@@ -480,6 +480,38 @@ a.active {
     margin-top: 30px;
 }
 
+/* Rotating text effect for ServiceNow skills */
+.rotating-text {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.rotating-text:hover {
+    transform: rotateY(180deg);
+    color: #425BB5;
+    font-weight: bold;
+}
+
+.rotating-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #425BB5, #6c757d);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.rotating-text:hover::before {
+    opacity: 0.1;
+}
+
 #certification .col-md-12:first-child {
     position: relative;
     z-index: 10;

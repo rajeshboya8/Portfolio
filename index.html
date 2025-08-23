@@ -54,7 +54,7 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <!-- <li><a href="#about">About</a></li> -->
-          <li><a href="#skill">Skill</a></li>
+          <li><a href="#skill">Skills</a></li>
 
           <li><a href="#projects">projects</a></li>
           
@@ -103,7 +103,7 @@
     <div class="section" id="skill">
       <div class="container" id="skill-container">
         <div class="col-md-12">
-          <h4>01</h4>
+          
           <h1 class="size-50">
             My Skills
           </h1>
@@ -116,83 +116,67 @@
                         <h2>Programming Languages</h2>
                         <div class="box">
                             <div class="frontSkill">
-                                <src href="<a href="https://www.flaticon.com/free-icons/steam" title="steam icons">Steam icons created by Freepik - Flaticon</a>" >
-                                JAVA
+                                <img src="img/icons/python_icon.png" alt="">
+                                Python
                             </div>
                             <div class="frontSkill">
-                                <img src="img/icons/css3_css_file_development_icon.png" alt="">
-                                CSS
+                                <img src="img/java1.png" alt="">
+                                Java
                             </div>
                             <div class="frontSkill">
                                 <img src="img/icons/javascript_icon.png" alt="">
                                 JavaScript
                             </div>
                             <div class="frontSkill">
-                                <img src="img/icons/react native_react_icon.png" alt="">
-                                React.js
-                            </div>
-                            <div class="frontSkill">
-                                <img src="img/icons/image.png" alt="">
-                                Bootstrap
-                            </div>
-                             <div class="frontSkill">
-                                <img src="img/icons/python_icon.png" alt="">
-                                Python
+                                <img src="img/icons/mysql_icon.png" alt="">
+                                SQL
                             </div>
                         </div>
                     </div>
                     <div class="back">
-                        <h2>Backend</h2>
+                        <h2>Web Technologies</h2>
                         <div class="box">
                             <div class="backSkill">
-                                <img src="img/icons/node_icon.png" alt="">
-                                Node.js
+                                <img src="img/icons/html_html5_icon.png" alt="">
+                                HTML
                             </div>
                             <div class="backSkill">
-                                <img src="img/icons/expressjs_logo_icon_169185.png" alt="">
-                                Express.js
+                                <img src="img/icons/css3_css_file_development_icon.png" alt="">
+                                CSS
                             </div>
                             <div class="backSkill">
-                                <img src="img/icons/mongodb_icon.png" alt="">
-                                MongoDB
+                                <img src="img/icons/javascript_icon.png" alt="">
+                                JavaScript
                             </div>
                             <div class="backSkill">
-                                <img src="img/icons/mysql_icon.png" alt="">
-                                MYSQL
+                                <img src="img/icons/python_icon.png" alt="">
+                                Django
                             </div>
-                           
                         </div>
                     </div>
                     <div class="tools">
-                        <h2>Tools & Services</h2>
+                        <h2>ServiceNow</h2>
                         <div class="box">
-                            <div class="toolsSkill">
-                                <img src="img/icons/git_icon.png" alt="">
-                                Git
+                            <div class="toolsSkill rotating-text">
+                                Service Catalog
                             </div>
-                            <div class="toolsSkill">
-                                <img src="img/icons/github_icon.png" alt="">
-                                Github
+                            <div class="toolsSkill rotating-text">
+                                Incident Management
                             </div>
-                            <div class="toolsSkill">
-                              <img src="img/icons/vscode_fill_icon.png" alt="">
-                              VS Code
-                              </div>
-                                <div class="toolsSkill">
-                                    <img src="img/icons/docker.png" alt="">
-                                    Docker
-                                </div>
-                            <div class="toolsSkill">
-                                <img src="img/icons/jupiter-notebook.png" alt="">
-                                Jupyter Notebook
+                            <div class="toolsSkill rotating-text">
+                                Change Management
                             </div>
-                            <div class="toolsSkill">
-                                <img src="img/icons/postman_icon.png" alt="">
-                                Postman
+                            <div class="toolsSkill rotating-text">
+                                CMDB
                             </div>
-                            <div class="toolsSkill">
-                                <img src="img/icons/canva-icon-512x512-q41pwse8.png" alt="">
-                                Canva
+                            <div class="toolsSkill rotating-text">
+                                Workflow
+                            </div>
+                            <div class="toolsSkill rotating-text">
+                                Scripting
+                            </div>
+                            <div class="toolsSkill rotating-text">
+                                Performance Analytics
                             </div>
                         </div>
                     </div>
@@ -229,7 +213,7 @@
     <div class="section" id="projects">
       <div class="container">
         <div class="col-md-12">
-          <h4>03</h4>
+          
           <h1 class="size-50">
             My <br />
             Projects
@@ -344,7 +328,7 @@
     <div class="section" id="certification">
       <div class="container">
         <div class="col-md-12">
-          <h4>04</h4>
+          
           <h1 class="size-50">
             My <br />
             Certifications
@@ -521,7 +505,6 @@
         <div class="section" id="education">
           <div class="container">
             <div class="col-md-12">
-              <h4>05</h4>
               <h1 class="size-50">
                 My
                 Education
@@ -593,7 +576,6 @@
     <div class="section" id="contact">
       <div class="container">
         <div class="col-md-12">
-          <h4>06</h4>
           <h1 class="size-50">Contact Me</h1>
           <div class="h-50"></div>
         </div>
@@ -633,7 +615,8 @@
             class="contact-bg"
             id="contact-form"
             name="contact"
-            method="post"
+            action="https://formsubmit.co/boyarajesh888@gmail.com"
+            method="POST"
             novalidate="novalidate"
           >
             <input
@@ -687,17 +670,13 @@
             form.addEventListener("submit", formSubmit);
 
             function formSubmit(e) {
-                e.preventDefault();
-                const formData = new FormData(e.target);
-
-                console.log(formData);
-
-                       // Check if required fields are empty
-                const name = formData.get('name');
-                const email = formData.get('email');
-                const message = formData.get('message');
+                // Check if required fields are empty
+                const name = e.target.name.value;
+                const email = e.target.email.value;
+                const message = e.target.message.value;
                 
                 if (!name || !email || !message) {
+                    e.preventDefault();
                     alert("Please fill in all the required fields (name, email, and message).");
                     return;
                 }
@@ -705,32 +684,18 @@
                 // Check if email is valid
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailPattern.test(email)) {
+                    e.preventDefault();
                     alert("Please enter a valid email address.");
                     return;
                 }
 
-                fetch("https://getform.io/f/bnllmolb", {
-                    method: "POST",
-                    body: formData,
-                    headers: {
-                        "Accept": "application/json",
-                    },
-                })
-                .then(response => {
-                    console.log(response)
-                    $('#contact :input').attr('disabled', 'disabled');
-                    $('#contact').fadeTo("slow", 1, function () {
-                        $(this).find(':input').attr('disabled', 'disabled');
-                        $(this).find('label').css('cursor', 'default');
-                        $('#success').fadeIn();
-                    });
-                })
-                .catch(error => {
-                    console.log(error)
-                    $('#contact').fadeTo("slow", 1, function () {
-                        $('#error').fadeIn();
-                    });
-                })
+                // Show success message
+                $('#contact :input').attr('disabled', 'disabled');
+                $('#contact').fadeTo("slow", 1, function () {
+                    $(this).find(':input').attr('disabled', 'disabled');
+                    $(this).find('label').css('cursor', 'default');
+                    $('#success').fadeIn();
+                });
             }
           </script>
         </div>
