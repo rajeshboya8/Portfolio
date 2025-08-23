@@ -902,6 +902,7 @@ fieldset {
     }
     nav li {
         margin: 4px;
+        flex: 0 0 auto;
     }
     nav li a {
         font-size: 10px;
@@ -909,6 +910,10 @@ fieldset {
         background: rgba(66, 91, 181, 0.1);
         border-radius: 15px;
         transition: all 0.3s ease;
+        white-space: nowrap;
+        text-align: center;
+        min-width: 0;
+        width: auto;
     }
     nav li a:hover {
         background: #425BB5;
@@ -1048,6 +1053,7 @@ fieldset {
         margin: 15px 0;
         width: 100%;
         text-align: center;
+        flex: 0 0 auto;
     }
     nav li a {
         font-size: 16px !important;
@@ -1057,6 +1063,9 @@ fieldset {
         background: rgba(66, 91, 181, 0.1) !important;
         border-radius: 8px;
         transition: all 0.3s ease;
+        white-space: nowrap;
+        text-align: center;
+        min-width: 0;
     }
     nav li a:hover {
         background: #425BB5 !important;
