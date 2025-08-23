@@ -2493,7 +2493,7 @@ fieldset {
         min-height: auto !important;
         width: 100% !important;
         margin: 0 !important;
-        padding: 20px 0 !important;
+        padding: 10px 0 !important;
     }
     
     #home .table-cell {
@@ -2502,7 +2502,7 @@ fieldset {
         width: 100% !important;
         float: none !important;
         margin: 0 !important;
-        padding: 20px 0 !important;
+        padding: 15px 0 !important;
         text-align: center !important;
     }
     
@@ -2547,16 +2547,16 @@ fieldset {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        gap: 15px !important;
+        gap: 12px !important;
         width: 100% !important;
-        margin: 20px 0 !important;
+        margin: 15px 0 !important;
         padding: 0 !important;
         justify-content: center !important;
         float: none !important;
     }
     
     #home .resumediv {
-        width: 150px !important;
+        width: 130px !important;
         text-align: center !important;
         margin: 5px 0 !important;
         padding: 0 !important;
@@ -2566,9 +2566,9 @@ fieldset {
     
     /* FIX TEXT ALIGNMENT AND SIZING */
     #home h1.size-50 {
-        font-size: 32px !important;
-        line-height: 36px !important;
-        margin-bottom: 15px !important;
+        font-size: 28px !important;
+        line-height: 32px !important;
+        margin-bottom: 10px !important;
         text-align: center !important;
         width: 100% !important;
         float: none !important;
@@ -2591,9 +2591,9 @@ fieldset {
     
     /* FIX PROFILE IMAGE */
     #home #profilepic {
-        width: 250px !important;
+        width: 200px !important;
         height: auto !important;
-        margin: 20px auto !important;
+        margin: 15px auto !important;
         display: block !important;
         float: none !important;
         max-width: 100% !important;
@@ -2639,8 +2639,8 @@ fieldset {
     
     nav li a {
         display: block !important;
-        padding: 4px 6px !important;
-        font-size: 9px !important;
+        padding: 3px 4px !important;
+        font-size: 8px !important;
         white-space: nowrap !important;
         text-decoration: none !important;
         color: white !important;
@@ -2830,6 +2830,522 @@ fieldset {
     h1, h2, h3, h4, h5, h6, p, div, span {
         word-wrap: break-word !important;
         overflow-wrap: break-word !important;
+    }
+}
+
+/* RESPONSIVE BREAKPOINTS - PROPER MOBILE, TABLET, DESKTOP LAYOUTS */
+/* This CSS provides proper layouts for different screen sizes */
+
+/* Mobile devices (≤480px) - Single column, stacked layout */
+@media (max-width: 480px) {
+    /* COMPLETELY DISABLE DESKTOP TABLE LAYOUT */
+    .disply-table,
+    .disply-table *,
+    #home .disply-table,
+    #home .disply-table *,
+    .section .disply-table,
+    .section .disply-table * {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        min-height: auto !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 20px 0 !important;
+        table-layout: auto !important;
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+        float: none !important;
+        position: static !important;
+        vertical-align: top !important;
+        text-align: center !important;
+    }
+    
+    /* FORCE ALL TABLE ELEMENTS TO BE BLOCK */
+    .table-cell,
+    .table-cell *,
+    #home .table-cell,
+    #home .table-cell *,
+    .section .table-cell,
+    .section .table-cell * {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 20px 0 !important;
+        float: none !important;
+        vertical-align: top !important;
+        position: static !important;
+        table-layout: auto !important;
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* OVERRIDE ALL BOOTSTRAP GRID CLASSES */
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, 
+    .col-md-5, .col-md-6, .col-md-7, .col-md-8, 
+    .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, 
+    .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, 
+    .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, 
+    .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, 
+    .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12,
+    .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, 
+    .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, 
+    .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+        width: 100% !important;
+        float: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: block !important;
+        position: static !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* FORCE MOBILE LAYOUT ORDER */
+    #home .disply-table {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        height: auto !important;
+        min-height: auto !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 10px 0 !important;
+    }
+    
+    #home .table-cell {
+        order: 1 !important;
+        display: block !important;
+        width: 100% !important;
+        float: none !important;
+        margin: 0 !important;
+        padding: 15px 0 !important;
+        text-align: center !important;
+    }
+    
+    #home #profilediv {
+        order: 2 !important;
+        display: block !important;
+        width: 100% !important;
+        float: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: center !important;
+    }
+    
+    /* FIX HOME SECTION COMPLETELY */
+    #home {
+        height: auto !important;
+        min-height: calc(100vh - 60px) !important;
+        padding: 20px 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+        display: block !important;
+    }
+    
+    #home .container {
+        padding: 0 15px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+        float: none !important;
+    }
+    
+    /* FIX ALL HOME ELEMENTS */
+    #home * {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        float: none !important;
+    }
+    
+    /* FIX BUTTON LAYOUT */
+    #home #herobtn {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+        margin: 15px 0 !important;
+        padding: 0 !important;
+        justify-content: center !important;
+        float: none !important;
+    }
+    
+    #home .resumediv {
+        width: 130px !important;
+        text-align: center !important;
+        margin: 5px 0 !important;
+        padding: 0 !important;
+        display: block !important;
+        float: none !important;
+    }
+    
+    /* FIX TEXT ALIGNMENT AND SIZING */
+    #home h1.size-50 {
+        font-size: 28px !important;
+        line-height: 32px !important;
+        margin-bottom: 10px !important;
+        text-align: center !important;
+        width: 100% !important;
+        float: none !important;
+        display: block !important;
+    }
+    
+    #home h4 {
+        font-size: 16px !important;
+        margin-left: 0 !important;
+        text-align: center !important;
+        margin-bottom: 10px !important;
+        width: 100% !important;
+        float: none !important;
+        display: block !important;
+    }
+    
+    #home h4:before {
+        display: none !important;
+    }
+    
+    /* FIX PROFILE IMAGE */
+    #home #profilepic {
+        width: 200px !important;
+        height: auto !important;
+        margin: 15px auto !important;
+        display: block !important;
+        float: none !important;
+        max-width: 100% !important;
+        position: static !important;
+    }
+    
+    #home #profilediv {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        float: none !important;
+        position: static !important;
+        display: block !important;
+    }
+    
+    /* FIX NAVIGATION */
+    nav {
+        position: fixed !important;
+        top: 0 !important;
+        width: 100% !important;
+        z-index: 1000 !important;
+        background: rgba(0, 0, 0, 0.9) !important;
+        display: block !important;
+    }
+    
+    nav ul {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 !important;
+        padding: 8px !important;
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    nav li {
+        margin: 2px !important;
+        display: inline-block !important;
+        float: none !important;
+    }
+    
+    nav li a {
+        display: block !important;
+        padding: 3px 4px !important;
+        font-size: 8px !important;
+        white-space: nowrap !important;
+        text-decoration: none !important;
+        color: white !important;
+        float: none !important;
+    }
+    
+    /* ADD TOP MARGIN TO BODY FOR FIXED NAV */
+    body {
+        padding-top: 60px !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* FIX ANY REMAINING LAYOUT ISSUES */
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    .clearfix::after {
+        content: "" !important;
+        display: table !important;
+        clear: both !important;
+    }
+    
+    /* ENSURE PROPER CONTAINER BEHAVIOR */
+    .container, .container-fluid {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin: 0 !important;
+        float: none !important;
+    }
+    
+    /* OVERRIDE ANY REMAINING TABLE PROPERTIES */
+    table, tr, td, th {
+        display: block !important;
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    /* FORCE ALL ELEMENTS TO BE BLOCK ON MOBILE */
+    div, section, article, aside, header, footer, main {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* Tablet devices (481px-768px) - Side-by-side layout with proper proportions */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* ALLOW DESKTOP TABLE LAYOUT BUT WITH TABLET OPTIMIZATIONS */
+    .disply-table {
+        display: table !important;
+        height: auto !important;
+        min-height: 80vh !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 40px 20px !important;
+    }
+    
+    .table-cell {
+        display: table-cell !important;
+        vertical-align: middle !important;
+        width: 50% !important;
+        float: none !important;
+        margin: 0 !important;
+        padding: 0 20px !important;
+        text-align: left !important;
+    }
+    
+    /* TABLET LAYOUT ORDER */
+    #home .table-cell {
+        order: 1 !important;
+        width: 50% !important;
+        text-align: left !important;
+        padding: 0 20px !important;
+    }
+    
+    #home #profilediv {
+        order: 2 !important;
+        width: 50% !important;
+        text-align: center !important;
+        padding: 0 20px !important;
+    }
+    
+    /* FIX HOME SECTION FOR TABLET */
+    #home {
+        height: auto !important;
+        min-height: 80vh !important;
+        padding: 40px 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+    }
+    
+    #home .container {
+        padding: 0 20px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* FIX BUTTON LAYOUT FOR TABLET */
+    #home #herobtn {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 20px !important;
+        width: auto !important;
+        margin: 20px 0 !important;
+        padding: 0 !important;
+        justify-content: flex-start !important;
+    }
+    
+    #home .resumediv {
+        width: 140px !important;
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* FIX TEXT ALIGNMENT AND SIZING FOR TABLET */
+    #home h1.size-50 {
+        font-size: 42px !important;
+        line-height: 46px !important;
+        margin-bottom: 20px !important;
+        text-align: left !important;
+        width: 100% !important;
+    }
+    
+    #home h4 {
+        font-size: 18px !important;
+        margin-left: 0 !important;
+        text-align: left !important;
+        margin-bottom: 15px !important;
+        width: 100% !important;
+    }
+    
+    #home h4:before {
+        display: block !important;
+        width: 30px !important;
+        left: -40px !important;
+    }
+    
+    /* FIX PROFILE IMAGE FOR TABLET */
+    #home #profilepic {
+        width: 280px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
+        max-width: 100% !important;
+    }
+    
+    /* FIX NAVIGATION FOR TABLET */
+    nav {
+        position: fixed !important;
+        top: 0 !important;
+        width: 100% !important;
+        z-index: 1000 !important;
+        background: rgba(0, 0, 0, 0.9) !important;
+    }
+    
+    nav ul {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 !important;
+        padding: 10px !important;
+    }
+    
+    nav li {
+        margin: 3px !important;
+        display: inline-block !important;
+    }
+    
+    nav li a {
+        display: block !important;
+        padding: 5px 8px !important;
+        font-size: 10px !important;
+        white-space: nowrap !important;
+        text-decoration: none !important;
+        color: white !important;
+    }
+    
+    /* ADD TOP MARGIN TO BODY FOR FIXED NAV */
+    body {
+        padding-top: 60px !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* FIX BOOTSTRAP GRID FOR TABLET */
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, 
+    .col-md-5, .col-md-6, .col-md-7, .col-md-8, 
+    .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+        width: 50% !important;
+        float: left !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .col-md-6, .col-md-12 {
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    /* ENSURE PROPER CONTAINER BEHAVIOR */
+    .container, .container-fluid {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        margin: 0 !important;
+    }
+}
+
+/* Desktop devices (≥769px) - Original desktop layout */
+@media (min-width: 769px) {
+    /* KEEP ORIGINAL DESKTOP LAYOUT */
+    .disply-table {
+        display: table !important;
+        height: 100vh !important;
+        width: 100% !important;
+    }
+    
+    .table-cell {
+        display: table-cell !important;
+        vertical-align: middle !important;
+        width: auto !important;
+    }
+    
+    #home #herobtn {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 30px !important;
+    }
+    
+    #home .resumediv {
+        width: auto !important;
+    }
+    
+    #home h1.size-50 {
+        font-size: 80px !important;
+        line-height: 70px !important;
+        text-align: left !important;
+    }
+    
+    #home h4 {
+        font-size: 18px !important;
+        margin-left: 40px !important;
+        text-align: left !important;
+    }
+    
+    #home h4:before {
+        display: block !important;
+    }
+    
+    #home #profilepic {
+        width: 400px !important;
+    }
+    
+    /* RESTORE ORIGINAL BOOTSTRAP GRID */
+    .col-md-4 {
+        width: 33.33333333% !important;
+        float: left !important;
+    }
+    
+    .col-md-6 {
+        width: 50% !important;
+        float: left !important;
+    }
+    
+    .col-md-8 {
+        width: 66.66666667% !important;
+        float: left !important;
+    }
+    
+    .col-md-12 {
+        width: 100% !important;
+        float: none !important;
     }
 }
 
