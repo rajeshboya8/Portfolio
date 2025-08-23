@@ -453,6 +453,41 @@ a.active {
     padding: 100px 0;
 }
 
+/* certifications section
+==================================================*/
+
+#certification {
+    padding: 100px 0;
+}
+
+#certification .col-md-12 {
+    margin-bottom: 80px;
+}
+
+#certification .main-container {
+    margin-top: 40px;
+}
+
+#certification .portfolio_container {
+    margin-top: 100px;
+}
+
+#certification .portfolio_item {
+    margin-top: 20px;
+}
+
+#certification .certification-image-container {
+    margin-top: 30px;
+}
+
+#certification .col-md-12:first-child {
+    position: relative;
+    z-index: 10;
+    background: white;
+    padding-bottom: 60px;
+    margin-bottom: 150px;
+}
+
 .portfolio .categories-grid span {
     font-size: 30px;
     margin-bottom: 30px;
@@ -1040,6 +1075,94 @@ fieldset {
 .Skills .container-skill .mainSkill .front .frontSkill:hover, .back .backSkill:hover, .datasci .datasciSkill:hover, .tools .toolsSkill:hover{
     transform: translateY(-7px);
     transition: all 0.3s ease;
+}
+
+/* Certification Styles */
+#certification {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+/* Certification heading styles - same as other sections */
+#certification h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000;
+    margin-bottom: 30px;
+    text-align: left;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+#certification h4 {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    position: relative;
+    color: #425BB5;
+    margin-left: 40px;
+    font-weight: 700;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+#certification h4:before {
+    position: absolute;
+    width: 30px;
+    left: -40px;
+    content: "";
+    display: block;
+    height: 2px;
+    background: #425BB5;
+    top: 9px;
+}
+
+.certification-image-container {
+    width: 100%;
+    height: 250px;
+    background: #000;
+    border: 3px solid #000;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.certification-image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.certification-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s ease;
+}
+
+.certification-image-container:hover .certification-image {
+    transform: scale(1.05);
+}
+
+/* Ensure all certification items have equal height */
+#certification .portfolio_item {
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+#certification .portfolio_item_hover {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
 }
 
 
