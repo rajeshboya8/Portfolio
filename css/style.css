@@ -894,7 +894,6 @@ fieldset {
     }
     #home {
         height: 760px;
-    
     }
     #profilepic{
         margin: 40px 30px 0px 50px;
@@ -903,7 +902,6 @@ fieldset {
     .table-cell{
         display: block;
         margin: 120px 30px 0px 24px;
-
     }
     .table-cell h1{
         font-size: 30px;
@@ -916,7 +914,185 @@ fieldset {
         margin-top: 0px;
         width: 120px;
     }
+}
 
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+    /* General mobile fixes */
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Header mobile */
+    nav ul {
+        padding: 10px;
+    }
+    
+    nav li {
+        margin: 5px;
+    }
+    
+    nav li a {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+    
+    /* Home section mobile */
+    #home {
+        height: auto;
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+    
+    .disply-table {
+        height: auto;
+        display: block;
+    }
+    
+    .table-cell {
+        display: block;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    #profilepic {
+        width: 250px;
+        height: auto;
+        margin: 20px auto;
+        display: block;
+    }
+    
+    /* Skills section mobile */
+    .Skills .container-skill .mainSkill {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .Skills .container-skill .mainSkill .front,
+    .Skills .container-skill .mainSkill .back,
+    .Skills .container-skill .mainSkill .tools {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .Skills .container-skill .mainSkill .box {
+        gap: 8px;
+        justify-content: center;
+    }
+    
+    .Skills .container-skill .mainSkill .front .frontSkill,
+    .Skills .container-skill .mainSkill .back .backSkill,
+    .Skills .container-skill .mainSkill .tools .toolsSkill {
+        font-size: 12px;
+        padding: 8px 12px;
+        min-width: 120px;
+    }
+    
+    /* Projects section mobile */
+    .portfolio_filter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .portfolio_filter li {
+        margin: 5px;
+    }
+    
+    .portfolio_filter li a {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    
+    .portfolio_container .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* Certifications section mobile */
+    #certification .portfolio_container .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* Contact section mobile */
+    #contact .col-md-4,
+    #contact .col-md-8 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .contact-bg input,
+    .contact-bg textarea {
+        margin-bottom: 15px;
+    }
+    
+    /* Education section mobile */
+    .timeline-event-copy {
+        width: 85%;
+        left: 1.5em;
+    }
+    
+    /* Section headings mobile */
+    h1.size-50 {
+        font-size: 35px;
+        line-height: 40px;
+    }
+    
+    h4 {
+        font-size: 14px;
+        margin-left: 20px;
+    }
+    
+    /* Button fixes */
+    #herobtn {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    #githubdiv {
+        margin-left: 0;
+    }
+    
+    .resumediv {
+        width: 150px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small devices */
+    h1.size-50 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    
+    .Skills .container-skill .mainSkill .front .frontSkill,
+    .Skills .container-skill .mainSkill .back .backSkill,
+    .Skills .container-skill .mainSkill .tools .toolsSkill {
+        font-size: 11px;
+        padding: 6px 10px;
+        min-width: 100px;
+    }
+    
+    .portfolio_filter li a {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+    
+    #profilepic {
+        width: 200px;
+    }
+    
+    .table-cell h1 {
+        font-size: 25px;
+    }
+    
+    .table-cell h4 {
+        font-size: 16px;
+    }
 }
 
   .resumediv a{
