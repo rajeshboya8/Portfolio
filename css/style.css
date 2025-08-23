@@ -1,21 +1,15 @@
-/*
-* Resume template
-* Created by : Ahmed Essa
-* website : www.ahmedessa.net
-*/
+/* ULTRA-AGGRESSIVE MOBILE OVERRIDE - MUST BE FIRST */
+/* This CSS will completely override all desktop styles on mobile devices */
 
-/* MOBILE-FIRST APPROACH - HIGH PRIORITY OVERRIDES */
-/* These styles will override all desktop styles on mobile devices */
-
-/* Base mobile styles - applied to all screen sizes by default */
-* {
-    box-sizing: border-box;
-}
-
-/* Mobile-first responsive design */
+/* Force mobile layout on all screen sizes below 768px */
 @media (max-width: 768px) {
-    /* Force mobile layout for all elements */
-    .disply-table {
+    /* COMPLETELY DISABLE DESKTOP TABLE LAYOUT */
+    .disply-table,
+    .disply-table *,
+    #home .disply-table,
+    #home .disply-table *,
+    .section .disply-table,
+    .section .disply-table * {
         display: flex !important;
         flex-direction: column !important;
         height: auto !important;
@@ -23,9 +17,22 @@
         width: 100% !important;
         margin: 0 !important;
         padding: 20px 0 !important;
+        table-layout: auto !important;
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+        float: none !important;
+        position: static !important;
+        vertical-align: top !important;
+        text-align: center !important;
     }
     
-    .table-cell {
+    /* FORCE ALL TABLE ELEMENTS TO BE BLOCK */
+    .table-cell,
+    .table-cell *,
+    #home .table-cell,
+    #home .table-cell *,
+    .section .table-cell,
+    .section .table-cell * {
         display: block !important;
         width: 100% !important;
         text-align: center !important;
@@ -33,44 +40,156 @@
         padding: 20px 0 !important;
         float: none !important;
         vertical-align: top !important;
+        position: static !important;
+        table-layout: auto !important;
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
     
-    #profilediv {
+    /* OVERRIDE ALL BOOTSTRAP GRID CLASSES */
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, 
+    .col-md-5, .col-md-6, .col-md-7, .col-md-8, 
+    .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, 
+    .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, 
+    .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, 
+    .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, 
+    .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
         width: 100% !important;
-        text-align: center !important;
+        float: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: block !important;
+        position: static !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* FORCE MOBILE LAYOUT ORDER */
+    #home .table-cell {
+        order: 1 !important;
+        display: block !important;
+        width: 100% !important;
+        float: none !important;
+        margin: 0 !important;
+        padding: 20px 0 !important;
+    }
+    
+    #home #profilediv {
+        order: 2 !important;
+        display: block !important;
+        width: 100% !important;
+        float: none !important;
         margin: 0 !important;
         padding: 0 !important;
-        float: none !important;
-        order: 2 !important;
+        text-align: center !important;
     }
     
-    #profilepic {
+    /* FIX HOME SECTION COMPLETELY */
+    #home {
+        height: auto !important;
+        min-height: calc(100vh - 60px) !important;
+        padding: 20px 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+        display: block !important;
+    }
+    
+    #home .container {
+        padding: 0 15px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+        float: none !important;
+    }
+    
+    /* FIX ALL HOME ELEMENTS */
+    #home * {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        float: none !important;
+    }
+    
+    /* FIX BUTTON LAYOUT */
+    #home #herobtn {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+        width: 100% !important;
+        margin: 20px 0 !important;
+        padding: 0 !important;
+        justify-content: center !important;
+        float: none !important;
+    }
+    
+    #home .resumediv {
+        width: 150px !important;
+        text-align: center !important;
+        margin: 5px 0 !important;
+        padding: 0 !important;
+        display: block !important;
+        float: none !important;
+    }
+    
+    /* FIX TEXT ALIGNMENT AND SIZING */
+    #home h1.size-50 {
+        font-size: 32px !important;
+        line-height: 36px !important;
+        margin-bottom: 15px !important;
+        text-align: center !important;
+        width: 100% !important;
+        float: none !important;
+        display: block !important;
+    }
+    
+    #home h4 {
+        font-size: 16px !important;
+        margin-left: 0 !important;
+        text-align: center !important;
+        margin-bottom: 10px !important;
+        width: 100% !important;
+        float: none !important;
+        display: block !important;
+    }
+    
+    #home h4:before {
+        display: none !important;
+    }
+    
+    /* FIX PROFILE IMAGE */
+    #home #profilepic {
         width: 250px !important;
         height: auto !important;
         margin: 20px auto !important;
         display: block !important;
         float: none !important;
         max-width: 100% !important;
+        position: static !important;
     }
     
-    /* Force single column layout */
-    .col-md-1, .col-md-2, .col-md-3, .col-md-4, 
-    .col-md-5, .col-md-6, .col-md-7, .col-md-8, 
-    .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    #home #profilediv {
         width: 100% !important;
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
         float: none !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        position: static !important;
         display: block !important;
     }
     
-    /* Fix navigation for mobile */
+    /* FIX NAVIGATION */
     nav {
         position: fixed !important;
         top: 0 !important;
         width: 100% !important;
         z-index: 1000 !important;
         background: rgba(0, 0, 0, 0.9) !important;
+        display: block !important;
     }
     
     nav ul {
@@ -80,11 +199,14 @@
         align-items: center !important;
         margin: 0 !important;
         padding: 8px !important;
+        width: 100% !important;
+        float: none !important;
     }
     
     nav li {
         margin: 2px !important;
         display: inline-block !important;
+        float: none !important;
     }
     
     nav li a {
@@ -94,75 +216,42 @@
         white-space: nowrap !important;
         text-decoration: none !important;
         color: white !important;
+        float: none !important;
     }
     
-    /* Add top margin to body for fixed nav */
+    /* ADD TOP MARGIN TO BODY FOR FIXED NAV */
     body {
         padding-top: 60px !important;
         margin: 0 !important;
+        overflow-x: hidden !important;
     }
     
-    /* Fix home section */
-    #home {
-        height: auto !important;
-        min-height: calc(100vh - 60px) !important;
-        padding: 20px 0 !important;
-        margin: 0 !important;
-    }
-    
-    /* Fix button layout */
-    #herobtn {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 15px !important;
-        width: 100% !important;
-        margin: 20px 0 !important;
-        padding: 0 !important;
-    }
-    
-    .resumediv {
-        width: 150px !important;
-        text-align: center !important;
-        margin: 5px 0 !important;
-        padding: 0 !important;
-    }
-    
-    /* Fix text sizing */
-    h1.size-50 {
-        font-size: 32px !important;
-        line-height: 36px !important;
-        margin-bottom: 15px !important;
-        text-align: center !important;
-    }
-    
-    h4 {
-        font-size: 16px !important;
+    /* FIX ANY REMAINING LAYOUT ISSUES */
+    .row {
         margin-left: 0 !important;
-        text-align: center !important;
-        margin-bottom: 10px !important;
-    }
-    
-    h4:before {
-        display: none !important;
-    }
-    
-    /* Fix container behavior */
-    .container {
+        margin-right: 0 !important;
         width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 15px !important;
-        margin: 0 !important;
+        float: none !important;
     }
     
-    /* Fix section spacing */
-    .section {
-        padding: 30px 0 !important;
+    .clearfix::after {
+        content: "" !important;
+        display: table !important;
+        clear: both !important;
+    }
+    
+    /* ENSURE PROPER CONTAINER BEHAVIOR */
+    .container, .container-fluid {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
         margin: 0 !important;
+        float: none !important;
     }
 }
 
-/* Extra small devices */
+/* EXTRA SMALL DEVICES */
 @media (max-width: 480px) {
     .disply-table {
         padding: 10px 0 !important;
@@ -197,19 +286,10 @@
     }
 }
 
-/* Table of Content
-==================================================
-	- Google fonts & font family -
-	- typography -
-	- General -
-    - Preloader -
-	- Header -
-    - home section -
-    - About section -
-    - experience section -
-    - projects section -
-    - Contact section -
-    - Responsive media queries -
+/*
+* Resume template
+* Created by : Ahmed Essa
+* website : www.ahmedessa.net
 */
 
 
@@ -2308,13 +2388,28 @@ fieldset {
     }
 }
 
-/* COMPLETE MOBILE OVERRIDE - DISABLE DESKTOP LAYOUT */
+/* COMPLETE OVERRIDE OF ALL TABLE DISPLAY PROPERTIES */
+/* This will override any existing table display rules */
+
+/* Force mobile layout on all screen sizes below 768px */
 @media (max-width: 768px) {
-    /* Completely override any table display properties */
+    /* OVERRIDE ALL EXISTING TABLE DISPLAY RULES */
     .disply-table,
     .disply-table *,
     #home .disply-table,
-    #home .disply-table * {
+    #home .disply-table *,
+    .section .disply-table,
+    .section .disply-table *,
+    .portfolio .disply-table,
+    .portfolio .disply-table *,
+    .about .disply-table,
+    .about .disply-table *,
+    .experience .disply-table,
+    .experience .disply-table *,
+    .education .disply-table,
+    .education .disply-table *,
+    .contact .disply-table,
+    .contact .disply-table * {
         display: flex !important;
         flex-direction: column !important;
         height: auto !important;
@@ -2327,13 +2422,29 @@ fieldset {
         border-spacing: 0 !important;
         float: none !important;
         position: static !important;
+        vertical-align: top !important;
+        text-align: center !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
     
-    /* Force all table elements to be block */
+    /* OVERRIDE ALL EXISTING TABLE-CELL DISPLAY RULES */
     .table-cell,
     .table-cell *,
     #home .table-cell,
-    #home .table-cell * {
+    #home .table-cell *,
+    .section .table-cell,
+    .section .table-cell *,
+    .portfolio .table-cell,
+    .portfolio .table-cell *,
+    .about .table-cell,
+    .about .table-cell *,
+    .experience .table-cell,
+    .experience .table-cell *,
+    .education .table-cell,
+    .education .table-cell *,
+    .contact .table-cell,
+    .contact .table-cell * {
         display: block !important;
         width: 100% !important;
         text-align: center !important;
@@ -2345,39 +2456,74 @@ fieldset {
         table-layout: auto !important;
         border-collapse: separate !important;
         border-spacing: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
     
-    /* Override any Bootstrap grid classes */
+    /* OVERRIDE ALL BOOTSTRAP GRID CLASSES */
     .col-md-1, .col-md-2, .col-md-3, .col-md-4, 
     .col-md-5, .col-md-6, .col-md-7, .col-md-8, 
     .col-md-9, .col-md-10, .col-md-11, .col-md-12,
     .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, 
     .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, 
-    .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, 
+    .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, 
+    .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12,
+    .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, 
+    .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, 
+    .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
         width: 100% !important;
         float: none !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         display: block !important;
         position: static !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
     
-    /* Force proper mobile layout order */
+    /* FORCE MOBILE LAYOUT ORDER FOR HOME SECTION */
+    #home .disply-table {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        height: auto !important;
+        min-height: auto !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 20px 0 !important;
+    }
+    
     #home .table-cell {
         order: 1 !important;
+        display: block !important;
+        width: 100% !important;
+        float: none !important;
+        margin: 0 !important;
+        padding: 20px 0 !important;
+        text-align: center !important;
     }
     
     #home #profilediv {
         order: 2 !important;
+        display: block !important;
+        width: 100% !important;
+        float: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: center !important;
     }
     
-    /* Ensure proper spacing and alignment */
+    /* FIX HOME SECTION COMPLETELY */
     #home {
         height: auto !important;
         min-height: calc(100vh - 60px) !important;
         padding: 20px 0 !important;
         margin: 0 !important;
         overflow: hidden !important;
+        display: block !important;
     }
     
     #home .container {
@@ -2385,15 +2531,18 @@ fieldset {
         margin: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
+        display: block !important;
+        float: none !important;
     }
     
-    /* Fix any remaining layout issues */
+    /* FIX ALL HOME ELEMENTS */
     #home * {
         max-width: 100% !important;
         box-sizing: border-box !important;
+        float: none !important;
     }
     
-    /* Ensure buttons are properly stacked */
+    /* FIX BUTTON LAYOUT */
     #home #herobtn {
         display: flex !important;
         flex-direction: column !important;
@@ -2403,6 +2552,7 @@ fieldset {
         margin: 20px 0 !important;
         padding: 0 !important;
         justify-content: center !important;
+        float: none !important;
     }
     
     #home .resumediv {
@@ -2411,9 +2561,10 @@ fieldset {
         margin: 5px 0 !important;
         padding: 0 !important;
         display: block !important;
+        float: none !important;
     }
     
-    /* Fix text alignment and sizing */
+    /* FIX TEXT ALIGNMENT AND SIZING */
     #home h1.size-50 {
         font-size: 32px !important;
         line-height: 36px !important;
@@ -2421,6 +2572,7 @@ fieldset {
         text-align: center !important;
         width: 100% !important;
         float: none !important;
+        display: block !important;
     }
     
     #home h4 {
@@ -2430,13 +2582,14 @@ fieldset {
         margin-bottom: 10px !important;
         width: 100% !important;
         float: none !important;
+        display: block !important;
     }
     
     #home h4:before {
         display: none !important;
     }
     
-    /* Fix profile image */
+    /* FIX PROFILE IMAGE */
     #home #profilepic {
         width: 250px !important;
         height: auto !important;
@@ -2454,6 +2607,88 @@ fieldset {
         padding: 0 !important;
         float: none !important;
         position: static !important;
+        display: block !important;
+    }
+    
+    /* FIX NAVIGATION */
+    nav {
+        position: fixed !important;
+        top: 0 !important;
+        width: 100% !important;
+        z-index: 1000 !important;
+        background: rgba(0, 0, 0, 0.9) !important;
+        display: block !important;
+    }
+    
+    nav ul {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 !important;
+        padding: 8px !important;
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    nav li {
+        margin: 2px !important;
+        display: inline-block !important;
+        float: none !important;
+    }
+    
+    nav li a {
+        display: block !important;
+        padding: 4px 6px !important;
+        font-size: 9px !important;
+        white-space: nowrap !important;
+        text-decoration: none !important;
+        color: white !important;
+        float: none !important;
+    }
+    
+    /* ADD TOP MARGIN TO BODY FOR FIXED NAV */
+    body {
+        padding-top: 60px !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* FIX ANY REMAINING LAYOUT ISSUES */
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    .clearfix::after {
+        content: "" !important;
+        display: table !important;
+        clear: both !important;
+    }
+    
+    /* ENSURE PROPER CONTAINER BEHAVIOR */
+    .container, .container-fluid {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin: 0 !important;
+        float: none !important;
+    }
+    
+    /* OVERRIDE ANY REMAINING TABLE PROPERTIES */
+    table, tr, td, th {
+        display: block !important;
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    /* FORCE ALL ELEMENTS TO BE BLOCK ON MOBILE */
+    div, section, article, aside, header, footer, main {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 }
 
@@ -2568,6 +2803,33 @@ fieldset {
         float: none !important;
         display: block !important;
         margin-bottom: 15px !important;
+    }
+    
+    /* Additional mobile layout improvements */
+    /* Fix any remaining table-like behavior */
+    .portfolio, .about, .experience, .education, .contact {
+        display: block !important;
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    /* Ensure proper spacing for all elements */
+    * {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Fix any remaining floating issues */
+    .pull-left, .pull-right {
+        float: none !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Ensure proper text flow */
+    h1, h2, h3, h4, h5, h6, p, div, span {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
     }
 }
 
