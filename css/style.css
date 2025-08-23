@@ -453,6 +453,7 @@ a.active {
     padding: 100px 0;
 }
 
+
 /* certifications section
 ==================================================*/
 
@@ -480,7 +481,9 @@ a.active {
     margin-top: 30px;
 }
 
+
 /* Rotating text effect for ServiceNow skills */
+
 .rotating-text {
     position: relative;
     display: inline-block;
@@ -824,11 +827,12 @@ fieldset {
     color: #425BB5;
 }
 
-#profilepic{
+#profilepic {
     margin-top: 150px;
     margin-left: 500px;
 }
-.resumediv{ 
+
+.resumediv {
     margin-top: 25px;
     width: 140px;
     height: 40px;
@@ -844,7 +848,7 @@ fieldset {
     display: inline-block;
     border: 1px solid black;
     outline: none;
-  }
+}
 
 
 /* Responsive media queries
@@ -883,67 +887,187 @@ fieldset {
 }
 
 @media (max-width: 431px) {
+    /* Mobile Navigation */
+    nav ul {
+        padding: 15px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
     nav li {
-        margin: 6px;
+        margin: 4px;
     }
     nav li a {
-        font-size: 6px;
+        font-size: 10px;
+        padding: 6px 10px;
+        background: rgba(66, 91, 181, 0.1);
+        border-radius: 15px;
+        transition: all 0.3s ease;
     }
-    nav ul {
-        padding: 20px 0px;
+    nav li a:hover {
+        background: #425BB5;
+        color: white;
     }
+    /* Home Section */
     #home {
-        height: 760px;
+        height: auto;
+        min-height: 100vh;
+        padding: 60px 0 40px;
     }
-    #profilepic{
-        margin: 40px 30px 0px 50px;
-        width: 300px;
+    .disply-table {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 20px 15px;
     }
-    .table-cell{
+    .table-cell {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        order: 1;
+    }
+    .table-cell h1 {
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 15px;
+    }
+    .table-cell h4 {
+        font-size: 18px;
+        margin-left: 0;
+        margin-bottom: 25px;
+    }
+    #profilediv {
+        order: 2;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+    #profilepic {
+        width: 280px;
+        height: auto;
+        margin: 0 auto;
         display: block;
-        margin: 120px 30px 0px 24px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
-    .table-cell h1{
-        font-size: 30px;
+    #herobtn {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        margin-top: 25px;
     }
-    .table-cell h4{
-        font-size: 20px;
-        margin-left: 0px;
+    .resumediv {
+        width: 160px;
+        margin-top: 0;
+        padding: 12px 20px;
+        font-size: 14px;
     }
-    .resumediv{
-        margin-top: 0px;
-        width: 120px;
+    #githubdiv {
+        margin-left: 0;
     }
 }
 
+
+/* Mobile Menu Toggle */
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #425BB5;
+    margin: 2px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+
 /* Mobile Responsive Fixes */
+
 @media (max-width: 768px) {
+    /* Mobile Menu Toggle */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    /* Navigation */
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 20px;
+        transition: right 0.3s ease;
+        z-index: 999;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+    nav ul.active {
+        right: 0;
+    }
+    nav li {
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+    nav li a {
+        font-size: 16px !important;
+        padding: 12px 20px !important;
+        display: block;
+        width: 100%;
+        background: rgba(66, 91, 181, 0.1) !important;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    nav li a:hover {
+        background: #425BB5 !important;
+        color: white !important;
+        transform: translateX(-5px);
+    }
     /* General mobile fixes */
     .container {
         padding: 0 15px;
     }
-    
-    /* Header mobile */
-    nav ul {
-        padding: 10px;
-    }
-    
-    nav li {
-        margin: 5px;
-    }
-    
-    nav li a {
-        font-size: 10px;
-        padding: 5px 8px;
-    }
-    
     /* Home section mobile */
     #home {
         height: auto;
         min-height: 100vh;
         padding: 20px 0;
     }
-    
     .disply-table {
         height: auto;
         display: flex;
@@ -952,7 +1076,6 @@ fieldset {
         justify-content: center;
         padding: 20px 0;
     }
-    
     .table-cell {
         display: flex;
         flex-direction: column;
@@ -962,7 +1085,6 @@ fieldset {
         padding: 20px 0;
         width: 100%;
     }
-    
     #profilepic {
         width: 250px;
         height: auto;
@@ -970,31 +1092,26 @@ fieldset {
         display: block;
         order: 2;
     }
-    
     #profilediv {
         order: 2;
         width: 100%;
         text-align: center;
     }
-    
     /* Skills section mobile */
     .Skills .container-skill .mainSkill {
         flex-direction: column;
         gap: 20px;
     }
-    
     .Skills .container-skill .mainSkill .front,
     .Skills .container-skill .mainSkill .back,
     .Skills .container-skill .mainSkill .tools {
         width: 100%;
         max-width: 100%;
     }
-    
     .Skills .container-skill .mainSkill .box {
         gap: 8px;
         justify-content: center;
     }
-    
     .Skills .container-skill .mainSkill .front .frontSkill,
     .Skills .container-skill .mainSkill .back .backSkill,
     .Skills .container-skill .mainSkill .tools .toolsSkill {
@@ -1002,7 +1119,6 @@ fieldset {
         padding: 8px 12px;
         min-width: 120px;
     }
-    
     /* Projects section mobile */
     .portfolio_filter {
         display: flex;
@@ -1010,56 +1126,46 @@ fieldset {
         justify-content: center;
         gap: 10px;
     }
-    
     .portfolio_filter li {
         margin: 5px;
     }
-    
     .portfolio_filter li a {
         padding: 5px 10px;
         font-size: 12px;
     }
-    
     .portfolio_container .col-md-4 {
         width: 100%;
         margin-bottom: 20px;
     }
-    
     /* Certifications section mobile */
     #certification .portfolio_container .col-md-4 {
         width: 100%;
         margin-bottom: 20px;
     }
-    
     /* Contact section mobile */
     #contact .col-md-4,
     #contact .col-md-8 {
         width: 100%;
         margin-bottom: 30px;
     }
-    
     .contact-bg input,
     .contact-bg textarea {
         margin-bottom: 15px;
     }
-    
     /* Education section mobile */
     .timeline-event-copy {
         width: 85%;
         left: 1.5em;
     }
-    
     /* Section headings mobile */
     h1.size-50 {
         font-size: 35px;
         line-height: 40px;
     }
-    
     h4 {
         font-size: 14px;
         margin-left: 20px;
     }
-    
     /* Button fixes */
     #herobtn {
         flex-direction: column;
@@ -1068,29 +1174,23 @@ fieldset {
         justify-content: center;
         width: 100%;
     }
-    
     #githubdiv {
         margin-left: 0;
     }
-    
     .resumediv {
         width: 150px;
         text-align: center;
     }
-    
     /* Certification section mobile fixes */
     #certification .col-md-12:first-child {
         margin-bottom: 15px !important;
     }
-    
     #certification .main-container {
         margin-top: 15px !important;
     }
-    
     #certification .portfolio_container {
         margin-top: 10px !important;
     }
-    
     #certification .portfolio_container .col-md-4 {
         margin-bottom: 15px !important;
     }
@@ -1102,7 +1202,6 @@ fieldset {
         font-size: 28px;
         line-height: 32px;
     }
-    
     .Skills .container-skill .mainSkill .front .frontSkill,
     .Skills .container-skill .mainSkill .back .backSkill,
     .Skills .container-skill .mainSkill .tools .toolsSkill {
@@ -1110,39 +1209,34 @@ fieldset {
         padding: 6px 10px;
         min-width: 100px;
     }
-    
     .portfolio_filter li a {
         font-size: 11px;
         padding: 4px 8px;
     }
-    
     #profilepic {
         width: 200px;
     }
-    
     .table-cell h1 {
         font-size: 25px;
     }
-    
     .table-cell h4 {
         font-size: 16px;
     }
-    
     /* Extra small certification fixes */
     #certification .col-md-12:first-child {
         margin-bottom: 20px !important;
     }
-    
     #certification .main-container {
         margin-top: 20px !important;
     }
-    
     #certification .portfolio_container {
         margin-top: 15px !important;
     }
 }
 
+
 /* Tablet and medium mobile fixes */
+
 @media (min-width: 481px) and (max-width: 768px) {
     /* Home section tablet */
     .disply-table {
@@ -1153,78 +1247,68 @@ fieldset {
         padding: 40px 20px;
         min-height: 80vh;
     }
-    
     .table-cell {
         text-align: left;
         padding: 0;
         width: 50%;
         order: 1;
     }
-    
     #profilediv {
         width: 50%;
         text-align: center;
         order: 2;
     }
-    
     #profilepic {
         width: 280px;
         margin: 0 auto;
         order: 2;
     }
-    
     /* Skills section tablet */
     .Skills .container-skill .mainSkill {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 30px;
     }
-    
     .Skills .container-skill .mainSkill .front,
     .Skills .container-skill .mainSkill .back,
     .Skills .container-skill .mainSkill .tools {
         width: calc(50% - 15px);
         min-width: 250px;
     }
-    
     /* Projects section tablet */
     .portfolio_container .col-md-4 {
         width: 50%;
         margin-bottom: 30px;
     }
-    
     /* Certifications section tablet */
     #certification .portfolio_container .col-md-4 {
         width: 50%;
         margin-bottom: 15px;
     }
-    
     /* Certification spacing tablet */
     #certification .col-md-12:first-child {
         margin-bottom: 15px !important;
     }
-    
     #certification .main-container {
         margin-top: 15px !important;
     }
-    
     #certification .portfolio_container {
         margin-top: 10px !important;
     }
-    
     /* Button alignment tablet */
     #herobtn {
         flex-direction: row;
         gap: 20px;
         justify-content: center;
     }
-    
     .resumediv {
         width: 140px;
     }
 }
 
+
 /* Large mobile and small tablet fixes */
+
 @media (min-width: 769px) and (max-width: 991px) {
     /* Home section large mobile */
     .disply-table {
@@ -1235,123 +1319,112 @@ fieldset {
         padding: 60px 40px;
         min-height: 85vh;
     }
-    
     .table-cell {
         text-align: left;
         padding: 0;
         width: 50%;
         order: 1;
     }
-    
     #profilediv {
         width: 50%;
         text-align: center;
         order: 2;
     }
-    
     #profilepic {
         width: 320px;
         margin: 0 auto;
         order: 2;
     }
-    
     /* Skills section large mobile */
     .Skills .container-skill .mainSkill {
         flex-direction: row;
         gap: 40px;
     }
-    
     .Skills .container-skill .mainSkill .front,
     .Skills .container-skill .mainSkill .back,
     .Skills .container-skill .mainSkill .tools {
         width: calc(33.33% - 27px);
     }
-    
     /* Projects section large mobile */
     .portfolio_container .col-md-4 {
         width: 50%;
         margin-bottom: 40px;
     }
-    
     /* Certifications section large mobile */
     #certification .portfolio_container .col-md-4 {
         width: 50%;
         margin-bottom: 15px;
     }
-    
     /* Certification spacing large mobile */
     #certification .col-md-12:first-child {
         margin-bottom: 15px !important;
     }
-    
     #certification .main-container {
         margin-top: 15px !important;
     }
-    
     #certification .portfolio_container {
         margin-top: 10px !important;
     }
-    
     /* Button alignment large mobile */
     #herobtn {
         flex-direction: row;
         gap: 30px;
         justify-content: center;
     }
-    
     .resumediv {
         width: 160px;
     }
 }
 
-  .resumediv a{
+.resumediv a {
     color: black;
     text-decoration: none;
-  }
-
+}
 
 .resumediv:after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 100%;
-  top: 0;
-  right: 0;
-  z-index: -1;
-  background-color: #425BB5;
-  border-radius: 4px;
-  transition: all 0.4s ease;
-  color: #fff;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #425BB5;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+    color: #fff;
 }
 
-.resumediv:hover a{
-  color: #fff;
+.resumediv:hover a {
+    color: #fff;
 }
+
 .resumediv:hover:after {
-  left: 0;
-  width: 100%;
-}
-.resumediv:active {
-  top: 2px;
+    left: 0;
+    width: 100%;
 }
 
-.Skills{
+.resumediv:active {
+    top: 2px;
+}
+
+.Skills {
     display: block;
     width: 100%;
 }
 
-.Skills .container-skill{
+.Skills .container-skill {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     animation: moveUp 1s ease-in-out;
-    position: relative; /* Ensure the div can be moved */
-    
+    position: relative;
+    /* Ensure the div can be moved */
 }
 
-.Skills .container-skill .heading{
+.Skills .container-skill .heading {
     font-size: 42px;
     text-align: center;
     font-weight: 600;
@@ -1359,19 +1432,19 @@ fieldset {
     color: rgb(242, 243, 244);
 }
 
-.Skills .container-skill .heading h1{
+.Skills .container-skill .heading h1 {
     padding: 0%;
     margin: 0%;
 }
 
-.Skills .container-skill .Text{
+.Skills .container-skill .Text {
     font-size: 18px;
     text-align: center;
     max-width: 500px;
     color: rgb(177, 178, 179);
 }
 
-.Skills .container-skill .mainSkill{
+.Skills .container-skill .mainSkill {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -1380,7 +1453,10 @@ fieldset {
     justify-content: center;
 }
 
-.Skills .container-skill .mainSkill .front , .back , .datasci, .tools{
+.Skills .container-skill .mainSkill .front,
+.back,
+.datasci,
+.tools {
     width: 100%;
     max-width: 500px;
     background: rgb(255, 255, 255);
@@ -1389,7 +1465,10 @@ fieldset {
     padding: 18px 36px;
 }
 
-.Skills .container-skill .mainSkill .front h2, .back h2, .datasci h2, .tools h2{
+.Skills .container-skill .mainSkill .front h2,
+.back h2,
+.datasci h2,
+.tools h2 {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0%;
@@ -1401,7 +1480,7 @@ fieldset {
     text-align: center;
 }
 
-.Skills .container-skill .mainSkill .box{
+.Skills .container-skill .mainSkill .box {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -1409,7 +1488,10 @@ fieldset {
     margin-bottom: 20px;
 }
 
-.Skills .container-skill .mainSkill .front .frontSkill, .back .backSkill, .datasci .datasciSkill, .tools .toolsSkill{
+.Skills .container-skill .mainSkill .front .frontSkill,
+.back .backSkill,
+.datasci .datasciSkill,
+.tools .toolsSkill {
     font-size: 14px;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.5);
@@ -1423,27 +1505,25 @@ fieldset {
     transition: all 0.3s ease;
 }
 
-.Skills .container-skill .mainSkill .front .box img{
+.Skills .container-skill .mainSkill .front .box img {
     width: 30px;
     height: 30px;
 }
 
-.Skills .container-skill .mainSkill .back .box img{
+.Skills .container-skill .mainSkill .back .box img {
     width: 30px;
     height: 30px;
 }
 
-.Skills .container-skill .mainSkill .datasci .box img{
+.Skills .container-skill .mainSkill .datasci .box img {
     width: 30px;
     height: 30px;
 }
 
-.Skills .container-skill .mainSkill .tools .box img{
+.Skills .container-skill .mainSkill .tools .box img {
     width: 30px;
     height: 30px;
 }
-
-
 
 @keyframes moveUp {
     from {
@@ -1454,53 +1534,56 @@ fieldset {
     }
 }
 
-#skill-container{
+#skill-container {
     padding-top: 60px;
     padding-bottom: 40px;
 }
 
-
-#education{
+#education {
     padding-top: 60px;
     padding-bottom: 40px;
 }
 
-#projects{
+#projects {
     padding-top: 60px;
     padding-bottom: 40px;
 }
 
-#experience{
+#experience {
     padding-top: 60px;
     padding-bottom: 40px;
 }
 
-
-
-#herobtn{
+#herobtn {
     /* display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 0px; */
     display: flex;
 }
 
-#githubdiv{
+#githubdiv {
     margin-left: 30px;
 }
 
-
-.Skills .container-skill .mainSkill .front .frontSkill:hover, .back .backSkill:hover, .datasci .datasciSkill:hover, .tools .toolsSkill:hover{
+.Skills .container-skill .mainSkill .front .frontSkill:hover,
+.back .backSkill:hover,
+.datasci .datasciSkill:hover,
+.tools .toolsSkill:hover {
     transform: translateY(-7px);
     transition: all 0.3s ease;
 }
 
+
 /* Certification Styles */
+
 #certification {
     padding-top: 60px;
     padding-bottom: 40px;
 }
 
+
 /* Certification heading styles - same as other sections */
+
 #certification h1 {
     font-family: 'Playfair Display', serif;
     font-size: 50px;
@@ -1569,7 +1652,9 @@ fieldset {
     transform: scale(1.05);
 }
 
+
 /* Ensure all certification items have equal height */
+
 #certification .portfolio_item {
     height: 320px;
     display: flex;
@@ -1581,5 +1666,3 @@ fieldset {
     display: flex;
     align-items: flex-end;
 }
-
-
