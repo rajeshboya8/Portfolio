@@ -1684,7 +1684,9 @@ fieldset {
 
 /* Mobile Home section overrides - only affect #home on mobile */
 
-@media (max-width: 768px) {
+@media (max-width: 768px),
+(max-device-width: 768px),
+(hover: none) and (pointer: coarse) {
     /* Remove hero background and fixed heights on mobile */
     #home {
         background: none !important;
