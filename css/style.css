@@ -4,6 +4,198 @@
 * website : www.ahmedessa.net
 */
 
+/* MOBILE-FIRST APPROACH - HIGH PRIORITY OVERRIDES */
+/* These styles will override all desktop styles on mobile devices */
+
+/* Base mobile styles - applied to all screen sizes by default */
+* {
+    box-sizing: border-box;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+    /* Force mobile layout for all elements */
+    .disply-table {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        min-height: auto !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 20px 0 !important;
+    }
+    
+    .table-cell {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 20px 0 !important;
+        float: none !important;
+        vertical-align: top !important;
+    }
+    
+    #profilediv {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        float: none !important;
+        order: 2 !important;
+    }
+    
+    #profilepic {
+        width: 250px !important;
+        height: auto !important;
+        margin: 20px auto !important;
+        display: block !important;
+        float: none !important;
+        max-width: 100% !important;
+    }
+    
+    /* Force single column layout */
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, 
+    .col-md-5, .col-md-6, .col-md-7, .col-md-8, 
+    .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+        width: 100% !important;
+        float: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: block !important;
+    }
+    
+    /* Fix navigation for mobile */
+    nav {
+        position: fixed !important;
+        top: 0 !important;
+        width: 100% !important;
+        z-index: 1000 !important;
+        background: rgba(0, 0, 0, 0.9) !important;
+    }
+    
+    nav ul {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 !important;
+        padding: 8px !important;
+    }
+    
+    nav li {
+        margin: 2px !important;
+        display: inline-block !important;
+    }
+    
+    nav li a {
+        display: block !important;
+        padding: 4px 6px !important;
+        font-size: 9px !important;
+        white-space: nowrap !important;
+        text-decoration: none !important;
+        color: white !important;
+    }
+    
+    /* Add top margin to body for fixed nav */
+    body {
+        padding-top: 60px !important;
+        margin: 0 !important;
+    }
+    
+    /* Fix home section */
+    #home {
+        height: auto !important;
+        min-height: calc(100vh - 60px) !important;
+        padding: 20px 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* Fix button layout */
+    #herobtn {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+        width: 100% !important;
+        margin: 20px 0 !important;
+        padding: 0 !important;
+    }
+    
+    .resumediv {
+        width: 150px !important;
+        text-align: center !important;
+        margin: 5px 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Fix text sizing */
+    h1.size-50 {
+        font-size: 32px !important;
+        line-height: 36px !important;
+        margin-bottom: 15px !important;
+        text-align: center !important;
+    }
+    
+    h4 {
+        font-size: 16px !important;
+        margin-left: 0 !important;
+        text-align: center !important;
+        margin-bottom: 10px !important;
+    }
+    
+    h4:before {
+        display: none !important;
+    }
+    
+    /* Fix container behavior */
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 15px !important;
+        margin: 0 !important;
+    }
+    
+    /* Fix section spacing */
+    .section {
+        padding: 30px 0 !important;
+        margin: 0 !important;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .disply-table {
+        padding: 10px 0 !important;
+    }
+    
+    .table-cell {
+        padding: 15px 0 !important;
+    }
+    
+    #profilepic {
+        width: 200px !important;
+        margin: 15px auto !important;
+    }
+    
+    #herobtn {
+        gap: 12px !important;
+        margin: 15px 0 !important;
+    }
+    
+    .resumediv {
+        width: 130px !important;
+    }
+    
+    h1.size-50 {
+        font-size: 28px !important;
+        line-height: 32px !important;
+    }
+    
+    nav li a {
+        font-size: 8px !important;
+        padding: 3px 4px !important;
+    }
+}
 
 /* Table of Content
 ==================================================
@@ -2116,105 +2308,266 @@ fieldset {
     }
 }
 
-/* Final mobile overrides to ensure proper layout */
+/* COMPLETE MOBILE OVERRIDE - DISABLE DESKTOP LAYOUT */
 @media (max-width: 768px) {
-    /* Force mobile layout for all sections */
-    .section {
-        padding: 30px 0 !important;
-        margin: 0 !important;
-    }
-    
-    /* Ensure proper home section layout */
-    #home .container {
-        padding: 0 15px !important;
-    }
-    
-    #home .disply-table {
+    /* Completely override any table display properties */
+    .disply-table,
+    .disply-table *,
+    #home .disply-table,
+    #home .disply-table * {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        min-height: auto !important;
+        width: 100% !important;
         margin: 0 !important;
         padding: 20px 0 !important;
+        table-layout: auto !important;
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+        float: none !important;
+        position: static !important;
     }
     
+    /* Force all table elements to be block */
+    .table-cell,
+    .table-cell *,
+    #home .table-cell,
+    #home .table-cell * {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 20px 0 !important;
+        float: none !important;
+        vertical-align: top !important;
+        position: static !important;
+        table-layout: auto !important;
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+    }
+    
+    /* Override any Bootstrap grid classes */
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, 
+    .col-md-5, .col-md-6, .col-md-7, .col-md-8, 
+    .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, 
+    .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, 
+    .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+        width: 100% !important;
+        float: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: block !important;
+        position: static !important;
+    }
+    
+    /* Force proper mobile layout order */
     #home .table-cell {
-        margin: 0 !important;
-        padding: 20px 0 !important;
+        order: 1 !important;
     }
     
     #home #profilediv {
+        order: 2 !important;
+    }
+    
+    /* Ensure proper spacing and alignment */
+    #home {
+        height: auto !important;
+        min-height: calc(100vh - 60px) !important;
+        padding: 20px 0 !important;
         margin: 0 !important;
-        padding: 0 !important;
+        overflow: hidden !important;
     }
     
-    #home #profilepic {
-        margin: 20px auto !important;
-        padding: 0 !important;
+    #home .container {
+        padding: 0 15px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
     
-    /* Force proper button layout */
+    /* Fix any remaining layout issues */
+    #home * {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Ensure buttons are properly stacked */
     #home #herobtn {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+        width: 100% !important;
         margin: 20px 0 !important;
         padding: 0 !important;
+        justify-content: center !important;
     }
     
     #home .resumediv {
+        width: 150px !important;
+        text-align: center !important;
         margin: 5px 0 !important;
         padding: 0 !important;
+        display: block !important;
     }
     
-    /* Ensure certification section is properly spaced */
+    /* Fix text alignment and sizing */
+    #home h1.size-50 {
+        font-size: 32px !important;
+        line-height: 36px !important;
+        margin-bottom: 15px !important;
+        text-align: center !important;
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    #home h4 {
+        font-size: 16px !important;
+        margin-left: 0 !important;
+        text-align: center !important;
+        margin-bottom: 10px !important;
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    #home h4:before {
+        display: none !important;
+    }
+    
+    /* Fix profile image */
+    #home #profilepic {
+        width: 250px !important;
+        height: auto !important;
+        margin: 20px auto !important;
+        display: block !important;
+        float: none !important;
+        max-width: 100% !important;
+        position: static !important;
+    }
+    
+    #home #profilediv {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        float: none !important;
+        position: static !important;
+    }
+}
+
+/* Fix certification section and other sections for mobile */
+@media (max-width: 768px) {
+    /* Fix all sections */
+    .section {
+        padding: 30px 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+    }
+    
+    /* Fix certification section specifically */
+    #certification {
+        padding-top: 30px !important;
+        padding-bottom: 20px !important;
+        margin-top: 0 !important;
+    }
+    
     #certification .container {
         padding: 0 15px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
     
     #certification .col-md-12:first-child {
         margin: 0 0 10px 0 !important;
         padding: 0 !important;
+        width: 100% !important;
+        float: none !important;
     }
     
     #certification .main-container {
         margin: 10px 0 0 0 !important;
         padding: 0 !important;
+        width: 100% !important;
+        float: none !important;
     }
     
     #certification .portfolio_container {
         margin: 5px 0 0 0 !important;
         padding: 0 !important;
+        width: 100% !important;
+        float: none !important;
     }
     
     #certification .portfolio_container .col-md-4 {
         margin: 0 0 15px 0 !important;
         padding: 0 !important;
+        width: 100% !important;
+        float: none !important;
+        display: block !important;
     }
     
-    /* Ensure proper image sizing */
+    /* Fix certification image containers */
     #certification .certification-image-container {
+        width: 100% !important;
+        height: 200px !important;
         margin: 0 0 10px 0 !important;
         padding: 0 !important;
+        float: none !important;
+        display: block !important;
     }
     
-    /* Fix any remaining spacing issues */
-    * {
+    #certification .certification-image {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        float: none !important;
+        display: block !important;
+    }
+    
+    /* Fix certification text alignment */
+    #certification h1.size-50 {
+        text-align: center !important;
+        margin-bottom: 15px !important;
+        font-size: 32px !important;
+        line-height: 36px !important;
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    #certification h4 {
+        text-align: center !important;
+        margin-left: 0 !important;
+        margin-bottom: 10px !important;
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    #certification h4:before {
+        display: none !important;
+    }
+    
+    /* Fix any remaining layout issues */
+    #certification * {
+        max-width: 100% !important;
         box-sizing: border-box !important;
     }
     
-    /* Ensure proper text flow */
-    h1, h2, h3, h4, h5, h6, p, div, span {
-        word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
-    }
-    
-    /* Fix any floating issues */
-    .clearfix::after {
-        content: "" !important;
-        display: table !important;
-        clear: both !important;
-    }
-    
-    /* Ensure proper container behavior */
-    .container, .container-fluid {
-        max-width: 100% !important;
+    /* Ensure proper grid layout */
+    #certification .portfolio_container {
+        display: block !important;
         width: 100% !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
+        float: none !important;
+    }
+    
+    #certification .portfolio_container .col-md-4,
+    #certification .portfolio_container .col-sm-6 {
+        width: 100% !important;
+        float: none !important;
+        display: block !important;
+        margin-bottom: 15px !important;
     }
 }
 
