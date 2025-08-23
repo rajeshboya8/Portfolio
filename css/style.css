@@ -2290,7 +2290,7 @@ fieldset {
         flex-shrink: 0;
     }
     
-    /* Fix mobile navigation positioning */
+    /* Fix mobile navigation positioning - ONLY for mobile */
     header {
         position: fixed;
         top: 0;
@@ -2301,12 +2301,12 @@ fieldset {
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
     
-    /* Add top margin to body to account for fixed header */
+    /* Add top margin to body to account for fixed header - ONLY for mobile */
     body {
         padding-top: 60px;
     }
     
-    /* Fix mobile menu toggle positioning */
+    /* Fix mobile menu toggle positioning - ONLY for mobile */
     .mobile-menu-toggle {
         position: fixed;
         top: 15px;
@@ -2314,7 +2314,7 @@ fieldset {
         z-index: 1001;
     }
     
-    /* Fix mobile navigation overlay */
+    /* Fix mobile navigation overlay - ONLY for mobile */
     nav ul {
         position: fixed;
         top: 0;
@@ -2450,7 +2450,198 @@ fieldset {
     }
 }
 
-/* Final Mobile Fixes and Improvements */
+/* Desktop Styles - Restore original layout */
+@media (min-width: 768px) {
+    /* Reset mobile-specific styles for desktop */
+    header {
+        position: static;
+        height: auto;
+    }
+    
+    body {
+        padding-top: 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+    
+    /* Restore original navigation for desktop */
+    nav ul {
+        position: static !important;
+        width: auto !important;
+        height: auto !important;
+        background: transparent !important;
+        flex-direction: row !important;
+        padding: 20px !important;
+        box-shadow: none !important;
+        overflow: visible !important;
+        right: auto !important;
+    }
+    
+    nav li {
+        margin: 10px !important;
+        width: auto !important;
+        display: inline-block !important;
+    }
+    
+    nav li a {
+        font-size: 11px !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border-radius: 0 !important;
+        display: inline !important;
+        width: auto !important;
+        color: #444 !important;
+    }
+    
+    nav li a:hover {
+        background: transparent !important;
+        color: #425BB5 !important;
+        transform: none !important;
+    }
+    
+    /* Restore original home section for desktop */
+    #home {
+        margin-top: 0;
+        padding-top: 40px;
+    }
+    
+    /* Restore original skills section for desktop */
+    .Skills {
+        margin-top: 30px;
+    }
+    
+    /* Restore original projects section for desktop */
+    #projects {
+        margin-top: 0;
+    }
+    
+    /* Restore original certifications section for desktop */
+    #certification {
+        margin-top: 0;
+    }
+    
+    /* Restore original education section for desktop */
+    #education {
+        margin-top: 0;
+    }
+    
+    /* Restore original contact section for desktop */
+    #contact {
+        margin-top: 0;
+    }
+    
+    /* Restore original button spacing for desktop */
+    #herobtn {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    /* Restore original profile picture for desktop */
+    #profilepic {
+        margin-top: 150px;
+        margin-left: 500px;
+        margin-bottom: 0;
+    }
+    
+    /* Restore original skills grid for desktop */
+    .Skills .container-skill .mainSkill {
+        margin-top: 30px;
+    }
+    
+    /* Restore original portfolio filter for desktop */
+    .portfolio_filter {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    /* Restore original portfolio items for desktop */
+    .portfolio_container {
+        margin-top: 0;
+    }
+    
+    /* Restore original certification items for desktop */
+    #certification .portfolio_container {
+        margin-top: 0;
+    }
+    
+    /* Restore original timeline for desktop */
+    .timeline {
+        margin-top: 0;
+    }
+    
+    /* Restore original contact form for desktop */
+    #contact-form {
+        margin-top: 0;
+    }
+    
+    /* Restore original social icons for desktop */
+    .social {
+        margin-top: 20px;
+        text-align: left;
+    }
+    
+    .social li {
+        float: left;
+        display: inline;
+        margin: 0 15px 0 0;
+    }
+    
+    .social li a {
+        font-size: 35px;
+        margin-right: 15px;
+    }
+    
+    /* Restore original section spacing for desktop */
+    .section {
+        padding: 100px 0;
+    }
+    
+    #skill-container,
+    #education,
+    #projects,
+    #experience,
+    #certification {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    
+    /* Restore original headings for desktop */
+    h1.size-50 {
+        font-size: 50px;
+        line-height: 50px;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    
+    h4 {
+        font-size: 18px;
+        margin-left: 40px;
+        text-align: left;
+    }
+    
+    /* Restore original preloader for desktop */
+    .preloader {
+        height: 40px;
+        width: 40px;
+        margin-top: -20px;
+        margin-left: -20px;
+    }
+    
+    .preloader:before {
+        border-width: 2px;
+    }
+    
+    .preloader > .icon {
+        height: 25px;
+        width: 10.6px;
+        margin-top: -12.5px;
+        margin-left: -5.3px;
+    }
+}
+
+/* Mobile-Specific Styles - Only for mobile devices */
 @media (max-width: 767px) {
     /* Fix for mobile viewport issues */
     html, body {
@@ -2849,4 +3040,196 @@ fieldset {
         padding-top: 40px !important;
         padding-bottom: 30px !important;
     }
+}
+
+/* Original Skills CSS - Restore the missing skills section */
+.Skills {
+    display: block;
+    width: 100%;
+}
+
+.Skills .container-skill {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    animation: moveUp 1s ease-in-out;
+    position: relative;
+}
+
+.Skills .container-skill .heading {
+    font-size: 42px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+    color: rgb(242, 243, 244);
+}
+
+.Skills .container-skill .heading h1 {
+    padding: 0%;
+    margin: 0%;
+}
+
+.Skills .container-skill .Text {
+    font-size: 18px;
+    text-align: center;
+    max-width: 500px;
+    color: rgb(177, 178, 179);
+}
+
+.Skills .container-skill .mainSkill {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.Skills .container-skill .mainSkill .front,
+.Skills .container-skill .mainSkill .back,
+.Skills .container-skill .mainSkill .tools {
+    width: 100%;
+    max-width: 500px;
+    background: rgb(255, 255, 255);
+    border: 0.1px solid rgb(0, 0, 0);
+    border-radius: 16px;
+    padding: 18px 36px;
+}
+
+.Skills .container-skill .mainSkill .front h2,
+.Skills .container-skill .mainSkill .back h2,
+.Skills .container-skill .mainSkill .tools h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0%;
+    padding: 0%;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.Skills .container-skill .mainSkill .box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.Skills .container-skill .mainSkill .front .frontSkill,
+.Skills .container-skill .mainSkill .back .backSkill,
+.Skills .container-skill .mainSkill .tools .toolsSkill {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.Skills .container-skill .mainSkill .front .box img {
+    width: 30px;
+    height: 30px;
+}
+
+.Skills .container-skill .mainSkill .back .box img {
+    width: 30px;
+    height: 30px;
+}
+
+.Skills .container-skill .mainSkill .tools .box img {
+    width: 30px;
+    height: 30px;
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Skills hover effects */
+.Skills .container-skill .mainSkill .front .frontSkill:hover,
+.Skills .container-skill .mainSkill .back .backSkill:hover,
+.Skills .container-skill .mainSkill .tools .toolsSkill:hover {
+    transform: translateY(-7px);
+    transition: all 0.3s ease;
+}
+
+/* Skills section spacing */
+#skill-container {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+/* Hero button styles */
+#herobtn {
+    display: flex;
+}
+
+#githubdiv {
+    margin-left: 30px;
+}
+
+/* Resume button styles */
+.resumediv {
+    margin-top: 25px;
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+    padding-top: 6px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    border: 1px solid black;
+    outline: none;
+}
+
+.resumediv a {
+    color: black;
+    text-decoration: none;
+}
+
+.resumediv:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #425BB5;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+    color: #fff;
+}
+
+.resumediv:hover a {
+    color: #fff;
+}
+
+.resumediv:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+.resumediv:active {
+    top: 2px;
 }
