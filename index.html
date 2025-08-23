@@ -75,7 +75,7 @@
             <h1>ServiceNow Developer</h1>
             <div id="herobtn">
             <div class="resumediv" id="resumediv">
-              <a class="resume" id="resume" href="https://drive.google.com/file/d/1nFbqlpuxE_A66TnrcmN3V7_uX93kmBwg/view?usp=drivesdk" target="_blank">View Resume</a>
+              <a class="resume" id="resume" href="https://drive.google.com/file/d/1oGjMIkzNkI5NgJmiD9xcDIrMbsu4tF_F/view?usp=drivesdk" target="_blank">View Resume</a>
             </div>
             <div class="resumediv" id="githubdiv">
               <a class="resume" id="github" href="https://github.com/rajeshboya8/" target="_blank">GitHub </a>
@@ -615,7 +615,6 @@
             class="contact-bg"
             id="contact-form"
             name="contact"
-            action="https://formsubmit.co/boyarajesh888@gmail.com"
             method="POST"
             novalidate="novalidate"
           >
@@ -643,6 +642,12 @@
               placeholder="Your Message"
               style="height: 120px"
             ></textarea>
+            
+            <!-- Hidden fields for FormSubmit configuration -->
+            <input type="hidden" name="_subject" value="Portfolio Contact Form Submission">
+            <input type="hidden" name="_next" value="">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
             <button
               id="submit"
               type="submit"
@@ -670,13 +675,15 @@
             form.addEventListener("submit", formSubmit);
 
             function formSubmit(e) {
+                e.preventDefault();
+                
                 // Check if required fields are empty
                 const name = e.target.name.value;
                 const email = e.target.email.value;
                 const message = e.target.message.value;
+                const phone = e.target.phone.value || 'Not provided';
                 
                 if (!name || !email || !message) {
-                    e.preventDefault();
                     alert("Please fill in all the required fields (name, email, and message).");
                     return;
                 }
@@ -684,17 +691,58 @@
                 // Check if email is valid
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailPattern.test(email)) {
-                    e.preventDefault();
                     alert("Please enter a valid email address.");
                     return;
                 }
 
-                // Show success message
-                $('#contact :input').attr('disabled', 'disabled');
-                $('#contact').fadeTo("slow", 1, function () {
-                    $(this).find(':input').attr('disabled', 'disabled');
-                    $(this).find('label').css('cursor', 'default');
-                    $('#success').fadeIn();
+                // Show loading state
+                $('#submit').text('Sending...').prop('disabled', true);
+
+                // Create form data
+                const formData = new FormData();
+                formData.append('name', name);
+                formData.append('email', email);
+                formData.append('phone', phone);
+                formData.append('message', message);
+                formData.append('_subject', `Portfolio Contact from ${name}`);
+                formData.append('_template', 'table');
+                formData.append('_captcha', 'false');
+
+                // Submit to FormSubmit
+                fetch('https://formsubmit.co/boyarajesh888@gmail.com', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    console.log('FormSubmit Response status:', response.status);
+                    if (response.ok || response.status === 200) {
+                        // Show success message
+                        $('#contact :input').attr('disabled', 'disabled');
+                        $('#contact').fadeTo("slow", 1, function () {
+                            $(this).find(':input').attr('disabled', 'disabled');
+                            $(this).find('label').css('cursor', 'default');
+                            $('#success').fadeIn();
+                        });
+                        
+                        // Reset form
+                        e.target.reset();
+                        
+                        // Reset button
+                        $('#submit').text('Send').prop('disabled', false);
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    console.log('Error:', error);
+                    
+                    // Show error message
+                    $('#contact').fadeTo("slow", 1, function () {
+                        $('#error').fadeIn();
+                    });
+                    
+                    // Reset button
+                    $('#submit').text('Send').prop('disabled', false);
                 });
             }
           </script>
