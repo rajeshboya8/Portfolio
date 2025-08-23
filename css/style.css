@@ -1680,3 +1680,43 @@ fieldset {
     display: flex;
     align-items: flex-end;
 }
+
+
+/* Mobile Home section overrides - only affect #home on mobile */
+
+@media (max-width: 768px) {
+    /* Remove hero background and fixed heights on mobile */
+    #home {
+        background: none !important;
+        background-image: none !important;
+        min-height: auto !important;
+        padding: 20px 0 !important;
+    }
+    #home,
+    #home .disply-table {
+        height: auto !important;
+    }
+    /* Small background box only around home content */
+    #home .disply-table {
+        background: rgba(66, 91, 181, 0.08);
+        /* semi-transparent theme color */
+        backdrop-filter: blur(2px);
+        /* subtle glass effect on supported devices */
+        -webkit-backdrop-filter: blur(2px);
+        border-radius: 12px;
+        padding: 16px;
+        max-width: 520px;
+        margin: 0 auto;
+    }
+    /* Remove any floating/alignment on mobile */
+    #home #profilediv,
+    #home .table-cell {
+        float: none !important;
+        text-align: center !important;
+    }
+    #home #profilepic {
+        float: none !important;
+        display: block;
+        margin: 12px auto 0 !important;
+    }
+}
