@@ -285,8 +285,10 @@ a.active {
     background: url(../img/home-bg-2.jpg);
     background-size: auto;
     height: auto;
-    min-height: 100vh;
-    padding: 40px 0 20px;
+    min-height: 80vh;
+    /* Adjusted for mobile view */
+    padding: 20px 0;
+    /* Reduced padding */
     display: flex;
     flex-direction: column;
     align-items: center;
