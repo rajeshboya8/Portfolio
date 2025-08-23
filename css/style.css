@@ -859,899 +859,129 @@ fieldset {
 /* Responsive media queries
 ==================================================*/
 
-/* Mobile First Approach - Start with mobile and scale up */
+@media (max-width: 991px) {
+    .portfolio .categories-grid .categories ul li a {
+        padding: 0 2px;
+    }
+}
 
-/* Extra Small Devices (phones, 320px and up) */
-@media (max-width: 575px) {
-    /* Typography */
+@media (max-width: 768px) {
+    .timeline-event-copy {
+        width: 90%;
+        left: 2em;
+    }
+}
+
+@media (max-width: 500px) {
     h1 {
-        font-size: 28px !important;
-        line-height: 32px !important;
+        font-family: 'Playfair Display', serif;
+        font-size: 50px;
+        line-height: 50px;
     }
-    
-    h1.size-50 {
-        font-size: 24px !important;
-        line-height: 28px !important;
+    #home,
+    .disply-table {
+        height: 600px;
     }
-    
-    h4 {
-        font-size: 14px !important;
-        margin-left: 20px !important;
-        letter-spacing: 1px !important;
+    .about-border {
+        width: 265px;
     }
-    
-    /* Navigation */
+    .portfolio .categories-grid .categories ul li {
+        list-style: none;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 431px) {
+    /* Mobile Navigation */
     nav ul {
-        padding: 10px 0 !important;
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 6px !important;
+        padding: 15px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
     }
-    
     nav li {
-        margin: 3px !important;
+        margin: 4px;
     }
-    
     nav li a {
-        font-size: 9px !important;
-        padding: 5px 8px !important;
-        background: rgba(66, 91, 181, 0.1) !important;
-        border-radius: 12px !important;
-        white-space: nowrap !important;
+        font-size: 10px;
+        padding: 6px 10px;
+        background: rgba(66, 91, 181, 0.1);
+        border-radius: 15px;
+        transition: all 0.3s ease;
     }
-    
+    nav li a:hover {
+        background: #425BB5;
+        color: white;
+    }
     /* Home Section */
     #home {
-        height: auto !important;
-        min-height: 100vh !important;
-        padding: 40px 0 20px !important;
+        height: auto;
+        min-height: 100vh;
+        padding: 60px 0 40px;
     }
-    
     .disply-table {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        height: auto !important;
-        padding: 20px 10px !important;
-        min-height: 80vh !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 20px 15px;
     }
-    
     .table-cell {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        width: 100% !important;
-        order: 1 !important;
-        padding: 0 !important;
-        margin: 0 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        order: 1;
     }
-    
     .table-cell h1 {
-        font-size: 24px !important;
-        line-height: 28px !important;
-        margin-bottom: 10px !important;
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 15px;
     }
-    
     .table-cell h4 {
-        font-size: 14px !important;
-        margin-left: 0 !important;
-        margin-bottom: 20px !important;
+        font-size: 18px;
+        margin-left: 0;
+        margin-bottom: 25px;
     }
-    
     #profilediv {
-        order: 2 !important;
-        width: 100% !important;
-        text-align: center !important;
-        margin-top: 20px !important;
+        order: 2;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
     }
-    
     #profilepic {
-        width: 200px !important;
-        height: auto !important;
-        margin: 0 auto !important;
-        display: block !important;
-        border-radius: 8px !important;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+        width: 280px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
-    
-    /* Hero Buttons */
     #herobtn {
-        flex-direction: column !important;
-        gap: 12px !important;
-        align-items: center !important;
-        margin-top: 20px !important;
-        width: 100% !important;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        margin-top: 25px;
     }
-    
     .resumediv {
-        width: 140px !important;
-        margin: 0 !important;
-        padding: 10px 16px !important;
-        font-size: 13px !important;
+        width: 160px;
+        margin-top: 0;
+        padding: 12px 20px;
+        font-size: 14px;
     }
-    
     #githubdiv {
-        margin-left: 0 !important;
-    }
-    
-    /* Skills Section */
-    .Skills .container-skill .heading h1 {
-        font-size: 28px !important;
-        line-height: 32px !important;
-    }
-    
-    .Skills .container-skill .Text {
-        font-size: 14px !important;
-        max-width: 100% !important;
-        padding: 0 15px !important;
-    }
-    
-    .Skills .container-skill .mainSkill {
-        flex-direction: column !important;
-        gap: 15px !important;
-        padding: 0 10px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front,
-    .Skills .container-skill .mainSkill .back,
-    .Skills .container-skill .mainSkill .tools {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 15px 20px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front h2,
-    .Skills .container-skill .mainSkill .back h2,
-    .Skills .container-skill .mainSkill .tools h2 {
-        font-size: 18px !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .box {
-        gap: 8px !important;
-        justify-content: center !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front .frontSkill,
-    .Skills .container-skill .mainSkill .back .backSkill,
-    .Skills .container-skill .mainSkill .tools .toolsSkill {
-        font-size: 11px !important;
-        padding: 8px 12px !important;
-        min-width: 100px !important;
-        flex: 0 0 auto !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front .box img,
-    .Skills .container-skill .mainSkill .back .box img,
-    .Skills .container-skill .mainSkill .tools .box img {
-        width: 20px !important;
-        height: 20px !important;
-    }
-    
-    /* Projects Section */
-    .portfolio_filter {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 8px !important;
-        padding: 0 10px !important;
-    }
-    
-    .portfolio_filter li {
-        margin: 3px !important;
-    }
-    
-    .portfolio_filter li a {
-        padding: 6px 12px !important;
-        font-size: 11px !important;
-        white-space: nowrap !important;
-    }
-    
-    .portfolio_container .col-md-4 {
-        width: 100% !important;
-        margin-bottom: 15px !important;
-        padding: 0 10px !important;
-    }
-    
-    .portfolio_item {
-        margin-bottom: 15px !important;
-    }
-    
-    .portfolio_item img {
-        height: 200px !important;
-    }
-    
-    /* Certifications Section */
-    #certification .portfolio_container .col-md-4 {
-        width: 100% !important;
-        margin-bottom: 15px !important;
-        padding: 0 10px !important;
-    }
-    
-    #certification .col-md-12:first-child {
-        margin-bottom: 20px !important;
-    }
-    
-    #certification .main-container {
-        margin-top: 20px !important;
-    }
-    
-    #certification .portfolio_container {
-        margin-top: 15px !important;
-    }
-    
-    .certification-image-container {
-        height: 200px !important;
-    }
-    
-    /* Education Section */
-    .timeline-event-copy {
-        width: 80% !important;
-        left: 1em !important;
-        padding: 1em !important;
-    }
-    
-    .timeline-event-copy h3 {
-        font-size: 1.2em !important;
-    }
-    
-    .timeline-event-copy h4 {
-        font-size: 1em !important;
-    }
-    
-    /* Contact Section */
-    #contact .col-md-4,
-    #contact .col-md-8 {
-        width: 100% !important;
-        margin-bottom: 20px !important;
-        padding: 0 10px !important;
-    }
-    
-    #contact-form input,
-    #contact-form textarea {
-        margin-bottom: 12px !important;
-    }
-    
-    /* Section Spacing */
-    #skill-container,
-    #education,
-    #projects,
-    #experience,
-    #certification {
-        padding-top: 40px !important;
-        padding-bottom: 30px !important;
-    }
-    
-    .section {
-        padding: 40px 0 !important;
+        margin-left: 0;
     }
 }
 
-/* Small Devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767px) {
-    /* Typography */
-    h1 {
-        font-size: 32px !important;
-        line-height: 36px !important;
-    }
-    
-    h1.size-50 {
-        font-size: 28px !important;
-        line-height: 32px !important;
-    }
-    
-    h4 {
-        font-size: 16px !important;
-        margin-left: 25px !important;
-    }
-    
-    /* Navigation */
-    nav ul {
-        padding: 12px 0 !important;
-        gap: 8px !important;
-    }
-    
-    nav li a {
-        font-size: 10px !important;
-        padding: 6px 10px !important;
-    }
-    
-    /* Home Section */
-    .disply-table {
-        padding: 30px 20px !important;
-        min-height: 85vh !important;
-    }
-    
-    .table-cell h1 {
-        font-size: 28px !important;
-        line-height: 32px !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .table-cell h4 {
-        font-size: 16px !important;
-        margin-bottom: 25px !important;
-    }
-    
-    #profilepic {
-        width: 250px !important;
-    }
-    
-    /* Hero Buttons */
-    #herobtn {
-        gap: 15px !important;
-    }
-    
-    .resumediv {
-        width: 150px !important;
-        padding: 12px 18px !important;
-        font-size: 14px !important;
-    }
-    
-    /* Skills Section */
-    .Skills .container-skill .heading h1 {
-        font-size: 32px !important;
-        line-height: 36px !important;
-    }
-    
-    .Skills .container-skill .Text {
-        font-size: 16px !important;
-        max-width: 100% !important;
-    }
-    
-    .Skills .container-skill .mainSkill {
-        gap: 20px !important;
-        padding: 0 15px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front,
-    .Skills .container-skill .mainSkill .back,
-    .Skills .container-skill .mainSkill .tools {
-        padding: 20px 25px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front h2,
-    .Skills .container-skill .mainSkill .back h2,
-    .Skills .container-skill .mainSkill .tools h2 {
-        font-size: 20px !important;
-        margin-bottom: 18px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front .frontSkill,
-    .Skills .container-skill .mainSkill .back .backSkill,
-    .Skills .container-skill .mainSkill .tools .toolsSkill {
-        font-size: 12px !important;
-        padding: 10px 14px !important;
-        min-width: 110px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front .box img,
-    .Skills .container-skill .mainSkill .back .box img,
-    .Skills .container-skill .mainSkill .tools .box img {
-        width: 25px !important;
-        height: 25px !important;
-    }
-    
-    /* Projects Section */
-    .portfolio_filter {
-        gap: 10px !important;
-        padding: 0 15px !important;
-    }
-    
-    .portfolio_filter li a {
-        padding: 8px 14px !important;
-        font-size: 12px !important;
-    }
-    
-    .portfolio_container .col-md-4 {
-        padding: 0 15px !important;
-        margin-bottom: 20px !important;
-    }
-    
-    .portfolio_item img {
-        height: 220px !important;
-    }
-    
-    /* Certifications Section */
-    #certification .portfolio_container .col-md-4 {
-        padding: 0 15px !important;
-        margin-bottom: 20px !important;
-    }
-    
-    .certification-image-container {
-        height: 220px !important;
-    }
-    
-    /* Section Spacing */
-    #skill-container,
-    #education,
-    #projects,
-    #experience,
-    #certification {
-        padding-top: 50px !important;
-        padding-bottom: 40px !important;
-    }
-    
-    .section {
-        padding: 50px 0 !important;
-    }
-}
-
-/* Medium Devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991px) {
-    /* Typography */
-    h1 {
-        font-size: 40px !important;
-        line-height: 44px !important;
-    }
-    
-    h1.size-50 {
-        font-size: 35px !important;
-        line-height: 40px !important;
-    }
-    
-    h4 {
-        font-size: 18px !important;
-        margin-left: 30px !important;
-    }
-    
-    /* Navigation */
-    nav ul {
-        padding: 15px 0 !important;
-        gap: 12px !important;
-    }
-    
-    nav li a {
-        font-size: 11px !important;
-        padding: 8px 12px !important;
-    }
-    
-    /* Home Section */
-    .disply-table {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        padding: 50px 30px !important;
-        min-height: 90vh !important;
-    }
-    
-    .table-cell {
-        text-align: left !important;
-        width: 50% !important;
-        order: 1 !important;
-        padding: 0 !important;
-    }
-    
-    #profilediv {
-        width: 50% !important;
-        text-align: center !important;
-        order: 2 !important;
-    }
-    
-    #profilepic {
-        width: 300px !important;
-        margin: 0 auto !important;
-    }
-    
-    /* Hero Buttons */
-    #herobtn {
-        flex-direction: row !important;
-        gap: 20px !important;
-        justify-content: flex-start !important;
-    }
-    
-    .resumediv {
-        width: 140px !important;
-        padding: 12px 20px !important;
-        font-size: 14px !important;
-    }
-    
-    /* Skills Section */
-    .Skills .container-skill .heading h1 {
-        font-size: 36px !important;
-        line-height: 40px !important;
-    }
-    
-    .Skills .container-skill .Text {
-        font-size: 17px !important;
-        max-width: 600px !important;
-    }
-    
-    .Skills .container-skill .mainSkill {
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        gap: 25px !important;
-        justify-content: center !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front,
-    .Skills .container-skill .mainSkill .back,
-    .Skills .container-skill .mainSkill .tools {
-        width: calc(50% - 12.5px) !important;
-        min-width: 280px !important;
-        padding: 25px 30px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front h2,
-    .Skills .container-skill .mainSkill .back h2,
-    .Skills .container-skill .mainSkill .tools h2 {
-        font-size: 22px !important;
-        margin-bottom: 20px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front .frontSkill,
-    .Skills .container-skill .mainSkill .back .backSkill,
-    .Skills .container-skill .mainSkill .tools .toolsSkill {
-        font-size: 13px !important;
-        padding: 12px 16px !important;
-        min-width: 120px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front .box img,
-    .Skills .container-skill .mainSkill .back .box img,
-    .Skills .container-skill .mainSkill .tools .box img {
-        width: 28px !important;
-        height: 28px !important;
-    }
-    
-    /* Projects Section */
-    .portfolio_filter {
-        gap: 15px !important;
-        padding: 0 20px !important;
-    }
-    
-    .portfolio_filter li a {
-        padding: 10px 16px !important;
-        font-size: 13px !important;
-    }
-    
-    .portfolio_container .col-md-4 {
-        width: 50% !important;
-        padding: 0 20px !important;
-        margin-bottom: 30px !important;
-    }
-    
-    .portfolio_item img {
-        height: 240px !important;
-    }
-    
-    /* Certifications Section */
-    #certification .portfolio_container .col-md-4 {
-        width: 50% !important;
-        padding: 0 20px !important;
-        margin-bottom: 25px !important;
-    }
-    
-    .certification-image-container {
-        height: 240px !important;
-    }
-    
-    /* Section Spacing */
-    #skill-container,
-    #education,
-    #projects,
-    #experience,
-    #certification {
-        padding-top: 60px !important;
-        padding-bottom: 50px !important;
-    }
-    
-    .section {
-        padding: 60px 0 !important;
-    }
-}
-
-/* Large Devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199px) {
-    /* Typography */
-    h1 {
-        font-size: 50px !important;
-        line-height: 54px !important;
-    }
-    
-    h1.size-50 {
-        font-size: 40px !important;
-        line-height: 45px !important;
-    }
-    
-    h4 {
-        font-size: 20px !important;
-        margin-left: 35px !important;
-    }
-    
-    /* Navigation */
-    nav ul {
-        padding: 18px 0 !important;
-        gap: 15px !important;
-    }
-    
-    nav li a {
-        font-size: 11px !important;
-        padding: 10px 15px !important;
-    }
-    
-    /* Home Section */
-    .disply-table {
-        padding: 60px 40px !important;
-        min-height: 95vh !important;
-    }
-    
-    .table-cell h1 {
-        font-size: 45px !important;
-        line-height: 50px !important;
-        margin-bottom: 20px !important;
-    }
-    
-    .table-cell h4 {
-        font-size: 20px !important;
-        margin-bottom: 30px !important;
-    }
-    
-    #profilepic {
-        width: 350px !important;
-    }
-    
-    /* Hero Buttons */
-    #herobtn {
-        gap: 25px !important;
-    }
-    
-    .resumediv {
-        width: 150px !important;
-        padding: 15px 25px !important;
-        font-size: 15px !important;
-    }
-    
-    /* Skills Section */
-    .Skills .container-skill .heading h1 {
-        font-size: 40px !important;
-        line-height: 44px !important;
-    }
-    
-    .Skills .container-skill .Text {
-        font-size: 18px !important;
-        max-width: 700px !important;
-    }
-    
-    .Skills .container-skill .mainSkill {
-        gap: 30px !important;
-        justify-content: center !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front,
-    .Skills .container-skill .mainSkill .back,
-    .Skills .container-skill .mainSkill .tools {
-        width: calc(33.33% - 20px) !important;
-        padding: 30px 35px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front h2,
-    .Skills .container-skill .mainSkill .back h2,
-    .Skills .container-skill .mainSkill .tools h2 {
-        font-size: 24px !important;
-        margin-bottom: 25px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front .frontSkill,
-    .Skills .container-skill .mainSkill .back .backSkill,
-    .Skills .container-skill .mainSkill .tools .toolsSkill {
-        font-size: 14px !important;
-        padding: 14px 18px !important;
-        min-width: 130px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front .box img,
-    .Skills .container-skill .mainSkill .back .box img,
-    .Skills .container-skill .mainSkill .tools .box img {
-        width: 30px !important;
-        height: 30px !important;
-    }
-    
-    /* Projects Section */
-    .portfolio_filter {
-        gap: 20px !important;
-        padding: 0 25px !important;
-    }
-    
-    .portfolio_filter li a {
-        padding: 12px 18px !important;
-        font-size: 14px !important;
-    }
-    
-    .portfolio_container .col-md-4 {
-        width: 33.33% !important;
-        padding: 0 25px !important;
-        margin-bottom: 40px !important;
-    }
-    
-    .portfolio_item img {
-        height: 260px !important;
-    }
-    
-    /* Certifications Section */
-    #certification .portfolio_container .col-md-4 {
-        width: 33.33% !important;
-        padding: 0 25px !important;
-        margin-bottom: 30px !important;
-    }
-    
-    .certification-image-container {
-        height: 260px !important;
-    }
-    
-    /* Section Spacing */
-    #skill-container,
-    #education,
-    #projects,
-    #experience,
-    #certification {
-        padding-top: 80px !important;
-        padding-bottom: 60px !important;
-    }
-    
-    .section {
-        padding: 80px 0 !important;
-    }
-}
-
-/* Extra Large Devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    /* Typography */
-    h1 {
-        font-size: 80px !important;
-        line-height: 70px !important;
-    }
-    
-    h1.size-50 {
-        font-size: 50px !important;
-        line-height: 50px !important;
-    }
-    
-    h4 {
-        font-size: 22px !important;
-        margin-left: 40px !important;
-    }
-    
-    /* Navigation */
-    nav ul {
-        padding: 20px !important;
-        gap: 20px !important;
-    }
-    
-    nav li a {
-        font-size: 11px !important;
-        padding: 12px 20px !important;
-    }
-    
-    /* Home Section */
-    .disply-table {
-        padding: 80px 50px !important;
-        min-height: 100vh !important;
-    }
-    
-    .table-cell h1 {
-        font-size: 80px !important;
-        line-height: 70px !important;
-        margin-bottom: 30px !important;
-    }
-    
-    .table-cell h4 {
-        font-size: 22px !important;
-        margin-bottom: 40px !important;
-    }
-    
-    #profilepic {
-        width: 400px !important;
-    }
-    
-    /* Hero Buttons */
-    #herobtn {
-        gap: 30px !important;
-    }
-    
-    .resumediv {
-        width: 160px !important;
-        padding: 15px 30px !important;
-        font-size: 16px !important;
-    }
-    
-    /* Skills Section */
-    .Skills .container-skill .heading h1 {
-        font-size: 42px !important;
-        line-height: 46px !important;
-    }
-    
-    .Skills .container-skill .Text {
-        font-size: 18px !important;
-        max-width: 800px !important;
-    }
-    
-    .Skills .container-skill .mainSkill {
-        gap: 40px !important;
-        justify-content: center !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front,
-    .Skills .container-skill .mainSkill .back,
-    .Skills .container-skill .mainSkill .tools {
-        width: calc(33.33% - 27px) !important;
-        padding: 35px 40px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front h2,
-    .Skills .container-skill .mainSkill .back h2,
-    .Skills .container-skill .mainSkill .tools h2 {
-        font-size: 24px !important;
-        margin-bottom: 30px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front .frontSkill,
-    .Skills .container-skill .mainSkill .back .backSkill,
-    .Skills .container-skill .mainSkill .tools .toolsSkill {
-        font-size: 14px !important;
-        padding: 16px 20px !important;
-        min-width: 140px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front .box img,
-    .Skills .container-skill .mainSkill .back .box img,
-    .Skills .container-skill .mainSkill .tools .box img {
-        width: 30px !important;
-        height: 30px !important;
-    }
-    
-    /* Projects Section */
-    .portfolio_filter {
-        gap: 25px !important;
-        padding: 0 30px !important;
-    }
-    
-    .portfolio_filter li a {
-        padding: 15px 20px !important;
-        font-size: 14px !important;
-    }
-    
-    .portfolio_container .col-md-4 {
-        width: 33.33% !important;
-        padding: 0 30px !important;
-        margin-bottom: 50px !important;
-    }
-    
-    .portfolio_item img {
-        height: 280px !important;
-    }
-    
-    /* Certifications Section */
-    #certification .portfolio_container .col-md-4 {
-        width: 33.33% !important;
-        padding: 0 30px !important;
-        margin-bottom: 40px !important;
-    }
-    
-    .certification-image-container {
-        height: 280px !important;
-    }
-    
-    /* Section Spacing */
-    #skill-container,
-    #education,
-    #projects,
-    #experience,
-    #certification {
-        padding-top: 100px !important;
-        padding-bottom: 80px !important;
-    }
-    
-    .section {
-        padding: 100px 0 !important;
-    }
-}
 
 /* Mobile Menu Toggle */
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -1787,1419 +1017,368 @@ fieldset {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* Mobile Navigation Overlay */
-@media (max-width: 767px) {
+
+/* Mobile Responsive Fixes */
+
+@media (max-width: 768px) {
+    /* Mobile Menu Toggle */
     .mobile-menu-toggle {
         display: flex;
     }
-    
+    /* Navigation */
     nav ul {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%;
+        width: 70%;
         height: 100vh;
         background: white;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 80px 20px;
+        padding: 60px 20px;
         transition: right 0.3s ease;
         z-index: 999;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     }
-    
     nav ul.active {
         right: 0;
     }
-    
     nav li {
-        margin: 20px 0;
+        margin: 15px 0;
         width: 100%;
         text-align: center;
     }
-    
     nav li a {
         font-size: 16px !important;
-        padding: 15px 25px !important;
+        padding: 12px 20px !important;
         display: block;
         width: 100%;
         background: rgba(66, 91, 181, 0.1) !important;
-        border-radius: 10px;
+        border-radius: 8px;
         transition: all 0.3s ease;
     }
-    
     nav li a:hover {
         background: #425BB5 !important;
         color: white !important;
         transform: translateX(-5px);
     }
-}
-
-/* Container Responsiveness */
-@media (max-width: 767px) {
+    /* General mobile fixes */
     .container {
         padding: 0 15px;
     }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .container {
-        padding: 0 30px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        padding: 0 50px;
-    }
-}
-
-/* Timeline Responsiveness */
-@media (max-width: 767px) {
-    .timeline:before {
-        left: 1em;
-    }
-    
-    .timeline-event-icon {
-        left: 1em;
-    }
-    
-    .timeline-event-copy {
-        left: 2em;
-        width: 85%;
-    }
-}
-
-/* Portfolio Hover Effects Mobile Optimization */
-@media (max-width: 767px) {
-    .portfolio_item .portfolio_item_hover {
-        position: relative;
-        transform: none;
-        opacity: 1;
-        background-color: rgba(66, 91, 181, 0.9);
-        height: auto;
-        padding: 15px;
-    }
-    
-    .portfolio_item .portfolio_item_hover .item_info {
-        position: relative;
-        transform: none;
-        top: auto;
-        left: auto;
-        padding: 10px;
-    }
-    
-    .portfolio_item .portfolio_item_hover .item_info span,
-    .portfolio_item .portfolio_item_hover .item_info em {
-        transform: none;
-        opacity: 1;
-    }
-}
-
-/* Button Hover Effects Mobile */
-@media (max-width: 767px) {
-    .resumediv:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(66, 91, 181, 0.3);
-    }
-    
-    .resumediv:active {
-        transform: translateY(0);
-    }
-}
-
-/* Skills Hover Effects Mobile */
-@media (max-width: 767px) {
-    .Skills .container-skill .mainSkill .front .frontSkill:hover,
-    .Skills .container-skill .mainSkill .back .backSkill:hover,
-    .Skills .container-skill .mainSkill .tools .toolsSkill:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-}
-
-/* Certification Hover Effects Mobile */
-@media (max-width: 767px) {
-    .certification-image-container:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-    }
-    
-    .certification-image-container:hover .certification-image {
-        transform: scale(1.02);
-    }
-}
-
-/* Additional Mobile Optimizations */
-@media (max-width: 767px) {
-    /* Fix for mobile navigation overlay */
-    header {
-        height: 60px;
-    }
-    
-    /* Ensure proper spacing for mobile */
-    .section {
-        padding: 30px 0;
-    }
-    
-    /* Fix for mobile portfolio grid */
-    .portfolio_container {
-        margin: 0 -10px;
-    }
-    
-    /* Mobile-specific button improvements */
-    .resumediv {
-        border-radius: 8px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-    }
-    
-    /* Mobile skills grid improvements */
-    .Skills .container-skill .mainSkill .box {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    /* Mobile certification improvements */
-    #certification .portfolio_item {
-        height: auto;
-        min-height: 280px;
-    }
-    
-    /* Mobile timeline improvements */
-    .timeline-event {
-        margin-bottom: 30px;
-    }
-    
-    /* Mobile contact form improvements */
-    #contact-form input,
-    #contact-form textarea {
-        border-radius: 8px;
-        border: 1px solid #ddd;
-        padding: 12px 15px;
-    }
-    
-    #submit {
-        border-radius: 8px;
-        font-weight: 600;
-        letter-spacing: 1px;
-    }
-    
-    /* Mobile social icons improvements */
-    .social li a {
-        font-size: 28px;
-        margin-right: 12px;
-    }
-    
-    /* Mobile preloader improvements */
-    .preloader {
-        height: 35px;
-        width: 35px;
-        margin-top: -17.5px;
-        margin-left: -17.5px;
-    }
-    
-    .preloader:before {
-        border-width: 2px;
-    }
-    
-    .preloader > .icon {
-        height: 22px;
-        width: 9.3px;
-        margin-top: -11px;
-        margin-left: -4.65px;
-    }
-}
-
-/* Extra Small Mobile Optimizations */
-@media (max-width: 480px) {
-    /* Even smaller mobile improvements */
-    .Skills .container-skill .mainSkill .front,
-    .Skills .container-skill .mainSkill .back,
-    .Skills .container-skill .mainSkill .tools {
-        padding: 12px 15px;
-    }
-    
-    .Skills .container-skill .mainSkill .front h2,
-    .Skills .container-skill .mainSkill .back h2,
-    .Skills .container-skill .mainSkill .tools h2 {
-        font-size: 16px;
-        margin-bottom: 12px;
-    }
-    
-    .Skills .container-skill .mainSkill .front .frontSkill,
-    .Skills .container-skill .mainSkill .back .backSkill,
-    .Skills .container-skill .mainSkill .tools .toolsSkill {
-        font-size: 10px;
-        padding: 6px 10px;
-        min-width: 90px;
-    }
-    
-    .Skills .container-skill .mainSkill .front .box img,
-    .Skills .container-skill .mainSkill .back .box img,
-    .Skills .container-skill .mainSkill .tools .box img {
-        width: 18px;
-        height: 18px;
-    }
-    
-    /* Portfolio filter improvements for very small screens */
-    .portfolio_filter {
-        gap: 6px;
-        padding: 0 8px;
-    }
-    
-    .portfolio_filter li a {
-        padding: 5px 10px;
-        font-size: 10px;
-    }
-    
-    /* Profile picture size for very small screens */
-    #profilepic {
-        width: 180px;
-    }
-    
-    /* Button size adjustments */
-    .resumediv {
-        width: 130px;
-        padding: 8px 14px;
-        font-size: 12px;
-    }
-    
-    /* Section spacing for very small screens */
-    .section {
-        padding: 25px 0;
-    }
-    
-    #skill-container,
-    #education,
-    #projects,
-    #experience,
-    #certification {
-        padding-top: 30px;
-        padding-bottom: 25px;
-    }
-}
-
-/* Landscape Mobile Optimizations */
-@media (max-width: 767px) and (orientation: landscape) {
-    /* Landscape mobile specific fixes */
+    /* Home section mobile */
     #home {
+        height: auto;
         min-height: 100vh;
         padding: 20px 0;
     }
-    
     .disply-table {
-        min-height: 100vh;
-        padding: 15px 20px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
     }
-    
-    .table-cell h1 {
-        font-size: 22px;
-        line-height: 26px;
-        margin-bottom: 8px;
+    .table-cell {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
     }
-    
-    .table-cell h4 {
-        font-size: 13px;
+    #profilepic {
+        width: 250px;
+        height: auto;
+        margin: 20px auto;
+        display: block;
+        order: 2;
+    }
+    #profilediv {
+        order: 2;
+        width: 100%;
+        text-align: center;
+    }
+    /* Skills section mobile */
+    .Skills .container-skill .mainSkill {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .Skills .container-skill .mainSkill .front,
+    .Skills .container-skill .mainSkill .back,
+    .Skills .container-skill .mainSkill .tools {
+        width: 100%;
+        max-width: 100%;
+    }
+    .Skills .container-skill .mainSkill .box {
+        gap: 8px;
+        justify-content: center;
+    }
+    .Skills .container-skill .mainSkill .front .frontSkill,
+    .Skills .container-skill .mainSkill .back .backSkill,
+    .Skills .container-skill .mainSkill .tools .toolsSkill {
+        font-size: 12px;
+        padding: 8px 12px;
+        min-width: 120px;
+    }
+    /* Projects section mobile */
+    .portfolio_filter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .portfolio_filter li {
+        margin: 5px;
+    }
+    .portfolio_filter li a {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .portfolio_container .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    /* Certifications section mobile */
+    #certification .portfolio_container .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    /* Contact section mobile */
+    #contact .col-md-4,
+    #contact .col-md-8 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .contact-bg input,
+    .contact-bg textarea {
         margin-bottom: 15px;
     }
-    
-    #profilepic {
-        width: 160px;
-    }
-    
-    /* Skills landscape optimization */
-    .Skills .container-skill .mainSkill {
-        gap: 12px;
-    }
-    
-    .Skills .container-skill .mainSkill .front,
-    .Skills .container-skill .mainSkill .back,
-    .Skills .container-skill .mainSkill .tools {
-        padding: 12px 18px;
-    }
-    
-    /* Section spacing for landscape */
-    .section {
-        padding: 25px 0;
-    }
-    
-    #skill-container,
-    #education,
-    #projects,
-    #experience,
-    #certification {
-        padding-top: 30px;
-        padding-bottom: 25px;
-    }
-}
-
-/* High DPI Mobile Device Optimizations */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    /* High DPI mobile improvements */
-    .Skills .container-skill .mainSkill .front .frontSkill,
-    .Skills .container-skill .mainSkill .back .backSkill,
-    .Skills .container-skill .mainSkill .tools .toolsSkill {
-        border-width: 0.5px;
-    }
-    
-    .portfolio_item img {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-    }
-    
-    .certification-image {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-    }
-}
-
-/* Touch Device Optimizations */
-@media (hover: none) and (pointer: coarse) {
-    /* Touch device specific improvements */
-    .resumediv:hover {
-        transform: none;
-        box-shadow: none;
-    }
-    
-    .Skills .container-skill .mainSkill .front .frontSkill:hover,
-    .Skills .container-skill .mainSkill .back .backSkill:hover,
-    .Skills .container-skill .mainSkill .tools .toolsSkill:hover {
-        transform: none;
-        box-shadow: none;
-    }
-    
-    .certification-image-container:hover {
-        transform: none;
-        box-shadow: none;
-    }
-    
-    .certification-image-container:hover .certification-image {
-        transform: none;
-    }
-    
-    /* Increase touch targets */
-    nav li a {
-        min-height: 44px;
-        min-width: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .resumediv {
-        min-height: 44px;
-        min-width: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .Skills .container-skill .mainSkill .front .frontSkill,
-    .Skills .container-skill .mainSkill .back .backSkill,
-    .Skills .container-skill .mainSkill .tools .toolsSkill {
-        min-height: 44px;
-        min-width: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .portfolio_filter li a {
-        min-height: 44px;
-        min-width: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-/* Mobile Layout Fixes */
-@media (max-width: 767px) {
-    /* Fix horizontal scrolling issues */
-    body {
-        overflow-x: hidden;
-        width: 100%;
-    }
-    
-    .container {
-        overflow-x: hidden;
-        width: 100%;
-    }
-    
-    /* Fix text wrapping issues */
-    h1, h4, p, span, div {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-    
-    /* Fix navigation overflow */
-    nav {
-        overflow: hidden;
-    }
-    
-    nav ul {
-        overflow: hidden;
-    }
-    
-    /* Fix skills grid overflow */
-    .Skills .container-skill .mainSkill {
-        overflow: hidden;
-    }
-    
-    .Skills .container-skill .mainSkill .box {
-        overflow: hidden;
-    }
-    
-    /* Fix portfolio overflow */
-    .portfolio_container {
-        overflow: hidden;
-    }
-    
-    .portfolio_item {
-        overflow: hidden;
-    }
-    
-    /* Fix certification overflow */
-    #certification .portfolio_container {
-        overflow: hidden;
-    }
-    
-    /* Fix timeline overflow */
-    .timeline {
-        overflow: hidden;
-    }
-    
-    /* Fix contact form overflow */
-    #contact-form {
-        overflow: hidden;
-    }
-    
-    /* Ensure proper box sizing */
-    * {
-        box-sizing: border-box;
-    }
-    
-    /* Fix flexbox issues on mobile */
-    .disply-table {
-        flex-shrink: 0;
-    }
-    
-    .table-cell {
-        flex-shrink: 0;
-    }
-    
-    /* Fix mobile navigation positioning - ONLY for mobile */
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        background: white;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Add top margin to body to account for fixed header - ONLY for mobile */
-    body {
-        padding-top: 60px;
-    }
-    
-    /* Fix mobile menu toggle positioning - ONLY for mobile */
-    .mobile-menu-toggle {
-        position: fixed;
-        top: 15px;
-        right: 15px;
-        z-index: 1001;
-    }
-    
-    /* Fix mobile navigation overlay - ONLY for mobile */
-    nav ul {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        height: 100vh;
-        background: white;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 80px 20px;
-        transition: right 0.3s ease;
-        z-index: 999;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        overflow-y: auto;
-    }
-    
-    /* Fix mobile navigation active state */
-    nav ul.active {
-        right: 0;
-    }
-    
-    /* Fix mobile navigation items */
-    nav li {
-        margin: 20px 0;
-        width: 100%;
-        text-align: center;
-        list-style: none;
-    }
-    
-    nav li a {
-        font-size: 16px !important;
-        padding: 15px 25px !important;
-        display: block;
-        width: 100%;
-        background: rgba(66, 91, 181, 0.1) !important;
-        border-radius: 10px;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        color: #444;
-    }
-    
-    nav li a:hover {
-        background: #425BB5 !important;
-        color: white !important;
-        transform: translateX(-5px);
-    }
-    
-    /* Fix mobile home section */
-    #home {
-        margin-top: 0;
-        padding-top: 80px;
-    }
-    
-    /* Fix mobile skills section */
-    .Skills {
-        margin-top: 0;
-    }
-    
-    /* Fix mobile projects section */
-    #projects {
-        margin-top: 0;
-    }
-    
-    /* Fix mobile certifications section */
-    #certification {
-        margin-top: 0;
-    }
-    
-    /* Fix mobile education section */
-    #education {
-        margin-top: 0;
-    }
-    
-    /* Fix mobile contact section */
-    #contact {
-        margin-top: 0;
-    }
-    
-    /* Fix mobile button spacing */
-    #herobtn {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    
-    /* Fix mobile profile picture */
-    #profilepic {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    
-    /* Fix mobile skills grid */
-    .Skills .container-skill .mainSkill {
-        margin-top: 20px;
-    }
-    
-    /* Fix mobile portfolio filter */
-    .portfolio_filter {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    
-    /* Fix mobile portfolio items */
-    .portfolio_container {
-        margin-top: 20px;
-    }
-    
-    /* Fix mobile certification items */
-    #certification .portfolio_container {
-        margin-top: 20px;
-    }
-    
-    /* Fix mobile timeline */
-    .timeline {
-        margin-top: 20px;
-    }
-    
-    /* Fix mobile contact form */
-    #contact-form {
-        margin-top: 20px;
-    }
-    
-    /* Fix mobile social icons */
-    .social {
-        margin-top: 20px;
-        text-align: center;
-    }
-    
-    .social li {
-        float: none;
-        display: inline-block;
-        margin: 0 10px;
-    }
-}
-
-/* Desktop Styles - Restore original layout */
-@media (min-width: 768px) {
-    /* Reset mobile-specific styles for desktop */
-    header {
-        position: static;
-        height: auto;
-    }
-    
-    body {
-        padding-top: 0;
-    }
-    
-    .mobile-menu-toggle {
-        display: none !important;
-    }
-    
-    /* Restore original navigation for desktop */
-    nav ul {
-        position: static !important;
-        width: auto !important;
-        height: auto !important;
-        background: transparent !important;
-        flex-direction: row !important;
-        padding: 20px !important;
-        box-shadow: none !important;
-        overflow: visible !important;
-        right: auto !important;
-    }
-    
-    nav li {
-        margin: 10px !important;
-        width: auto !important;
-        display: inline-block !important;
-    }
-    
-    nav li a {
-        font-size: 11px !important;
-        padding: 0 !important;
-        background: transparent !important;
-        border-radius: 0 !important;
-        display: inline !important;
-        width: auto !important;
-        color: #444 !important;
-    }
-    
-    nav li a:hover {
-        background: transparent !important;
-        color: #425BB5 !important;
-        transform: none !important;
-    }
-    
-    /* Restore original home section for desktop */
-    #home {
-        margin-top: 0;
-        padding-top: 40px;
-    }
-    
-    /* Restore original skills section for desktop */
-    .Skills {
-        margin-top: 30px;
-    }
-    
-    /* Restore original projects section for desktop */
-    #projects {
-        margin-top: 0;
-    }
-    
-    /* Restore original certifications section for desktop */
-    #certification {
-        margin-top: 0;
-    }
-    
-    /* Restore original education section for desktop */
-    #education {
-        margin-top: 0;
-    }
-    
-    /* Restore original contact section for desktop */
-    #contact {
-        margin-top: 0;
-    }
-    
-    /* Restore original button spacing for desktop */
-    #herobtn {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-    
-    /* Restore original profile picture for desktop */
-    #profilepic {
-        margin-top: 150px;
-        margin-left: 500px;
-        margin-bottom: 0;
-    }
-    
-    /* Restore original skills grid for desktop */
-    .Skills .container-skill .mainSkill {
-        margin-top: 30px;
-    }
-    
-    /* Restore original portfolio filter for desktop */
-    .portfolio_filter {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-    
-    /* Restore original portfolio items for desktop */
-    .portfolio_container {
-        margin-top: 0;
-    }
-    
-    /* Restore original certification items for desktop */
-    #certification .portfolio_container {
-        margin-top: 0;
-    }
-    
-    /* Restore original timeline for desktop */
-    .timeline {
-        margin-top: 0;
-    }
-    
-    /* Restore original contact form for desktop */
-    #contact-form {
-        margin-top: 0;
-    }
-    
-    /* Restore original social icons for desktop */
-    .social {
-        margin-top: 20px;
-        text-align: left;
-    }
-    
-    .social li {
-        float: left;
-        display: inline;
-        margin: 0 15px 0 0;
-    }
-    
-    .social li a {
-        font-size: 35px;
-        margin-right: 15px;
-    }
-    
-    /* Restore original section spacing for desktop */
-    .section {
-        padding: 100px 0;
-    }
-    
-    #skill-container,
-    #education,
-    #projects,
-    #experience,
-    #certification {
-        padding-top: 60px;
-        padding-bottom: 40px;
-    }
-    
-    /* Restore original headings for desktop */
+    /* Education section mobile */
+    .timeline-event-copy {
+        width: 85%;
+        left: 1.5em;
+    }
+    /* Section headings mobile */
     h1.size-50 {
-        font-size: 50px;
-        line-height: 50px;
-        text-align: left;
-        margin-bottom: 0;
+        font-size: 35px;
+        line-height: 40px;
     }
-    
     h4 {
-        font-size: 18px;
-        margin-left: 40px;
-        text-align: left;
+        font-size: 14px;
+        margin-left: 20px;
     }
-    
-    /* Restore original preloader for desktop */
-    .preloader {
-        height: 40px;
-        width: 40px;
-        margin-top: -20px;
-        margin-left: -20px;
+    /* Button fixes */
+    #herobtn {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
-    
-    .preloader:before {
-        border-width: 2px;
+    #githubdiv {
+        margin-left: 0;
     }
-    
-    .preloader > .icon {
-        height: 25px;
-        width: 10.6px;
-        margin-top: -12.5px;
-        margin-left: -5.3px;
+    .resumediv {
+        width: 150px;
+        text-align: center;
+    }
+    /* Certification section mobile fixes */
+    #certification .col-md-12:first-child {
+        margin-bottom: 15px !important;
+    }
+    #certification .main-container {
+        margin-top: 15px !important;
+    }
+    #certification .portfolio_container {
+        margin-top: 10px !important;
+    }
+    #certification .portfolio_container .col-md-4 {
+        margin-bottom: 15px !important;
     }
 }
 
-/* Mobile-Specific Styles - Only for mobile devices */
-@media (max-width: 767px) {
-    /* Fix for mobile viewport issues */
-    html, body {
-        -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
-        text-size-adjust: 100%;
+@media (max-width: 480px) {
+    /* Extra small devices */
+    h1.size-50 {
+        font-size: 28px;
+        line-height: 32px;
     }
-    
-    /* Fix for mobile tap highlights */
-    * {
-        -webkit-tap-highlight-color: transparent;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-    
-    /* Allow text selection for content */
-    p, h1, h2, h3, h4, h5, h6, span, div {
-        -webkit-user-select: text;
-        -khtml-user-select: text;
-        -moz-user-select: text;
-        -ms-user-select: text;
-        user-select: text;
-    }
-    
-    /* Fix for mobile input zoom */
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    input[type="tel"],
-    textarea {
-        font-size: 16px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border-radius: 8px;
-    }
-    
-    /* Fix for mobile button appearance */
-    button, input[type="submit"], input[type="button"] {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border-radius: 8px;
-    }
-    
-    /* Fix for mobile image scaling */
-    img {
-        max-width: 100%;
-        height: auto;
-        -webkit-user-drag: none;
-        -khtml-user-drag: none;
-        -moz-user-drag: none;
-        -o-user-drag: none;
-        user-drag: none;
-    }
-    
-    /* Fix for mobile table layout */
-    .disply-table {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        height: auto !important;
-        min-height: 80vh !important;
-        padding: 20px 15px !important;
-    }
-    
-    /* Fix for mobile profile picture positioning */
-    #profilediv {
-        order: 2 !important;
-        width: 100% !important;
-        text-align: center !important;
-        margin-top: 20px !important;
-        margin-bottom: 20px !important;
-    }
-    
-    #profilepic {
-        width: 250px !important;
-        height: auto !important;
-        margin: 0 auto !important;
-        display: block !important;
-        border-radius: 8px !important;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
-        max-width: 100% !important;
-    }
-    
-    /* Fix for mobile hero buttons */
-    #herobtn {
-        flex-direction: column !important;
-        gap: 15px !important;
-        align-items: center !important;
-        justify-content: center !important;
-        margin-top: 20px !important;
-        margin-bottom: 20px !important;
-        width: 100% !important;
-    }
-    
-    .resumediv {
-        width: 160px !important;
-        margin: 0 !important;
-        padding: 12px 20px !important;
-        font-size: 14px !important;
-        text-align: center !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        min-height: 44px !important;
-    }
-    
-    #githubdiv {
-        margin-left: 0 !important;
-    }
-    
-    /* Fix for mobile skills section */
-    .Skills .container-skill .mainSkill {
-        flex-direction: column !important;
-        gap: 20px !important;
-        padding: 0 15px !important;
-        margin-top: 20px !important;
-    }
-    
-    .Skills .container-skill .mainSkill .front,
-    .Skills .container-skill .mainSkill .back,
-    .Skills .container-skill .mainSkill .tools {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 20px 25px !important;
-        margin: 0 !important;
-    }
-    
-    .Skills .container-skill .mainSkill .box {
-        gap: 10px !important;
-        justify-content: center !important;
-        flex-wrap: wrap !important;
-    }
-    
     .Skills .container-skill .mainSkill .front .frontSkill,
     .Skills .container-skill .mainSkill .back .backSkill,
     .Skills .container-skill .mainSkill .tools .toolsSkill {
-        font-size: 12px !important;
-        padding: 10px 14px !important;
-        min-width: 120px !important;
-        flex: 0 0 auto !important;
-        min-height: 44px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
+        font-size: 11px;
+        padding: 6px 10px;
+        min-width: 100px;
     }
-    
-    /* Fix for mobile portfolio section */
-    .portfolio_filter {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 10px !important;
-        padding: 0 15px !important;
-        margin-top: 20px !important;
-        margin-bottom: 20px !important;
-    }
-    
-    .portfolio_filter li {
-        margin: 5px !important;
-        list-style: none !important;
-    }
-    
     .portfolio_filter li a {
-        padding: 8px 16px !important;
-        font-size: 12px !important;
-        white-space: nowrap !important;
-        min-height: 44px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
+        font-size: 11px;
+        padding: 4px 8px;
     }
-    
-    .portfolio_container {
-        margin: 0 -10px !important;
-        margin-top: 20px !important;
+    #profilepic {
+        width: 200px;
     }
-    
-    .portfolio_container .col-md-4 {
-        width: 100% !important;
-        margin-bottom: 20px !important;
-        padding: 0 15px !important;
+    .table-cell h1 {
+        font-size: 25px;
     }
-    
-    .portfolio_item {
-        margin-bottom: 20px !important;
-        overflow: hidden !important;
+    .table-cell h4 {
+        font-size: 16px;
     }
-    
-    .portfolio_item img {
-        height: 220px !important;
-        width: 100% !important;
-        object-fit: cover !important;
-        border-radius: 8px !important;
-    }
-    
-    /* Fix for mobile certifications section */
-    #certification .portfolio_container .col-md-4 {
-        width: 100% !important;
-        margin-bottom: 20px !important;
-        padding: 0 15px !important;
-    }
-    
+    /* Extra small certification fixes */
     #certification .col-md-12:first-child {
         margin-bottom: 20px !important;
     }
-    
     #certification .main-container {
         margin-top: 20px !important;
     }
-    
     #certification .portfolio_container {
-        margin-top: 20px !important;
-    }
-    
-    .certification-image-container {
-        height: 220px !important;
-        border-radius: 8px !important;
-        overflow: hidden !important;
-    }
-    
-    /* Fix for mobile education section */
-    .timeline-event-copy {
-        width: 85% !important;
-        left: 1.5em !important;
-        padding: 1.5em !important;
-    }
-    
-    .timeline-event-copy h3 {
-        font-size: 1.3em !important;
-        margin-bottom: 10px !important;
-    }
-    
-    .timeline-event-copy h4 {
-        font-size: 1.1em !important;
-        margin-bottom: 15px !important;
-    }
-    
-    /* Fix for mobile contact section */
-    #contact .col-md-4,
-    #contact .col-md-8 {
-        width: 100% !important;
-        margin-bottom: 25px !important;
-        padding: 0 15px !important;
-    }
-    
-    #contact-form input,
-    #contact-form textarea {
-        margin-bottom: 15px !important;
-        border-radius: 8px !important;
-        border: 1px solid #ddd !important;
-        padding: 12px 15px !important;
-        font-size: 16px !important;
-    }
-    
-    #submit {
-        border-radius: 8px !important;
-        font-weight: 600 !important;
-        letter-spacing: 1px !important;
-        min-height: 44px !important;
-    }
-    
-    /* Fix for mobile social icons */
-    .social {
-        margin-top: 25px !important;
-        text-align: center !important;
-        padding: 0 !important;
-    }
-    
-    .social li {
-        float: none !important;
-        display: inline-block !important;
-        margin: 0 15px !important;
-        list-style: none !important;
-    }
-    
-    .social li a {
-        font-size: 30px !important;
-        margin-right: 0 !important;
-        color: #333 !important;
-        transition: all 0.3s ease !important;
-    }
-    
-    .social li a:hover {
-        color: #425BB5 !important;
-        transform: scale(1.1) !important;
-    }
-    
-    /* Fix for mobile section spacing */
-    .section {
-        padding: 40px 0 !important;
-    }
-    
-    #skill-container,
-    #education,
-    #projects,
-    #experience,
-    #certification {
-        padding-top: 50px !important;
-        padding-bottom: 40px !important;
-    }
-    
-    /* Fix for mobile headings */
-    h1.size-50 {
-        font-size: 32px !important;
-        line-height: 36px !important;
-        text-align: center !important;
-        margin-bottom: 20px !important;
-    }
-    
-    h4 {
-        font-size: 16px !important;
-        margin-left: 20px !important;
-        text-align: center !important;
-    }
-    
-    /* Fix for mobile navigation */
-    nav ul {
-        background: rgba(255, 255, 255, 0.98) !important;
-        backdrop-filter: blur(10px) !important;
-        -webkit-backdrop-filter: blur(10px) !important;
-    }
-    
-    /* Fix for mobile preloader */
-    .preloader {
-        height: 40px !important;
-        width: 40px !important;
-        margin-top: -20px !important;
-        margin-left: -20px !important;
-    }
-    
-    .preloader:before {
-        border-width: 2px !important;
-    }
-    
-    .preloader > .icon {
-        height: 25px !important;
-        width: 10.6px !important;
-        margin-top: -12.5px !important;
-        margin-left: -5.3px !important;
+        margin-top: 15px !important;
     }
 }
 
-/* Mobile Landscape Specific Fixes */
-@media (max-width: 767px) and (orientation: landscape) {
-    #home {
-        min-height: 100vh !important;
-        padding: 15px 0 !important;
-    }
-    
+
+/* Tablet and medium mobile fixes */
+
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Home section tablet */
     .disply-table {
-        min-height: 100vh !important;
-        padding: 15px 20px !important;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 20px;
+        min-height: 80vh;
     }
-    
-    .table-cell h1 {
-        font-size: 20px !important;
-        line-height: 24px !important;
-        margin-bottom: 8px !important;
+    .table-cell {
+        text-align: left;
+        padding: 0;
+        width: 50%;
+        order: 1;
     }
-    
-    .table-cell h4 {
-        font-size: 12px !important;
-        margin-bottom: 12px !important;
+    #profilediv {
+        width: 50%;
+        text-align: center;
+        order: 2;
     }
-    
     #profilepic {
-        width: 140px !important;
+        width: 280px;
+        margin: 0 auto;
+        order: 2;
     }
-    
+    /* Skills section tablet */
     .Skills .container-skill .mainSkill {
-        gap: 15px !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
     }
-    
     .Skills .container-skill .mainSkill .front,
     .Skills .container-skill .mainSkill .back,
     .Skills .container-skill .mainSkill .tools {
-        padding: 15px 20px !important;
+        width: calc(50% - 15px);
+        min-width: 250px;
     }
-    
-    .section {
-        padding: 30px 0 !important;
+    /* Projects section tablet */
+    .portfolio_container .col-md-4 {
+        width: 50%;
+        margin-bottom: 30px;
     }
-    
-    #skill-container,
-    #education,
-    #projects,
-    #experience,
-    #certification {
-        padding-top: 40px !important;
-        padding-bottom: 30px !important;
+    /* Certifications section tablet */
+    #certification .portfolio_container .col-md-4 {
+        width: 50%;
+        margin-bottom: 15px;
     }
-}
-
-/* Original Skills CSS - Restore the missing skills section */
-.Skills {
-    display: block;
-    width: 100%;
-}
-
-.Skills .container-skill {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    animation: moveUp 1s ease-in-out;
-    position: relative;
-}
-
-.Skills .container-skill .heading {
-    font-size: 42px;
-    text-align: center;
-    font-weight: 600;
-    margin-top: 20px;
-    color: rgb(242, 243, 244);
-}
-
-.Skills .container-skill .heading h1 {
-    padding: 0%;
-    margin: 0%;
-}
-
-.Skills .container-skill .Text {
-    font-size: 18px;
-    text-align: center;
-    max-width: 500px;
-    color: rgb(177, 178, 179);
-}
-
-.Skills .container-skill .mainSkill {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    gap: 30px;
-    justify-content: center;
-}
-
-.Skills .container-skill .mainSkill .front,
-.Skills .container-skill .mainSkill .back,
-.Skills .container-skill .mainSkill .tools {
-    width: 100%;
-    max-width: 500px;
-    background: rgb(255, 255, 255);
-    border: 0.1px solid rgb(0, 0, 0);
-    border-radius: 16px;
-    padding: 18px 36px;
-}
-
-.Skills .container-skill .mainSkill .front h2,
-.Skills .container-skill .mainSkill .back h2,
-.Skills .container-skill .mainSkill .tools h2 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0%;
-    padding: 0%;
-    font-size: 24px;
-    font-weight: 600;
-    color: rgb(0, 0, 0);
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.Skills .container-skill .mainSkill .box {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 20px;
-}
-
-.Skills .container-skill .mainSkill .front .frontSkill,
-.Skills .container-skill .mainSkill .back .backSkill,
-.Skills .container-skill .mainSkill .tools .toolsSkill {
-    font-size: 14px;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    border-radius: 12px;
-    padding: 12px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-}
-
-.Skills .container-skill .mainSkill .front .box img {
-    width: 30px;
-    height: 30px;
-}
-
-.Skills .container-skill .mainSkill .back .box img {
-    width: 30px;
-    height: 30px;
-}
-
-.Skills .container-skill .mainSkill .tools .box img {
-    width: 30px;
-    height: 30px;
-}
-
-@keyframes moveUp {
-    from {
-        transform: translateY(100%);
+    /* Certification spacing tablet */
+    #certification .col-md-12:first-child {
+        margin-bottom: 15px !important;
     }
-    to {
-        transform: translateY(0);
+    #certification .main-container {
+        margin-top: 15px !important;
+    }
+    #certification .portfolio_container {
+        margin-top: 10px !important;
+    }
+    /* Button alignment tablet */
+    #herobtn {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+    }
+    .resumediv {
+        width: 140px;
     }
 }
 
-/* Skills hover effects */
-.Skills .container-skill .mainSkill .front .frontSkill:hover,
-.Skills .container-skill .mainSkill .back .backSkill:hover,
-.Skills .container-skill .mainSkill .tools .toolsSkill:hover {
-    transform: translateY(-7px);
-    transition: all 0.3s ease;
-}
 
-/* Skills section spacing */
-#skill-container {
-    padding-top: 60px;
-    padding-bottom: 40px;
-}
+/* Large mobile and small tablet fixes */
 
-/* Hero button styles */
-#herobtn {
-    display: flex;
-}
-
-#githubdiv {
-    margin-left: 30px;
-}
-
-/* Resume button styles */
-.resumediv {
-    margin-top: 25px;
-    width: 140px;
-    height: 40px;
-    border-radius: 5px;
-    padding-top: 6px;
-    padding-bottom: 30px;
-    text-align: center;
-    font-weight: 500;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    border: 1px solid black;
-    outline: none;
+@media (min-width: 769px) and (max-width: 991px) {
+    /* Home section large mobile */
+    .disply-table {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px 40px;
+        min-height: 85vh;
+    }
+    .table-cell {
+        text-align: left;
+        padding: 0;
+        width: 50%;
+        order: 1;
+    }
+    #profilediv {
+        width: 50%;
+        text-align: center;
+        order: 2;
+    }
+    #profilepic {
+        width: 320px;
+        margin: 0 auto;
+        order: 2;
+    }
+    /* Skills section large mobile */
+    .Skills .container-skill .mainSkill {
+        flex-direction: row;
+        gap: 40px;
+    }
+    .Skills .container-skill .mainSkill .front,
+    .Skills .container-skill .mainSkill .back,
+    .Skills .container-skill .mainSkill .tools {
+        width: calc(33.33% - 27px);
+    }
+    /* Projects section large mobile */
+    .portfolio_container .col-md-4 {
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    /* Certifications section large mobile */
+    #certification .portfolio_container .col-md-4 {
+        width: 50%;
+        margin-bottom: 15px;
+    }
+    /* Certification spacing large mobile */
+    #certification .col-md-12:first-child {
+        margin-bottom: 15px !important;
+    }
+    #certification .main-container {
+        margin-top: 15px !important;
+    }
+    #certification .portfolio_container {
+        margin-top: 10px !important;
+    }
+    /* Button alignment large mobile */
+    #herobtn {
+        flex-direction: row;
+        gap: 30px;
+        justify-content: center;
+    }
+    .resumediv {
+        width: 160px;
+    }
 }
 
 .resumediv a {
@@ -3232,4 +1411,263 @@ fieldset {
 
 .resumediv:active {
     top: 2px;
+}
+
+.Skills {
+    display: block;
+    width: 100%;
+}
+
+.Skills .container-skill {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    animation: moveUp 1s ease-in-out;
+    position: relative;
+    /* Ensure the div can be moved */
+}
+
+.Skills .container-skill .heading {
+    font-size: 42px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+    color: rgb(242, 243, 244);
+}
+
+.Skills .container-skill .heading h1 {
+    padding: 0%;
+    margin: 0%;
+}
+
+.Skills .container-skill .Text {
+    font-size: 18px;
+    text-align: center;
+    max-width: 500px;
+    color: rgb(177, 178, 179);
+}
+
+.Skills .container-skill .mainSkill {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.Skills .container-skill .mainSkill .front,
+.back,
+.datasci,
+.tools {
+    width: 100%;
+    max-width: 500px;
+    background: rgb(255, 255, 255);
+    border: 0.1px solid rgb(0, 0, 0);
+    border-radius: 16px;
+    padding: 18px 36px;
+}
+
+.Skills .container-skill .mainSkill .front h2,
+.back h2,
+.datasci h2,
+.tools h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0%;
+    padding: 0%;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.Skills .container-skill .mainSkill .box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.Skills .container-skill .mainSkill .front .frontSkill,
+.back .backSkill,
+.datasci .datasciSkill,
+.tools .toolsSkill {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.Skills .container-skill .mainSkill .front .box img {
+    width: 30px;
+    height: 30px;
+}
+
+.Skills .container-skill .mainSkill .back .box img {
+    width: 30px;
+    height: 30px;
+}
+
+.Skills .container-skill .mainSkill .datasci .box img {
+    width: 30px;
+    height: 30px;
+}
+
+.Skills .container-skill .mainSkill .tools .box img {
+    width: 30px;
+    height: 30px;
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+#skill-container {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+#education {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+#projects {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+#experience {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+#herobtn {
+    /* display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 0px; */
+    display: flex;
+}
+
+#githubdiv {
+    margin-left: 30px;
+}
+
+.Skills .container-skill .mainSkill .front .frontSkill:hover,
+.back .backSkill:hover,
+.datasci .datasciSkill:hover,
+.tools .toolsSkill:hover {
+    transform: translateY(-7px);
+    transition: all 0.3s ease;
+}
+
+
+/* Certification Styles */
+
+#certification {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+
+/* Certification heading styles - same as other sections */
+
+#certification h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000;
+    margin-bottom: 30px;
+    text-align: left;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+#certification h4 {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    position: relative;
+    color: #425BB5;
+    margin-left: 40px;
+    font-weight: 700;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+#certification h4:before {
+    position: absolute;
+    width: 30px;
+    left: -40px;
+    content: "";
+    display: block;
+    height: 2px;
+    background: #425BB5;
+    top: 9px;
+}
+
+.certification-image-container {
+    width: 100%;
+    height: 250px;
+    background: #000;
+    border: 3px solid #000;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.certification-image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.certification-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s ease;
+}
+
+.certification-image-container:hover .certification-image {
+    transform: scale(1.05);
+}
+
+
+/* Ensure all certification items have equal height */
+
+#certification .portfolio_item {
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+#certification .portfolio_item_hover {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
 }
