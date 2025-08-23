@@ -946,13 +946,21 @@ fieldset {
     
     .disply-table {
         height: auto;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
     }
     
     .table-cell {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         padding: 20px 0;
+        width: 100%;
     }
     
     #profilepic {
@@ -960,6 +968,13 @@ fieldset {
         height: auto;
         margin: 20px auto;
         display: block;
+        order: 2;
+    }
+    
+    #profilediv {
+        order: 2;
+        width: 100%;
+        text-align: center;
     }
     
     /* Skills section mobile */
@@ -1065,15 +1080,19 @@ fieldset {
     
     /* Certification section mobile fixes */
     #certification .col-md-12:first-child {
-        margin-bottom: 30px !important;
+        margin-bottom: 15px !important;
     }
     
     #certification .main-container {
-        margin-top: 30px !important;
+        margin-top: 15px !important;
     }
     
     #certification .portfolio_container {
-        margin-top: 20px !important;
+        margin-top: 10px !important;
+    }
+    
+    #certification .portfolio_container .col-md-4 {
+        margin-bottom: 15px !important;
     }
 }
 
@@ -1126,14 +1145,32 @@ fieldset {
 /* Tablet and medium mobile fixes */
 @media (min-width: 481px) and (max-width: 768px) {
     /* Home section tablet */
-    .table-cell {
-        text-align: center;
+    .disply-table {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         padding: 40px 20px;
+        min-height: 80vh;
+    }
+    
+    .table-cell {
+        text-align: left;
+        padding: 0;
+        width: 50%;
+        order: 1;
+    }
+    
+    #profilediv {
+        width: 50%;
+        text-align: center;
+        order: 2;
     }
     
     #profilepic {
         width: 280px;
-        margin: 30px auto;
+        margin: 0 auto;
+        order: 2;
     }
     
     /* Skills section tablet */
@@ -1159,7 +1196,20 @@ fieldset {
     /* Certifications section tablet */
     #certification .portfolio_container .col-md-4 {
         width: 50%;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
+    }
+    
+    /* Certification spacing tablet */
+    #certification .col-md-12:first-child {
+        margin-bottom: 15px !important;
+    }
+    
+    #certification .main-container {
+        margin-top: 15px !important;
+    }
+    
+    #certification .portfolio_container {
+        margin-top: 10px !important;
     }
     
     /* Button alignment tablet */
@@ -1177,14 +1227,32 @@ fieldset {
 /* Large mobile and small tablet fixes */
 @media (min-width: 769px) and (max-width: 991px) {
     /* Home section large mobile */
-    .table-cell {
-        text-align: center;
+    .disply-table {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         padding: 60px 40px;
+        min-height: 85vh;
+    }
+    
+    .table-cell {
+        text-align: left;
+        padding: 0;
+        width: 50%;
+        order: 1;
+    }
+    
+    #profilediv {
+        width: 50%;
+        text-align: center;
+        order: 2;
     }
     
     #profilepic {
         width: 320px;
-        margin: 40px auto;
+        margin: 0 auto;
+        order: 2;
     }
     
     /* Skills section large mobile */
@@ -1208,7 +1276,20 @@ fieldset {
     /* Certifications section large mobile */
     #certification .portfolio_container .col-md-4 {
         width: 50%;
-        margin-bottom: 40px;
+        margin-bottom: 15px;
+    }
+    
+    /* Certification spacing large mobile */
+    #certification .col-md-12:first-child {
+        margin-bottom: 15px !important;
+    }
+    
+    #certification .main-container {
+        margin-top: 15px !important;
+    }
+    
+    #certification .portfolio_container {
+        margin-top: 10px !important;
     }
     
     /* Button alignment large mobile */
