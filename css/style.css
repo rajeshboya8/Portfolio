@@ -1272,8 +1272,8 @@ fieldset {
     }
     #profilepic {
         width: 120px;
-        margin: 5;
-        order: 2;
+        margin: 3;
+        order: 7;
     }
     /* Skills section large mobile */
     .Skills .container-skill .mainSkill {
