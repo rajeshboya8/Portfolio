@@ -1257,7 +1257,7 @@ fieldset {
         min-height: auto;
         /* Override mobile 100vh height and center content */
         display: flex;
-        align-items: center;
+        align-items: left;
     }
     .table-cell {
         text-align: left;
@@ -1267,7 +1267,7 @@ fieldset {
     }
     #profilediv {
         width: 50%;
-        text-align: right;
+        text-align: left;
         order: 2;
     }
     #profilepic {
