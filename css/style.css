@@ -1279,7 +1279,15 @@ fieldset {
         align-items: center;
         justify-content: space-between;
         padding: 40px 20px;
-        min-height: 80vh;
+        min-height: auto;
+        /* Make section compact */
+        height: auto;
+    }
+    #home {
+        min-height: auto;
+        /* Override mobile 100vh height and center content */
+        display: flex;
+        align-items: center;
     }
     .table-cell {
         text-align: left;
@@ -1351,7 +1359,15 @@ fieldset {
         align-items: center;
         justify-content: space-between;
         padding: 60px 40px;
-        min-height: 85vh;
+        min-height: auto;
+        /* Make section compact */
+        height: auto;
+    }
+    #home {
+        min-height: auto;
+        /* Override mobile 100vh height and center content */
+        display: flex;
+        align-items: center;
     }
     .table-cell {
         text-align: left;
