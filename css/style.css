@@ -1179,14 +1179,14 @@ fieldset {
     .table-cell h1 {
         font-size: 38px;
         line-height: 42px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         /* Tighter spacing */
         order: 2;
     }
     .table-cell h4 {
         font-size: 18px;
         margin-left: 0;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         /* Tighter spacing */
         margin-top: 0;
         order: 1;
@@ -1199,7 +1199,7 @@ fieldset {
         padding-top: 20px;
     }
     #profilediv {
-        margin-top: 30px;
+        margin-top: 25px;
         /* Space between buttons and image */
         margin-bottom: 0;
         order: 2;
