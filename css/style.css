@@ -1710,7 +1710,8 @@ fieldset {
         background-image: none;
         /* Remove background for clarity */
         height: auto;
-        min-height: 100vh;
+        min-height: auto;
+        /* Let content define height */
         padding: 80px 15px 40px;
         /* Add padding for nav and content */
         display: flex;
@@ -1731,18 +1732,18 @@ fieldset {
         display: block;
         width: 100%;
         padding: 15px 0;
-        order: 2;
-        /* Text and buttons will be second */
+        order: 1;
+        /* Text and buttons will be FIRST */
     }
     #profilediv {
-        order: 1;
-        /* Image will be first */
+        order: 2;
+        /* Image will be SECOND */
     }
     #profilepic {
         max-width: 280px;
         width: 80%;
-        margin: 0 auto 20px;
-        /* Center and add space below */
+        margin: 20px auto 0;
+        /* Add space above the image */
     }
     #herobtn {
         flex-direction: column;
