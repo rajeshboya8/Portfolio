@@ -303,6 +303,22 @@ a.active {
 .disply-table {
     display: table;
     height: 100vh;
+    width: 100%;
+}
+
+
+/* Give the image's table cell a fixed width and center the image */
+
+#profilediv {
+    width: 450px;
+    text-align: center;
+}
+
+
+/* Add some padding between the text and the image on desktop */
+
+.table-cell:first-child {
+    padding-right: 30px;
 }
 
 
@@ -835,8 +851,10 @@ fieldset {
 }
 
 #profilepic {
-    margin-top: 150px;
-    margin-left: 500px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin-top: 110px;
+    /* Pushes the image down */
 }
 
 .resumediv {
@@ -1686,41 +1704,52 @@ fieldset {
 
 /* Mobile Home section overrides - only affect #home on mobile */
 
-@media (max-width: 768px) and (orientation: portrait),
-(max-device-width: 768px) and (orientation: portrait),
-(hover: none) and (pointer: coarse) and (orientation: portrait) {
-    /* Remove hero background and fixed heights on mobile */
+@media (max-width: 991px) {
+    /* --- Home Section on Tablets and Mobiles --- */
     #home {
-        background: none !important;
-        background-image: none !important;
-        min-height: auto !important;
-        padding: 20px 0 !important;
+        background-image: none;
+        /* Remove background for clarity */
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 15px 40px;
+        /* Add padding for nav and content */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    #home,
     #home .disply-table {
-        height: auto !important;
+        display: flex;
+        flex-direction: column;
+        /* Stack items vertically */
+        height: auto;
+        width: 100%;
+        text-align: center;
     }
-    /* Small background box only around home content */
-    #home .disply-table {
-        background: rgba(66, 91, 181, 0.08);
-        /* semi-transparent theme color */
-        backdrop-filter: blur(2px);
-        /* subtle glass effect on supported devices */
-        -webkit-backdrop-filter: blur(2px);
-        border-radius: 12px;
-        padding: 16px;
-        max-width: 520px;
-        margin: 0 auto;
-    }
-    /* Remove any floating/alignment on mobile */
-    #home #profilediv,
-    #home .table-cell {
-        float: none !important;
-        text-align: center !important;
-    }
-    #home #profilepic {
-        float: none !important;
+    /* Make table cells full-width blocks */
+    #home .table-cell,
+    #profilediv {
         display: block;
-        margin: 12px auto 0 !important;
+        width: 100%;
+        padding: 15px 0;
+        order: 2;
+        /* Text and buttons will be second */
+    }
+    #profilediv {
+        order: 1;
+        /* Image will be first */
+    }
+    #profilepic {
+        max-width: 280px;
+        width: 80%;
+        margin: 0 auto 20px;
+        /* Center and add space below */
+    }
+    #herobtn {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    #githubdiv {
+        margin-left: 0;
     }
 }
