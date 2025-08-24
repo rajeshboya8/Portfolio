@@ -1757,9 +1757,9 @@ fieldset {
         /* Image will be SECOND */
     }
     #profilepic {
-        max-width: 150px;
-        width: 30%;
-        margin: 1px auto 0;
+        max-width: 250px;
+        width: 80%;
+        margin: 20px auto 0;
         /* Add space above the image */
     }
     #herobtn {
