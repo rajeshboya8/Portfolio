@@ -1062,25 +1062,24 @@ fieldset {
         padding: 5px 10px;
         font-size: 12px;
     }
-    .portfolio_container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 15px;
-    }
     .portfolio_container .col-md-4 {
-        width: calc(50% - 10px);
-        /* 2 columns with gap */
-        margin-bottom: 0;
+        width: 100%;
+        margin-bottom: 30px;
     }
     .portfolio_item img {
-        height: 200px !important;
-        /* Override inline style for mobile */
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        height: auto !important;
         object-fit: cover;
     }
     .certification-image-container {
-        height: 200px;
-        /* Match image height */
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+    .certification-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
     #certification .portfolio_item {
         height: auto;
@@ -1125,16 +1124,16 @@ fieldset {
     }
     /* Button fixes */
     .table-cell {
-        order: 1;
+        order: 2;
     }
     #herobtn {
-        flex-direction: row;
-        /* Buttons side-by-side */
-        gap: 10px;
-        align-items: flex-start;
-        justify-content: flex-start;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         margin-top: 25px;
+        order: 3;
     }
     #githubdiv {
         margin-left: 0;
@@ -1166,25 +1165,23 @@ fieldset {
 @media (max-width: 480px) {
     /* Extra small devices */
     h1 {
-        font-size: 32px;
-        /* Smaller for two-column layout */
-        line-height: 36px;
+        font-size: 40px;
+        line-height: 44px;
     }
     h1.size-50 {
         font-size: 28px;
         line-height: 34px;
     }
     .table-cell h1 {
-        font-size: 24px;
-        /* Smaller for two-column layout */
-        line-height: 28px;
-        margin-bottom: 15px;
+        font-size: 38px;
+        line-height: 42px;
+        margin-bottom: 25px;
         order: 2;
     }
     .table-cell h4 {
-        font-size: 16px;
+        font-size: 18px;
         margin-left: 0;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         margin-top: 0;
         order: 1;
     }
@@ -1192,11 +1189,13 @@ fieldset {
     .table-cell h4:before {
         display: none;
     }
-    /* Home section alignment */
+    .disply-table {
+        padding-top: 20px;
+    }
     #profilediv {
-        margin-top: 0;
+        margin-top: 30px;
         margin-bottom: 0;
-        order: 2;
+        order: 1;
     }
     .Skills .container-skill .mainSkill .front .frontSkill,
     .Skills .container-skill .mainSkill .back .backSkill,
@@ -1210,18 +1209,16 @@ fieldset {
         padding: 4px 8px;
     }
     #profilepic {
-        width: 100%;
-        /* Responsive image */
+        width: 200px;
     }
     .timeline-event-copy {
         padding: 1.5em 1em 0.5em 2em;
     }
     .timeline-event-copy h3 {
-        font-size: 1.4em;
+        font-size: 1.5em;
     }
     #herobtn {
-        margin-top: 15px;
-        order: 3;
+        margin-top: 20px;
     }
 }
 
