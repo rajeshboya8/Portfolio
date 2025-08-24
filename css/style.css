@@ -1709,14 +1709,14 @@ fieldset {
     #home {
         background-image: none;
         /* Remove background for clarity */
-        height: 100vh;
-        min-height: 100px;
+        height: auto;
+        min-height: auto;
         /* Let content define height */
-        padding: 80px 15px 40px;
+        padding: 75px 15px 40px;
+        /* Reduced padding for a more compact look */
         /* Add padding for nav and content */
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: block;
+        /* Changed from flex to remove vertical centering */
     }
     #home .disply-table {
         display: flex;
@@ -1725,6 +1725,7 @@ fieldset {
         height: auto;
         width: 100%;
         text-align: center;
+        /* Center the content */
     }
     /* Make table cells full-width blocks */
     #home .table-cell,
