@@ -1709,8 +1709,8 @@ fieldset {
     #home {
         background-image: none;
         /* Remove background for clarity */
-        height: auto;
-        min-height: auto;
+        height: 100vh;
+        min-height: 100px;
         /* Let content define height */
         padding: 80px 15px 40px;
         /* Add padding for nav and content */
