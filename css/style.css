@@ -1271,8 +1271,8 @@ fieldset {
         order: 2;
     }
     #profilepic {
-        width: 150px;
-        margin: 0;
+        width: 120px;
+        margin: 5;
         order: 2;
     }
     /* Skills section large mobile */
