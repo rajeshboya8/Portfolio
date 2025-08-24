@@ -1131,27 +1131,33 @@ fieldset {
     .table-cell h1 {
         font-size: 32px;
         line-height: 36px;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
+        order: 1;
     }
     .table-cell h4 {
         font-size: 18px;
         margin-left: 0;
-        margin-bottom: 25px;
+        margin-bottom: 0;
+        margin-top: 25px;
+        order: 3;
     }
     /* Hide decorative line on h4 for centered mobile layout */
     .table-cell h4:before {
         display: none;
     }
-    /* Stack image on top of text for a more ordered mobile view */
+    /* Stack text on top of image for mobile view */
     .disply-table {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding-top: 20px;
         /* Add some space at the top */
     }
     #profilediv {
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+    #herobtn {
+        order: 2;
         margin-top: 0;
-        margin-bottom: 30px;
-        /* Add space between image and text */
     }
     .Skills .container-skill .mainSkill .front .frontSkill,
     .Skills .container-skill .mainSkill .back .backSkill,
