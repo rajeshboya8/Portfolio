@@ -1138,6 +1138,21 @@ fieldset {
         margin-left: 0;
         margin-bottom: 25px;
     }
+    /* Hide decorative line on h4 for centered mobile layout */
+    .table-cell h4:before {
+        display: none;
+    }
+    /* Stack image on top of text for a more ordered mobile view */
+    .disply-table {
+        flex-direction: column-reverse;
+        padding-top: 20px;
+        /* Add some space at the top */
+    }
+    #profilediv {
+        margin-top: 0;
+        margin-bottom: 30px;
+        /* Add space between image and text */
+    }
     .Skills .container-skill .mainSkill .front .frontSkill,
     .Skills .container-skill .mainSkill .back .backSkill,
     .Skills .container-skill .mainSkill .tools .toolsSkill {
