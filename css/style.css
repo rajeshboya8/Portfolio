@@ -976,6 +976,14 @@ fieldset {
     .container {
         padding: 0 15px;
     }
+    .section {
+        padding: 60px 0;
+    }
+    h1.size-50 {
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 0;
+    }
     /* Home section mobile */
     #home {
         height: auto;
@@ -1010,12 +1018,13 @@ fieldset {
     #profilediv {
         width: 100%;
         text-align: center;
-        margin-top: 30px;
+        margin-top: 40px;
+        order: 4;
     }
     /* Skills section mobile */
     .Skills .container-skill .mainSkill {
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
     }
     .Skills .container-skill .mainSkill .front,
     .Skills .container-skill .mainSkill .back,
@@ -1025,7 +1034,7 @@ fieldset {
         max-width: 100%;
     }
     .Skills .container-skill .mainSkill .box {
-        gap: 8px;
+        gap: 10px;
         justify-content: center;
     }
     .Skills .container-skill .mainSkill .front .frontSkill,
@@ -1034,6 +1043,10 @@ fieldset {
         font-size: 12px;
         padding: 8px 12px;
         min-width: 120px;
+    }
+    .Skills .container-skill .mainSkill h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
     }
     /* Projects section mobile */
     .portfolio_filter {
@@ -1053,10 +1066,23 @@ fieldset {
         width: 100%;
         margin-bottom: 20px;
     }
+    .portfolio_item img {
+        height: 200px !important;
+        /* Override inline style for mobile */
+        object-fit: cover;
+    }
     /* Certifications section mobile */
     #certification .portfolio_container .col-md-4 {
         width: 100%;
         margin-bottom: 20px;
+    }
+    .certification-image-container {
+        height: 200px;
+        /* Match image height */
+    }
+    #certification .portfolio_item {
+        height: auto;
+        /* Let content define height */
     }
     /* Contact section mobile */
     #contact .col-md-4,
@@ -1069,20 +1095,26 @@ fieldset {
         margin-bottom: 15px;
     }
     /* Education section mobile */
-    .timeline-event-copy {
-        width: 90%;
-        left: 2em;
+    .timeline:before {
+        left: 15px;
     }
-    /* Section headings mobile */
-    h1.size-50 {
-        font-size: 35px;
-        line-height: 40px;
+    .timeline-event-icon {
+        left: 10px;
+    }
+    .timeline-event-copy {
+        width: 100%;
+        left: 0;
+        padding: 2em 1em 1em 2.5em;
+        top: -1.5em;
     }
     h4 {
         font-size: 14px;
         margin-left: 20px;
     }
     /* Button fixes */
+    .table-cell {
+        order: 1;
+    }
     #herobtn {
         flex-direction: column;
         gap: 15px;
@@ -1090,6 +1122,7 @@ fieldset {
         justify-content: center;
         width: 100%;
         margin-top: 25px;
+        order: 3;
     }
     #githubdiv {
         margin-left: 0;
@@ -1125,14 +1158,15 @@ fieldset {
         line-height: 44px;
     }
     h1.size-50 {
-        font-size: 28px;
-        line-height: 32px;
+        font-size: 32px;
+        line-height: 38px;
     }
     .table-cell h1 {
         font-size: 38px;
         line-height: 42px;
         margin-bottom: 25px;
         order: 2;
+        /* ServiceNow Developer */
     }
     .table-cell h4 {
         font-size: 18px;
@@ -1140,6 +1174,7 @@ fieldset {
         margin-bottom: 15px;
         margin-top: 0;
         order: 1;
+        /* Rajesh Boya */
     }
     /* Hide decorative line on h4 for centered mobile layout */
     .table-cell h4:before {
@@ -1152,12 +1187,10 @@ fieldset {
         /* Add some space at the top */
     }
     #profilediv {
-        margin-top: 40px;
+        margin-top: 30px;
         margin-bottom: 0;
-    }
-    #herobtn {
-        margin-top: 0;
-        order: 3;
+        order: 4;
+        /* Image */
     }
     .Skills .container-skill .mainSkill .front .frontSkill,
     .Skills .container-skill .mainSkill .back .backSkill,
@@ -1174,8 +1207,13 @@ fieldset {
         width: 200px;
     }
     .timeline-event-copy {
-        width: 85%;
-        left: 1.5em;
+        padding: 1.5em 1em 0.5em 2em;
+    }
+    .timeline-event-copy h3 {
+        font-size: 1.5em;
+    }
+    #herobtn {
+        margin-top: 20px;
     }
 }
 
