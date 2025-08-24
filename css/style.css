@@ -980,8 +980,8 @@ fieldset {
         padding: 60px 0;
     }
     h1.size-50 {
-        font-size: 36px;
-        line-height: 42px;
+        font-size: 34px;
+        line-height: 40px;
         margin-bottom: 0;
     }
     /* Home section mobile */
@@ -1062,19 +1062,21 @@ fieldset {
         padding: 5px 10px;
         font-size: 12px;
     }
+    .portfolio_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 15px;
+    }
     .portfolio_container .col-md-4 {
-        width: 100%;
-        margin-bottom: 20px;
+        width: calc(50% - 10px);
+        /* 2 columns with gap */
+        margin-bottom: 0;
     }
     .portfolio_item img {
         height: 200px !important;
         /* Override inline style for mobile */
         object-fit: cover;
-    }
-    /* Certifications section mobile */
-    #certification .portfolio_container .col-md-4 {
-        width: 100%;
-        margin-bottom: 20px;
     }
     .certification-image-container {
         height: 200px;
@@ -1107,6 +1109,16 @@ fieldset {
         padding: 2em 1em 1em 2.5em;
         top: -1.5em;
     }
+    .timeline-event-copy h4 {
+        font-size: 1.1em;
+        font-weight: 600;
+        color: #555;
+        margin-left: 0;
+        margin-bottom: 1em;
+    }
+    .timeline-event-copy h4:before {
+        display: none;
+    }
     h4 {
         font-size: 14px;
         margin-left: 20px;
@@ -1116,13 +1128,13 @@ fieldset {
         order: 1;
     }
     #herobtn {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-        justify-content: center;
+        flex-direction: row;
+        /* Buttons side-by-side */
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
         width: 100%;
         margin-top: 25px;
-        order: 3;
     }
     #githubdiv {
         margin-left: 0;
@@ -1154,43 +1166,37 @@ fieldset {
 @media (max-width: 480px) {
     /* Extra small devices */
     h1 {
-        font-size: 40px;
-        line-height: 44px;
+        font-size: 32px;
+        /* Smaller for two-column layout */
+        line-height: 36px;
     }
     h1.size-50 {
-        font-size: 32px;
-        line-height: 38px;
+        font-size: 28px;
+        line-height: 34px;
     }
     .table-cell h1 {
-        font-size: 38px;
-        line-height: 42px;
-        margin-bottom: 25px;
+        font-size: 24px;
+        /* Smaller for two-column layout */
+        line-height: 28px;
+        margin-bottom: 15px;
         order: 2;
-        /* ServiceNow Developer */
     }
     .table-cell h4 {
-        font-size: 18px;
+        font-size: 16px;
         margin-left: 0;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         margin-top: 0;
         order: 1;
-        /* Rajesh Boya */
     }
     /* Hide decorative line on h4 for centered mobile layout */
     .table-cell h4:before {
         display: none;
     }
-    /* Stack text on top of image for mobile view */
-    .disply-table {
-        flex-direction: column;
-        padding-top: 20px;
-        /* Add some space at the top */
-    }
+    /* Home section alignment */
     #profilediv {
-        margin-top: 30px;
+        margin-top: 0;
         margin-bottom: 0;
-        order: 4;
-        /* Image */
+        order: 2;
     }
     .Skills .container-skill .mainSkill .front .frontSkill,
     .Skills .container-skill .mainSkill .back .backSkill,
@@ -1204,16 +1210,18 @@ fieldset {
         padding: 4px 8px;
     }
     #profilepic {
-        width: 200px;
+        width: 100%;
+        /* Responsive image */
     }
     .timeline-event-copy {
         padding: 1.5em 1em 0.5em 2em;
     }
     .timeline-event-copy h3 {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
     #herobtn {
-        margin-top: 20px;
+        margin-top: 15px;
+        order: 3;
     }
 }
 
