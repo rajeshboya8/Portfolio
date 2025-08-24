@@ -1266,12 +1266,12 @@ fieldset {
         order: 1;
     }
     #profilediv {
-        width: 35%;
+        width: 30%;
         text-align: left;
         order: 2;
     }
     #profilepic {
-        width: 200px;
+        width: 150px;
         margin: 0;
         order: 2;
     }
