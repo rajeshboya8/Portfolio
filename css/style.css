@@ -977,7 +977,7 @@ fieldset {
         padding: 0 15px;
     }
     .section {
-        padding: 60px 0;
+        padding: 40px 0;
     }
     h1.size-50 {
         font-size: 34px;
@@ -988,7 +988,7 @@ fieldset {
     #home {
         height: auto;
         min-height: 100vh;
-        padding: 60px 15px 40px;
+        padding: 60px 15px 20px;
         background-image: none;
     }
     .disply-table {
@@ -1179,14 +1179,14 @@ fieldset {
     .table-cell h1 {
         font-size: 38px;
         line-height: 42px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         /* Tighter spacing */
         order: 2;
     }
     .table-cell h4 {
         font-size: 18px;
         margin-left: 0;
-        margin-bottom: 8px;
+        margin-bottom: 5px;
         /* Tighter spacing */
         margin-top: 0;
         order: 1;
@@ -1199,7 +1199,7 @@ fieldset {
         padding-top: 20px;
     }
     #profilediv {
-        margin-top: 25px;
+        margin-top: 20px;
         /* Space between buttons and image */
         margin-bottom: 0;
         order: 2;
