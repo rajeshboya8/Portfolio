@@ -876,136 +876,14 @@ fieldset {
 }
 
 
-/* Responsive media queries
-==================================================*/
-
-@media (max-width: 991px) {
-    .portfolio .categories-grid .categories ul li a {
-        padding: 0 2px;
-    }
-}
-
-@media (max-width: 768px) {
-    .timeline-event-copy {
-        width: 90%;
-        left: 2em;
-    }
-}
-
-@media (max-width: 500px) {
-    h1 {
-        font-family: 'Playfair Display', serif;
-        font-size: 50px;
-        line-height: 50px;
-    }
-    #home,
-    .disply-table {
-        height: 600px;
-    }
-    .about-border {
-        width: 265px;
-    }
-    .portfolio .categories-grid .categories ul li {
-        list-style: none;
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 431px) {
-    /* Mobile Navigation */
-    nav ul {
-        padding: 15px 0px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-    }
-    nav li {
-        margin: 4px;
-        flex: 0 0 auto;
-    }
-    nav li a {
-        font-size: 10px;
-        padding: 6px 10px;
-        background: rgba(66, 91, 181, 0.1);
-        border-radius: 15px;
-        transition: all 0.3s ease;
-        white-space: nowrap;
-        text-align: center;
-        min-width: 0;
-        width: auto;
-    }
-    nav li a:hover {
-        background: #425BB5;
-        color: white;
-    }
-    /* Home Section */
-    #home {
-        height: auto;
-        min-height: 100vh;
-        padding: 60px 0 40px;
-    }
-    .disply-table {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: auto;
-        padding: 20px 15px;
-    }
-    .table-cell {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        order: 1;
-    }
-    .table-cell h1 {
-        font-size: 32px;
-        line-height: 36px;
-        margin-bottom: 15px;
-    }
-    .table-cell h4 {
-        font-size: 18px;
-        margin-left: 0;
-        margin-bottom: 25px;
-    }
-    #profilediv {
-        order: 2;
-        width: 100%;
-        text-align: center;
-        margin-top: 30px;
-    }
-    #profilepic {
-        width: 280px;
-        height: auto;
-        margin: 0 auto;
-        display: block;
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-    #herobtn {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-        margin-top: 25px;
-    }
-    .resumediv {
-        width: 160px;
-        margin-top: 0;
-        padding: 12px 20px;
-        font-size: 14px;
-    }
-    #githubdiv {
-        margin-left: 0;
-    }
-}
+/* 
+==================================================
+    Responsive media queries
+==================================================
+*/
 
 
-/* Mobile Menu Toggle */
+/* Mobile Menu Toggle (initially hidden) */
 
 .mobile-menu-toggle {
     display: none;
@@ -1043,7 +921,9 @@ fieldset {
 }
 
 
-/* Mobile Responsive Fixes */
+/* ==================================================
+   Mobile & Portrait Tablet Styles (<= 768px)
+================================================== */
 
 @media (max-width: 768px) {
     /* Mobile Menu Toggle */
@@ -1100,15 +980,16 @@ fieldset {
     #home {
         height: auto;
         min-height: 100vh;
-        padding: 20px 0;
+        padding: 60px 15px 40px;
+        background-image: none;
     }
     .disply-table {
-        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 20px 0;
+        height: auto;
+        width: 100%;
     }
     .table-cell {
         display: flex;
@@ -1116,20 +997,20 @@ fieldset {
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 20px 0;
+        padding: 10px 0;
         width: 100%;
     }
     #profilepic {
         width: 250px;
         height: auto;
-        margin: 20px auto;
+        margin: 0 auto;
         display: block;
-        order: 2;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
     #profilediv {
-        order: 2;
         width: 100%;
         text-align: center;
+        margin-top: 30px;
     }
     /* Skills section mobile */
     .Skills .container-skill .mainSkill {
@@ -1139,6 +1020,7 @@ fieldset {
     .Skills .container-skill .mainSkill .front,
     .Skills .container-skill .mainSkill .back,
     .Skills .container-skill .mainSkill .tools {
+        flex: 1 1 100%;
         width: 100%;
         max-width: 100%;
     }
@@ -1188,8 +1070,8 @@ fieldset {
     }
     /* Education section mobile */
     .timeline-event-copy {
-        width: 85%;
-        left: 1.5em;
+        width: 90%;
+        left: 2em;
     }
     /* Section headings mobile */
     h1.size-50 {
@@ -1207,12 +1089,13 @@ fieldset {
         align-items: center;
         justify-content: center;
         width: 100%;
+        margin-top: 25px;
     }
     #githubdiv {
         margin-left: 0;
     }
     .resumediv {
-        width: 150px;
+        width: 160px;
         text-align: center;
     }
     /* Certification section mobile fixes */
@@ -1230,11 +1113,30 @@ fieldset {
     }
 }
 
+
+/* ==================================================
+   Extra Small Devices (Portrait Phones, <= 480px)
+================================================== */
+
 @media (max-width: 480px) {
     /* Extra small devices */
+    h1 {
+        font-size: 40px;
+        line-height: 44px;
+    }
     h1.size-50 {
         font-size: 28px;
         line-height: 32px;
+    }
+    .table-cell h1 {
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 15px;
+    }
+    .table-cell h4 {
+        font-size: 18px;
+        margin-left: 0;
+        margin-bottom: 25px;
     }
     .Skills .container-skill .mainSkill .front .frontSkill,
     .Skills .container-skill .mainSkill .back .backSkill,
@@ -1250,21 +1152,9 @@ fieldset {
     #profilepic {
         width: 200px;
     }
-    .table-cell h1 {
-        font-size: 25px;
-    }
-    .table-cell h4 {
-        font-size: 16px;
-    }
-    /* Extra small certification fixes */
-    #certification .col-md-12:first-child {
-        margin-bottom: 20px !important;
-    }
-    #certification .main-container {
-        margin-top: 20px !important;
-    }
-    #certification .portfolio_container {
-        margin-top: 15px !important;
+    .timeline-event-copy {
+        width: 85%;
+        left: 1.5em;
     }
 }
 
@@ -1715,59 +1605,4 @@ fieldset {
     flex-grow: 1;
     display: flex;
     align-items: flex-end;
-}
-
-
-/* Mobile Home section overrides - only affect #home on mobile */
-
-@media (max-width: 480px) {
-    /* --- Home Section on Tablets and Mobiles --- */
-    #home {
-        background-image: none;
-        /* Remove background for clarity */
-        height: auto;
-        min-height: auto;
-        /* Let content define height */
-        padding: 75px 15px 40px;
-        /* Reduced padding for a more compact look */
-        /* Add padding for nav and content */
-        display: block;
-        /* Changed from flex to remove vertical centering */
-    }
-    #home .disply-table {
-        display: flex;
-        flex-direction: column;
-        /* Stack items vertically */
-        height: auto;
-        width: 100%;
-        text-align: center;
-        /* Center the content */
-    }
-    /* Make table cells full-width blocks */
-    #home .table-cell,
-    #profilediv {
-        display: block;
-        width: 100%;
-        padding: 15px 0;
-        order: 1;
-        /* Text and buttons will be FIRST */
-    }
-    #profilediv {
-        order: 2;
-        /* Image will be SECOND */
-    }
-    #profilepic {
-        max-width: 250px;
-        width: 80%;
-        margin: 20px auto 0;
-        /* Add space above the image */
-    }
-    #herobtn {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    #githubdiv {
-        margin-left: 0;
-    }
 }
