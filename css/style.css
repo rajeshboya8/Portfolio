@@ -1266,9 +1266,9 @@ fieldset {
         order: 1;
     }
     #profilediv {
-        width: 25%;
+        width: 35%;
         text-align: left;
-        order: 2;
+        order: 3;
     }
     #profilepic {
         width: 200px;
