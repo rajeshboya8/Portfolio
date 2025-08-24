@@ -1303,6 +1303,8 @@ fieldset {
     #profilepic {
         width: 220px;
         margin: 0 auto;
+        position: relative;
+        left: 20px;
         order: 2;
     }
     /* Skills section tablet */
@@ -1383,6 +1385,8 @@ fieldset {
     #profilepic {
         width: 260px;
         margin: 0 auto;
+        position: relative;
+        left: 20px;
         order: 2;
     }
     /* Skills section large mobile */
