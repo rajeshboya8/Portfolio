@@ -1172,16 +1172,22 @@ fieldset {
         font-size: 28px;
         line-height: 34px;
     }
+    .table-cell {
+        order: 1;
+        /* Text block first */
+    }
     .table-cell h1 {
         font-size: 38px;
         line-height: 42px;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
+        /* Tighter spacing */
         order: 2;
     }
     .table-cell h4 {
         font-size: 18px;
         margin-left: 0;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+        /* Tighter spacing */
         margin-top: 0;
         order: 1;
     }
@@ -1194,8 +1200,10 @@ fieldset {
     }
     #profilediv {
         margin-top: 30px;
+        /* Space between buttons and image */
         margin-bottom: 0;
-        order: 1;
+        order: 2;
+        /* Image last */
     }
     .Skills .container-skill .mainSkill .front .frontSkill,
     .Skills .container-skill .mainSkill .back .backSkill,
@@ -1218,7 +1226,8 @@ fieldset {
         font-size: 1.5em;
     }
     #herobtn {
-        margin-top: 20px;
+        margin-top: 0;
+        /* Gap is now controlled by h1's margin-bottom */
     }
 }
 
