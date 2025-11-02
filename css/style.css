@@ -1325,19 +1325,25 @@ font-family: 'Open Sans', sans-serif;
             flex-direction: column;
             align-items: center;
         }
+        .Skills .container-skill .mainSkill .front .box,
         .Skills .container-skill .mainSkill .tools .box {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
+            margin-bottom: 0;
         }
+        .Skills .container-skill .mainSkill .front .frontSkill,
         .Skills .container-skill .mainSkill .tools .toolsSkill {
             font-size: 13px;
             padding: 10px 14px;
             min-width: auto;
             flex: 0 0 auto;
             white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         /* Projects section tablet */
         .portfolio_container .col-md-4 {
