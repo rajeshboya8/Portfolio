@@ -464,15 +464,15 @@ font-family: 'Open Sans', sans-serif;
     }
     
     #certification .col-md-12 {
-        margin-bottom: 80px;
+        margin-bottom: 50px;
     }
     
     #certification .main-container {
-        margin-top: 40px;
+        margin-top: 0;
     }
     
     #certification .portfolio_container {
-        margin-top: 100px;
+        margin-top: 0;
     }
     
     #certification .portfolio_item {
@@ -519,8 +519,8 @@ font-family: 'Open Sans', sans-serif;
         position: relative;
         z-index: 10;
         background: white;
-        padding-bottom: 60px;
-        margin-bottom: 150px;
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
     
     .portfolio .categories-grid span {
@@ -991,16 +991,10 @@ font-family: 'Open Sans', sans-serif;
             color: #425BB5;
             font-weight: 600;
             letter-spacing: 1px;
+            order: 1;
         }
         .table-cell h4:before {
             display: none;
-        }
-        .table-cell h1 {
-            font-size: 42px;
-            line-height: 48px;
-            margin-bottom: 20px;
-            color: #2c3e50;
-            font-weight: 700;
         }
         .table-cell h3 {
             font-family: 'Playfair Display', serif;
@@ -1009,6 +1003,15 @@ font-family: 'Open Sans', sans-serif;
             margin-bottom: 10px;
             color: #2c3e50;
             font-weight: 700;
+            order: 2;
+        }
+        .table-cell h1 {
+            font-size: 42px;
+            line-height: 48px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-weight: 700;
+            order: 3;
         }
         #profilepic {
             width: 280px;
@@ -1176,13 +1179,16 @@ font-family: 'Open Sans', sans-serif;
         }
         /* Certification section mobile fixes */
         #certification .col-md-12:first-child {
-            margin-bottom: 15px !important;
+            margin-bottom: 0 !important;
+        }
+        #certification .col-md-12 {
+            margin-bottom: 30px !important;
         }
         #certification .main-container {
-            margin-top: 15px !important;
+            margin-top: 0 !important;
         }
         #certification .portfolio_container {
-            margin-top: 10px !important;
+            margin-top: 0 !important;
         }
         #certification .portfolio_container .col-md-4 {
             margin-bottom: 15px !important;
@@ -1202,12 +1208,13 @@ font-family: 'Open Sans', sans-serif;
             font-size: 30px;
             line-height: 36px;
         }
-        .table-cell h1 {
-            font-size: 38px;
-            line-height: 42px;
-            margin-bottom: 10px;
+        .table-cell h4 {
+            font-size: 18px;
+            margin-left: 0;
+            margin-bottom: 5px;
             /* Tighter spacing */
-            order: 2;
+            margin-top: 0;
+            order: 1;
         }
         .table-cell h3 {
             font-family: 'Playfair Display', serif;
@@ -1216,14 +1223,14 @@ font-family: 'Open Sans', sans-serif;
             margin-bottom: 8px;
             color: #2c3e50;
             font-weight: 700;
+            order: 2;
         }
-        .table-cell h4 {
-            font-size: 18px;
-            margin-left: 0;
-            margin-bottom: 5px;
+        .table-cell h1 {
+            font-size: 38px;
+            line-height: 42px;
+            margin-bottom: 10px;
             /* Tighter spacing */
-            margin-top: 0;
-            order: 1;
+            order: 3;
         }
         /* Hide decorative line on h4 for centered mobile layout */
         .table-cell h4:before {
@@ -1321,13 +1328,16 @@ font-family: 'Open Sans', sans-serif;
         }
         /* Certification spacing tablet */
         #certification .col-md-12:first-child {
-            margin-bottom: 15px !important;
+            margin-bottom: 0 !important;
+        }
+        #certification .col-md-12 {
+            margin-bottom: 30px !important;
         }
         #certification .main-container {
-            margin-top: 15px !important;
+            margin-top: 0 !important;
         }
         #certification .portfolio_container {
-            margin-top: 10px !important;
+            margin-top: 0 !important;
         }
         /* Button alignment tablet */
         #herobtn {
@@ -1397,13 +1407,16 @@ font-family: 'Open Sans', sans-serif;
         }
         /* Certification spacing large mobile */
         #certification .col-md-12:first-child {
-            margin-bottom: 15px !important;
+            margin-bottom: 0 !important;
+        }
+        #certification .col-md-12 {
+            margin-bottom: 30px !important;
         }
         #certification .main-container {
-            margin-top: 15px !important;
+            margin-top: 0 !important;
         }
         #certification .portfolio_container {
-            margin-top: 10px !important;
+            margin-top: 0 !important;
         }
         /* Button alignment large mobile */
         #herobtn {

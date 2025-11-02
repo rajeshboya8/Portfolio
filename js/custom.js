@@ -81,13 +81,13 @@ $(document).ready(function() {
 
     //  isotope
     $('#projects').waitForImages(function() {
-        var $container = $('.portfolio_container');
+        var $container = $('#projects .portfolio_container');
         $container.isotope({
             filter: '*',
         });
 
-        $('.portfolio_filter a').click(function() {
-            $('.portfolio_filter .active').removeClass('active');
+        $('#projects .portfolio_filter a').click(function() {
+            $('#projects .portfolio_filter .active').removeClass('active');
             $(this).addClass('active');
 
             var selector = $(this).attr('data-filter');
