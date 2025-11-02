@@ -1081,16 +1081,35 @@ font-family: 'Open Sans', sans-serif;
             width: 100%;
             max-width: 100%;
         }
-        .Skills .container-skill .mainSkill .box {
-            gap: 10px;
-            justify-content: center;
+        .Skills .container-skill .mainSkill .tools {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .Skills .container-skill .mainSkill .front .box,
+        .Skills .container-skill .mainSkill .tools .box {
+            width: 100% !important;
+            display: flex !important;
+            flex-wrap: wrap !important;
+            flex-direction: row !important;
+            justify-content: center !important;
+            align-items: flex-start !important;
+            gap: 10px !important;
+            margin-bottom: 0 !important;
         }
         .Skills .container-skill .mainSkill .front .frontSkill,
         .Skills .container-skill .mainSkill .back .backSkill,
         .Skills .container-skill .mainSkill .tools .toolsSkill {
-            font-size: 12px;
-            padding: 8px 12px;
-            min-width: 120px;
+            font-size: 12px !important;
+            padding: 8px 12px !important;
+            min-width: 120px !important;
+            width: auto !important;
+            max-width: none !important;
+            flex: 0 0 auto !important;
+            white-space: nowrap !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
         }
         .Skills .container-skill .mainSkill h2 {
             font-size: 20px;
@@ -1243,12 +1262,29 @@ font-family: 'Open Sans', sans-serif;
             margin-top: 20px;
             /* Space between buttons and image */
         }
+        .Skills .container-skill .mainSkill .front .box,
+        .Skills .container-skill .mainSkill .tools .box {
+            width: 100% !important;
+            display: flex !important;
+            flex-wrap: wrap !important;
+            flex-direction: row !important;
+            justify-content: center !important;
+            align-items: flex-start !important;
+            gap: 10px !important;
+        }
         .Skills .container-skill .mainSkill .front .frontSkill,
         .Skills .container-skill .mainSkill .back .backSkill,
         .Skills .container-skill .mainSkill .tools .toolsSkill {
-            font-size: 11px;
-            padding: 6px 10px;
-            min-width: 100px;
+            font-size: 11px !important;
+            padding: 6px 10px !important;
+            min-width: 100px !important;
+            width: auto !important;
+            max-width: none !important;
+            flex: 0 0 auto !important;
+            white-space: nowrap !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
         }
         .portfolio_filter li a {
             font-size: 11px;
@@ -1327,23 +1363,31 @@ font-family: 'Open Sans', sans-serif;
         }
         .Skills .container-skill .mainSkill .front .box,
         .Skills .container-skill .mainSkill .tools .box {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 0;
+            width: 100% !important;
+            display: flex !important;
+            flex-wrap: wrap !important;
+            flex-direction: row !important;
+            justify-content: center !important;
+            align-items: flex-start !important;
+            gap: 12px !important;
+            margin-bottom: 0 !important;
         }
         .Skills .container-skill .mainSkill .front .frontSkill,
         .Skills .container-skill .mainSkill .tools .toolsSkill {
-            font-size: 13px;
-            padding: 10px 14px;
-            min-width: auto;
-            flex: 0 0 auto;
-            white-space: nowrap;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-size: 13px !important;
+            padding: 10px 14px !important;
+            min-width: auto !important;
+            width: auto !important;
+            max-width: none !important;
+            flex: 0 0 auto !important;
+            white-space: nowrap !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            border: 1px solid rgba(0, 0, 0, 0.5) !important;
+            border-radius: 12px !important;
+            color: rgba(0, 0, 0, 0.5) !important;
+            font-weight: 400 !important;
         }
         /* Projects section tablet */
         .portfolio_container .col-md-4 {
