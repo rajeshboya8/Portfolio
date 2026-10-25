@@ -2097,7 +2097,9 @@ font-family: 'Open Sans', sans-serif;
 
         #profilepic {
             width: min(88vw, 340px);
-            height: min(88vw, 340px);
+            height: min(105vw, 380px);
+            object-fit: cover;
+            object-position: center;
         }
 
         #herobtn {
