@@ -1939,11 +1939,26 @@ font-family: 'Open Sans', sans-serif;
         #projects .portfolio_filter li { margin: 3px 0; }
         #projects .portfolio_filter li a { padding: 6px 8px; font-size: 10px; }
         #projects .portfolio_item { margin-bottom: 18px; }
+        #projects .portfolio_item img {
+            height: auto !important;
+            aspect-ratio: auto;
+            object-fit: contain;
+            background: #fff;
+        }
 
         #certification .portfolio_container { margin-left: -6px; margin-right: -6px; }
         #certification .portfolio_container > .current-certification { padding: 0 6px; }
         #certification .portfolio_item { height: 270px; margin-bottom: 16px; }
-        #certification .certification-image-container { height: 205px; margin-bottom: 10px; }
+        #certification .certification-image-container {
+            height: 205px;
+            margin-bottom: 10px;
+            background: #fff;
+        }
+
+        #certification .certification-image {
+            object-fit: contain;
+            background: #fff;
+        }
 
         .timeline-event-copy { padding-left: 2.4em; padding-top: 1.7em; }
         .timeline-event-copy h3 { font-size: 1.25em; }
