@@ -1557,12 +1557,17 @@ font-family: 'Open Sans', sans-serif;
         /* Skills section large mobile */
         .Skills .container-skill .mainSkill {
             flex-direction: row;
+            flex-wrap: wrap;
             gap: 40px;
+            justify-content: center;
         }
         .Skills .container-skill .mainSkill .front,
         .Skills .container-skill .mainSkill .back,
+        .Skills .container-skill .mainSkill .datasci,
         .Skills .container-skill .mainSkill .tools {
-            width: calc(33.33% - 27px);
+            width: calc(50% - 20px);
+            max-width: none;
+            flex: 0 0 calc(50% - 20px);
         }
         /* Projects section large mobile */
         .portfolio_container .col-md-4 {
