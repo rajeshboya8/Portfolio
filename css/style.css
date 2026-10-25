@@ -2103,7 +2103,7 @@ font-family: 'Open Sans', sans-serif;
         }
 
         #profilepic {
-            width: min(88vw, 340px);
+            width: min(94vw, 380px);
             height: min(105vw, 380px);
             object-fit: cover;
             object-position: center;
