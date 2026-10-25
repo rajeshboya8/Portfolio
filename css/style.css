@@ -2006,6 +2006,34 @@ font-family: 'Open Sans', sans-serif;
         #contact .form-control { min-height: 48px; padding: 12px 14px; border-radius: 6px; }
         #contact textarea.form-control { min-height: 130px; }
         #contact #submit { width: 100%; min-height: 48px; }
+
+        #home #herobtn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        #home #herobtn .resumediv,
+        #home #herobtn #githubdiv {
+            width: min(78vw, 230px);
+            height: 48px;
+            min-height: 48px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        #home #herobtn .resumediv a {
+            display: block;
+            line-height: 46px;
+            width: 100%;
+        }
     }
 
     /* Match the Contact section background everywhere except Home. */
