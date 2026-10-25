@@ -283,7 +283,9 @@ font-family: 'Open Sans', sans-serif;
     
     #home {
         background: url(../img/home-bg-2.jpg);
-        background-size: auto;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         height: auto;
         min-height: 80vh;
         /* Adjusted for mobile view */
@@ -1029,8 +1031,10 @@ font-family: 'Open Sans', sans-serif;
             height: auto;
             min-height: 100vh;
             padding: 60px 15px 20px;
-            background-image: none;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-image: url(../img/home-bg-2.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
