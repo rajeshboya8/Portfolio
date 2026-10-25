@@ -31,18 +31,27 @@ font-family: 'Open Sans', sans-serif;
     
     h1 {
         font-family: 'Playfair Display', serif;
-        font-size: 80px;
-        line-height: 70px;
+        font-size: 86px;
+        line-height: 76px;
     }
     
     #home h3 {
         font-family: 'Playfair Display', serif;
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .hero-description {
+        max-width: 620px;
+        margin: 12px 0 24px;
+        color: #1f2937;
+        font-size: 17px;
+        line-height: 1.7;
     }
     
     h4 {
         font-family: 'Lato', sans-serif;
+        font-size: 22px;
         text-transform: capitalize;
         letter-spacing: 2px;
         position: relative;
@@ -332,7 +341,24 @@ font-family: 'Open Sans', sans-serif;
     
     #experience {
         padding: 100px 0;
-        background: #f3f3f3
+        background: #fff;
+    }
+
+    #experience .timeline {
+        display: inline-block;
+        width: 100%;
+    }
+
+    #experience .timeline:before {
+        height: calc(100% - 2em);
+    }
+
+    #experience .timeline-event-icon {
+        outline-color: #fff;
+    }
+
+    #experience .timeline-event-copy p:not(.timeline-event-thumbnail) {
+        font-size: 15px;
     }
     
     .experience-row {
@@ -455,6 +481,51 @@ font-family: 'Open Sans', sans-serif;
     
     #projects {
         padding: 100px 0;
+    }
+
+    /* Keep the portfolio focused on the current AI projects. */
+    #projects .portfolio_container > .servicenow,
+    #projects .portfolio_container > .web-dev {
+        display: none;
+    }
+
+    #projects .portfolio_container {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    #projects .portfolio_container > .ai-project {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        float: none;
+        position: static !important;
+        transform: none !important;
+    }
+
+    @media (min-width: 768px) {
+        #projects .portfolio_container > .ai-project {
+            flex: 0 0 33.333333% !important;
+            width: 33.333333% !important;
+            max-width: 33.333333% !important;
+        }
+    }
+
+    @media (max-width: 767px) {
+        #projects .portfolio_container > .ai-project {
+            flex: 0 0 50% !important;
+            width: 50% !important;
+            max-width: 50% !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #projects .portfolio_container > .ai-project {
+            flex: 0 0 100% !important;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
     }
     /* certifications section
 ==================================================*/
@@ -985,7 +1056,7 @@ font-family: 'Open Sans', sans-serif;
             order: 1;
         }
         .table-cell h4 {
-            font-size: 18px;
+            font-size: 20px;
             margin-left: 0;
             margin-bottom: 10px;
             color: #425BB5;
@@ -998,20 +1069,26 @@ font-family: 'Open Sans', sans-serif;
         }
         .table-cell h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            line-height: 28px;
+            font-size: 18px;
+            line-height: 24px;
             margin-bottom: 10px;
+            color: #2c3e50;
+            font-weight: 700;
+            order: 3;
+        }
+        .table-cell h1 {
+            font-size: 46px;
+            line-height: 52px;
+            margin-bottom: 20px;
             color: #2c3e50;
             font-weight: 700;
             order: 2;
         }
-        .table-cell h1 {
-            font-size: 42px;
-            line-height: 48px;
-            margin-bottom: 20px;
-            color: #2c3e50;
-            font-weight: 700;
-            order: 3;
+        .hero-description {
+            max-width: 520px;
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 8px 0 18px;
         }
         #profilepic {
             width: 280px;
@@ -1228,7 +1305,7 @@ font-family: 'Open Sans', sans-serif;
             line-height: 36px;
         }
         .table-cell h4 {
-            font-size: 18px;
+            font-size: 20px;
             margin-left: 0;
             margin-bottom: 5px;
             /* Tighter spacing */
@@ -1237,19 +1314,24 @@ font-family: 'Open Sans', sans-serif;
         }
         .table-cell h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            line-height: 26px;
+            font-size: 17px;
+            line-height: 22px;
             margin-bottom: 8px;
             color: #2c3e50;
             font-weight: 700;
-            order: 2;
+            order: 3;
         }
         .table-cell h1 {
-            font-size: 38px;
-            line-height: 42px;
+            font-size: 42px;
+            line-height: 46px;
             margin-bottom: 10px;
             /* Tighter spacing */
-            order: 3;
+            order: 2;
+        }
+        .hero-description {
+            font-size: 14px;
+            line-height: 1.55;
+            margin: 6px 0 14px;
         }
         /* Hide decorative line on h4 for centered mobile layout */
         .table-cell h4:before {
@@ -1620,7 +1702,7 @@ font-family: 'Open Sans', sans-serif;
     .tools .toolsSkill {
         font-size: 14px;
         font-weight: 400;
-        color: rgba(0, 0, 0, 0.5);
+        color: #1f2937;
         border: 1px solid rgba(0, 0, 0, 0.5);
         border-radius: 12px;
         padding: 12px 16px;
@@ -1672,7 +1754,7 @@ font-family: 'Open Sans', sans-serif;
     
     #projects {
         padding-top: 60px;
-        padding-bottom: 40px;
+        padding-bottom: 20px;
     }
     
     #experience {
@@ -1701,8 +1783,27 @@ font-family: 'Open Sans', sans-serif;
     /* Certification Styles */
     
     #certification {
-        padding-top: 60px;
+        padding-top: 20px;
         padding-bottom: 40px;
+    }
+
+    #certification .portfolio-inner {
+        padding-top: 20px;
+    }
+
+    #certification .portfolio_container > .col-md-4:not(.current-certification) {
+        display: none;
+    }
+
+    #certification .current-certification,
+    #skill .mainSkill > div {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #certification .current-certification:hover,
+    #skill .mainSkill > div:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
     }
     /* Certification heading styles - same as other sections */
     
@@ -1785,4 +1886,145 @@ font-family: 'Open Sans', sans-serif;
         flex-grow: 1;
         display: flex;
         align-items: flex-end;
+    }
+
+    /* Final mobile refinements */
+    @media (max-width: 768px) {
+        body {
+            overflow-x: hidden;
+        }
+
+        header.navbar-fixed-top {
+            min-height: 56px;
+        }
+
+        #home {
+            min-height: auto;
+            padding: 80px 15px 45px;
+        }
+
+        .disply-table {
+            gap: 18px;
+            padding: 10px 0;
+        }
+
+        .table-cell h1 {
+            font-size: clamp(36px, 10vw, 46px);
+            line-height: 1.08;
+            margin-bottom: 10px;
+        }
+
+        .table-cell h3 {
+            font-size: 17px;
+            line-height: 1.35;
+            margin-bottom: 8px;
+        }
+
+        .hero-description {
+            max-width: 100%;
+            font-size: 14px;
+            line-height: 1.55;
+            margin: 6px auto 14px;
+        }
+
+        #profilepic {
+            width: min(72vw, 240px);
+            height: min(72vw, 240px);
+        }
+
+        #herobtn {
+            margin-top: 12px;
+        }
+
+        #skill-container,
+        #experience,
+        #projects,
+        #certification,
+        #education {
+            padding-top: 42px;
+            padding-bottom: 28px;
+        }
+
+        .Skills .container-skill .mainSkill .datasci {
+            flex: 1 1 100%;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .Skills .container-skill .mainSkill h2 {
+            font-size: 18px;
+            line-height: 1.3;
+            letter-spacing: 1px;
+        }
+
+        .Skills .container-skill .mainSkill .front .frontSkill,
+        .Skills .container-skill .mainSkill .back .backSkill,
+        .Skills .container-skill .mainSkill .datasci .datasciSkill,
+        .Skills .container-skill .mainSkill .tools .toolsSkill {
+            min-width: 0 !important;
+            white-space: normal !important;
+            text-align: center;
+        }
+
+        #projects .portfolio_filter {
+            max-width: 100%;
+            margin-bottom: 18px;
+        }
+
+        #projects .portfolio_filter li a {
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        #projects .portfolio_container > .ai-project {
+            flex-basis: 100% !important;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        #projects .portfolio_item img {
+            height: auto !important;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+        }
+
+        #certification .portfolio-inner {
+            padding-top: 0;
+        }
+
+        #certification .portfolio_item {
+            height: 290px;
+        }
+
+        #certification .certification-image-container {
+            height: 220px;
+        }
+
+        .timeline-event-copy {
+            padding-right: 0;
+        }
+
+        .timeline-event-copy h3 {
+            font-size: 1.35em;
+            line-height: 1.3;
+        }
+
+        .timeline-event-copy p:not(.timeline-event-thumbnail) {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        #contact .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #contact h3 {
+            font-size: 18px;
+        }
+
+        #contact .form-control {
+            width: 100%;
+            font-size: 16px;
+        }
     }
