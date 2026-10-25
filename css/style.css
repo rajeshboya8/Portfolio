@@ -1889,6 +1889,72 @@ font-family: 'Open Sans', sans-serif;
         align-items: flex-end;
     }
 
+    @media (max-width: 768px) {
+        nav ul {
+            width: min(86vw, 340px);
+            padding: 72px 24px 32px;
+            justify-content: flex-start;
+        }
+
+        nav li { margin: 7px 0; }
+        nav li a {
+            font-size: 14px !important;
+            letter-spacing: 1.5px;
+            padding: 11px 14px !important;
+        }
+
+        #home { padding: 78px 15px 42px; }
+        .table-cell h4 { font-size: 18px; letter-spacing: 1px; }
+        .table-cell h1 { font-size: clamp(34px, 10vw, 44px); }
+        .table-cell h3 { font-size: 16px; }
+        .hero-description { font-size: 14px; max-width: 42rem; }
+
+        .section > .container { padding-left: 18px; padding-right: 18px; }
+        h1.size-50 {
+            font-size: clamp(28px, 8vw, 34px);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+        .h-50 { height: 18px; }
+
+        .Skills .container-skill .mainSkill { gap: 18px; margin-top: 12px; }
+        .Skills .container-skill .mainSkill .front,
+        .Skills .container-skill .mainSkill .back,
+        .Skills .container-skill .mainSkill .datasci,
+        .Skills .container-skill .mainSkill .tools {
+            padding: 16px 12px;
+            border-radius: 12px;
+        }
+        .Skills .container-skill .mainSkill .box { gap: 8px !important; }
+        .Skills .container-skill .mainSkill .front .frontSkill,
+        .Skills .container-skill .mainSkill .back .backSkill,
+        .Skills .container-skill .mainSkill .datasci .datasciSkill,
+        .Skills .container-skill .mainSkill .tools .toolsSkill {
+            font-size: 12px !important;
+            padding: 8px 10px !important;
+            line-height: 1.25;
+        }
+
+        #projects .portfolio_filter { gap: 4px; margin-bottom: 10px; }
+        #projects .portfolio_filter li { margin: 3px 0; }
+        #projects .portfolio_filter li a { padding: 6px 8px; font-size: 10px; }
+        #projects .portfolio_item { margin-bottom: 18px; }
+
+        #certification .portfolio_container { margin-left: -6px; margin-right: -6px; }
+        #certification .portfolio_container > .current-certification { padding: 0 6px; }
+        #certification .portfolio_item { height: 270px; margin-bottom: 16px; }
+        #certification .certification-image-container { height: 205px; margin-bottom: 10px; }
+
+        .timeline-event-copy { padding-left: 2.4em; padding-top: 1.7em; }
+        .timeline-event-copy h3 { font-size: 1.25em; }
+        .timeline-event-copy h4 { font-size: 1em; line-height: 1.35; }
+
+        #contact .col-md-4, #contact .col-md-8 { margin-bottom: 20px; }
+        #contact .form-control { min-height: 48px; padding: 12px 14px; border-radius: 6px; }
+        #contact textarea.form-control { min-height: 130px; }
+        #contact #submit { width: 100%; min-height: 48px; }
+    }
+
     /* Match the Contact section background everywhere except Home. */
     body {
         background: #f3f3f3;
@@ -1910,6 +1976,8 @@ font-family: 'Open Sans', sans-serif;
     @media (max-width: 768px) {
         body {
             overflow-x: hidden;
+            font-size: 15px;
+            line-height: 1.6;
         }
 
         header.navbar-fixed-top {
