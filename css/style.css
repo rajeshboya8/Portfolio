@@ -1908,6 +1908,40 @@ font-family: 'Open Sans', sans-serif;
         }
 
         #home { padding: 78px 15px 42px; }
+        #home .container,
+        #home .disply-table,
+        #home .table-cell,
+        #home #profilediv {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        #home .table-cell:first-child {
+            padding-right: 0;
+            text-align: center;
+            align-items: center;
+        }
+
+        #home .table-cell h4,
+        #home .table-cell h1,
+        #home .table-cell h3,
+        #home .hero-description {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        #home #herobtn {
+            width: 100%;
+            align-items: center;
+        }
+
+        #home #profilediv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         .table-cell h4 { font-size: 18px; letter-spacing: 1px; }
         .table-cell h1 { font-size: clamp(34px, 10vw, 44px); }
         .table-cell h3 { font-size: 16px; }
