@@ -1549,7 +1549,7 @@ font-family: 'Open Sans', sans-serif;
         }
         #profilepic {
             width: 580px;
-            height: 480px;
+            height: 380px;
             margin: 0;
             order: 2;
             object-fit: cover;
