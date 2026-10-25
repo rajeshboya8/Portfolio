@@ -2015,8 +2015,8 @@ font-family: 'Open Sans', sans-serif;
         }
 
         #profilepic {
-            width: min(72vw, 240px);
-            height: min(72vw, 240px);
+            width: min(82vw, 300px);
+            height: min(82vw, 300px);
         }
 
         #herobtn {
