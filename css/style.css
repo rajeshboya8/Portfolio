@@ -1542,14 +1542,16 @@ font-family: 'Open Sans', sans-serif;
             order: 1;
         }
         #profilediv {
-            width: 30%;
+            width: 50%;
             text-align: left;
             order: 2;
         }
         #profilepic {
-            width: 130px;
+            width: 580px;
+            height: 480px;
             margin: 0;
             order: 2;
+            object-fit: cover;
         }
         /* Skills section large mobile */
         .Skills .container-skill .mainSkill {
@@ -2103,8 +2105,8 @@ font-family: 'Open Sans', sans-serif;
         }
 
         #profilepic {
-            width: min(94vw, 580px);
-            height: 480px;
+            width: min(88vw, 340px);
+            height: min(105vw, 380px);
             object-fit: cover;
             object-position: center;
         }
