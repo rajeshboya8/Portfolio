@@ -310,7 +310,7 @@ font-family: 'Open Sans', sans-serif;
     /* Give the image's table cell a fixed width and center the image */
     
     #profilediv {
-        width: 500px;
+        width: 560px;
         text-align: center;
     }
     /* Add some padding between the text and the image on desktop */
@@ -905,7 +905,7 @@ font-family: 'Open Sans', sans-serif;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         margin-top: 110px;
         /* Pushes the image down */
-        width: 460px;
+        width: 520px;
         height: 560px;
         object-fit: cover;
         object-position: center;
