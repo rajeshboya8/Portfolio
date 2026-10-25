@@ -1545,7 +1545,7 @@ font-family: 'Open Sans', sans-serif;
             width: 50%;
             text-align: left;
             order: 2;
-            transform: translateX(24px);
+            transform: translateX(48px);
         }
         #profilepic {
             width: 580px;
