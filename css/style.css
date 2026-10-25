@@ -1592,6 +1592,13 @@ font-family: 'Open Sans', sans-serif;
         #projects .portfolio_container > .ai-project .portfolio_item {
             height: 320px;
         }
+
+        #projects .portfolio_container > .ai-project {
+            flex: 0 0 50% !important;
+            width: 50% !important;
+            max-width: 50% !important;
+            float: left;
+        }
         /* Certifications section large mobile */
         #certification .portfolio_container .col-md-4 {
             width: 50%;
