@@ -726,6 +726,8 @@ font-family: 'Open Sans', sans-serif;
     .portfolio_item img {
         /* -webkit-filter: grayscale(100%); */
         /* filter: grayscale(100%); */
+        object-fit: contain !important;
+        background: #fff;
     }
     
     .portfolio-padding {
@@ -903,6 +905,8 @@ font-family: 'Open Sans', sans-serif;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         margin-top: 110px;
         /* Pushes the image down */
+        object-fit: cover;
+        object-position: center;
     }
     
     .resumediv {
@@ -1871,7 +1875,8 @@ font-family: 'Open Sans', sans-serif;
     .certification-image {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        background: #fff;
         object-position: center;
         transition: all 0.3s ease;
     }
