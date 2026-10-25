@@ -1089,6 +1089,7 @@ font-family: 'Open Sans', sans-serif;
             font-size: 15px;
             line-height: 1.6;
             margin: 8px 0 18px;
+            order: 4;
         }
         #profilepic {
             width: 280px;
@@ -1117,7 +1118,7 @@ font-family: 'Open Sans', sans-serif;
             justify-content: center;
             width: 100%;
             margin-top: 30px;
-            order: 3;
+            order: 5;
         }
         .resumediv {
             width: 180px;
@@ -1888,6 +1889,23 @@ font-family: 'Open Sans', sans-serif;
         align-items: flex-end;
     }
 
+    /* Match the Contact section background everywhere except Home. */
+    body {
+        background: #f3f3f3;
+    }
+
+    #experience,
+    #skill,
+    #projects,
+    #certification,
+    #education {
+        background: #f3f3f3;
+    }
+
+    #certification .col-md-12:first-child {
+        background: transparent;
+    }
+
     /* Final mobile refinements */
     @media (max-width: 768px) {
         body {
@@ -1925,6 +1943,7 @@ font-family: 'Open Sans', sans-serif;
             font-size: 14px;
             line-height: 1.55;
             margin: 6px auto 14px;
+            order: 4;
         }
 
         #profilepic {
